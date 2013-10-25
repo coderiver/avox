@@ -684,9 +684,9 @@
     };
 
     Chosen.prototype.blur_test = function(evt) {
-      if (!this.active_field && this.container.hasClass("chosen-container-active")) {
-        return this.close_field();
-      }
+      // if (!this.active_field && this.container.hasClass("chosen-container-active")) {
+      //   return this.close_field();
+      // }
     };
 
     Chosen.prototype.close_field = function() {
