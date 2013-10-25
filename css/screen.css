@@ -1,53 +1,66 @@
-* { margin: 0; padding: 0; }
+/*
+Syntax error: Invalid US-ASCII character "\xC2"
+        on line 111 of /Users/akella/Desktop/git/avox/sass/lib/_mixins.scss
+        from line 3 of /Users/akella/Desktop/git/avox/sass/lib/_base.scss
+        from line 1 of /Users/akella/Desktop/git/avox/sass/screen.sass
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
-button::-moz-focus-inner { padding: 0; border: 0; }
-
-input[type="submit"]::-moz-focus-inner { padding: 0; border: 0; }
-
-body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; }
-
-a img, fieldset { border: none; }
-
-.l { width: 100%; display: inline-block; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
-
-html { height: 100%; }
-
-.is-popup { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dcdcdc)); background-image: -webkit-linear-gradient(#ffffff, #dcdcdc); background-image: -moz-linear-gradient(#ffffff, #dcdcdc); background-image: -o-linear-gradient(#ffffff, #dcdcdc); background-image: linear-gradient(#ffffff, #dcdcdc); height: 100%; }
-
-.tabwindow { padding: 20px; }
-.tabwindow .tabwindow__content { background: white; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); padding: 35px 20px; position: relative; }
-
-.tabs { list-style: none; display: inline-block; width: 100%; vertical-align: bottom; position: relative; }
-.tabs li { float: left; margin-right: 15px; }
-.tabs a { float: left; height: 32px; line-height: 32px; padding: 0 17px; font-weight: bold; background: #b0d0da; font-size: 13px; color: #86a3ad; text-decoration: none; text-shadow: 0 1px 0 #d2e2e8; -webkit-border-radius: 8px 8px 0 0; -moz-border-radius: 8px 8px 0 0; -ms-border-radius: 8px 8px 0 0; -o-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3); box-shadow: 0 0 7px rgba(0, 0, 0, 0.3); }
-.tabs a:hover { color: #333333; }
-.tabs a.is-active { background: white; color: #5e5e5e; z-index: 100; position: relative; }
-.tabs a.is-active:before { position: absolute; content: " "; width: 100%; height: 10px; background: white; bottom: -10px; left: 0; }
-
-.button { display: inline-block; border-radius: 2px; height: 28px; line-height: 28px; position: relative; overflow: hidden; padding: 0 23px; color: #838383; font-size: 13px; font-weight: bold; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; }
-.button.button_blue { background: #15acd9; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
-.button:active { position: relative; top: 1px; }
-
-.actions { margin-top: 45px; text-align: right; }
-.actions > * { margin-left: 15px; }
-
-.trunkgroup { margin-bottom: 30px; }
-.trunkgroup .trunkgroup__title { position: relative; left: -20px; font-size: 0; margin-bottom: 13px; }
-.trunkgroup .trunkgroup__title h2 { display: inline-block; width: 186px; padding-left: 20px; background: #a3c1cb; font-weight: bold; height: 22px; line-height: 22px; color: white; text-transform: uppercase; text-shadow: 0 1px 1px #87a9b6; font-size: 12px; letter-spacing: 0.5px; margin-right: 4px; vertical-align: top; }
-.trunkgroup .trunkgroup__title .trunkgroup__add { background: url('../img/icons-s4fab9a1972.png') 0 0 no-repeat; width: 26px; height: 22px; vertical-align: top; cursor: pointer; display: inline-block; }
-
-.table { border-spacing: 0; border-collapse: collapse; width: 100%; }
-.table td, .table th { border: 1px solid #d5d5d5; text-align: center; vertical-align: middle; }
-.table th { padding: 7px 0; background: #d5d5d5; border-color: white; text-align: center; font-weight: normal; color: #666666; font-size: 12px; min-height: 40px; border-bottom-style: none; }
-.table th:first-child { border-left: none; border-top-left-radius: 4px; }
-.table th:last-child { border-right-color: #d5d5d5; }
-.table td { padding: 4px; }
-.table td:first-child, .table td:last-child { padding-top: 6px; }
-
-.customcheckbox { background: url('../img/icons-s4fab9a1972.png') 0 -59px no-repeat; width: 17px; height: 18px; display: inline-block; }
-.customcheckbox input { display: none; }
-
-.icon-delete { background: url('../img/icons-s4fab9a1972.png') 0 -32px no-repeat; width: 17px; height: 17px; cursor: pointer; display: inline-block; }
+Backtrace:
+/Users/akella/Desktop/git/avox/sass/lib/_mixins.scss:111
+/Users/akella/Desktop/git/avox/sass/lib/_base.scss:3
+/Users/akella/Desktop/git/avox/sass/screen.sass:1
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:373:in `block in check_encoding!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:603:in `rescue in block in check_encoding'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:600:in `block in check_encoding'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:599:in `each'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:599:in `each_with_index'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:599:in `check_encoding'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/util.rb:653:in `check_sass_encoding'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:372:in `check_encoding!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:339:in `_to_tree'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:274:in `to_tree'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:227:in `map'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:53:in `map'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:315:in `_render'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/sass/lib/sass/engine.rb:262:in `render'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:139:in `block in compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/logger.rb:45:in `red'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:138:in `compile'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:118:in `compile_if_required'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `each'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:101:in `block in run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:126:in `timed'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/compiler.rb:100:in `run'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/update_project.rb:45:in `perform'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/base.rb:18:in `execute'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/commands/project_base.rb:19:in `execute'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:30:in `block in <main>'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:44:in `call'
+/Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/bin/compass:44:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid US-ASCII character \"\xC2\"\A         on line 111 of /Users/akella/Desktop/git/avox/sass/lib/_mixins.scss\A         from line 3 of /Users/akella/Desktop/git/avox/sass/lib/_base.scss\A         from line 1 of /Users/akella/Desktop/git/avox/sass/screen.sass"; }
