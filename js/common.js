@@ -1,9 +1,4 @@
 $(document).ready(function() {
-	//showing popup
-	$('.showme').click(function (e) {
-		$('.overlay,.popup').addClass('is-visible');
-		return false;
-	});
 
 
 	//chosen stuff
