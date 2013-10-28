@@ -77,36 +77,46 @@ html
 .button
 	display: inline-block
 	border-radius: 2px
-	height: 28px 
-	line-height: 28px
+	height: 28px
 	position: relative
 	overflow: hidden
 	padding: 0 23px
-	color: #838383
-	font-size: 13px    
+	color: #838383 
+	font: bold 13px/28px Tahoma,Arial,sans-serif
 	font-weight: bold
 	background: #E8E8E8
 	text-shadow: 0 1px 0 #FAFAFA 
 	cursor: pointer
+	border: 0
 	&.button_blue
 		background: #15ACD9
 		color: #fff
 		text-shadow: 0 1px 2px rgba(#000, .4)   
+	&:hover
+		+opacity(.95)
+	&:focus
+		outline: none
 	&:active
 		position: relative
 		top: 1px 
+	&.button_big
+		height: 32px
+		font: bold 14px/32px Tahoma,Arial,sans-serif
+
 .actions
 	margin-top: 45px 
 	text-align: right
 	&>*
 		margin-left: 15px 
-.trunkgroup
+.group
 	margin-bottom: 30px 
-	.trunkgroup__title
+	.group__title
 		position: relative
 		left: -20px 
 		font-size: 0 
 		margin-bottom: 13px 
+		.customcheckbox
+			margin: 2px 5px 0 0 
 		h2
 			display: inline-block
 			width: 186px 
@@ -122,11 +132,31 @@ html
 			letter-spacing: .5px
 			margin-right: 4px 
 			vertical-align: top
-		.trunkgroup__add
+		.group__add
 			+s(trunkadd)
 			vertical-align: top
 			cursor: pointer
 			display: inline-block
+.group_text
+	.table
+		tbody
+			td
+				text-align: left
+				color: #5c5c5c 
+				padding: 7px 10px 
+				font-size: 12px
+				strong
+					display: inline-block
+					margin-right: 25px
+				a
+					font-size: 12px
+					color: #2cabdc
+					font-weight: bold
+					text-decoration: none 
+					
+		.icon-delete
+			margin: 0 auto
+			display: block 
 .table
 	border-spacing: 0
 	border-collapse: collapse
@@ -158,6 +188,7 @@ html
 		tr
 			&:nth-child(2n)
 				background: #f0f0f0 
+	
 .customcheckbox
 	position: relative
 	display: inline-block
@@ -219,7 +250,93 @@ html
 		border: 1px solid #aacdda
 		background: #bfe5f3
 		outline: none  
-		
+.input_textarea
+	resize: vertical
+	height: 62px
+	max-height: 120px
+.input_gray
+	background: #f6f6f6 
 .chosen-container
 	display: block
 	width: 100% !important
+
+.table
+	.input-wrap
+		margin-bottom: 0
+		.icon
+			position: absolute
+			top: 50%
+			right: 9px
+			left: auto
+		.icon_glass
+			margin-top: -7px
+		.input
+			&:focus
+				+ i
+					+s(glass-h)
+.icon_glass
+	+s(glass)
+
+.wrap
+	@extend %clr
+.col
+	float: left
+	width: 33.3%
+	padding-right: 4%
+	+box-sizing(border-box)
+	&:last-child
+		padding-right: 0
+	.group
+		margin-bottom: 28px
+		&.is-inactive-group
+			.row
+				+opacity(.5)
+		.group__title 
+			h2
+				width: 100%
+.row
+	margin-bottom: 4px
+	font-size: 0
+	.button
+		margin-top: 17px
+	.actions
+		margin-top: 35px
+		text-align: left
+		.button
+			&:first-child
+				margin-left: 0
+.row__title
+	display: inline-block
+	margin-bottom: 10px
+	width: 33%
+	margin-left: 16.5%
+	text-align: center
+	color: #b0b0b0
+	font-weight: bold
+	font-size: 12px  
+.row__text,
+.row__main
+	display: inline-block
+	vertical-align: middle
+.row__text
+	width: 20%
+	padding-right: 5px
+	font-size: 12px
+	text-align: right
+	+box-sizing(border-box)
+.row__main
+	width: 80%
+	@extend %clr
+	+box-sizing(border-box)
+	.input_s
+		width: 40%
+		display: inline-block
+		text-align: right
+	.input_to-right
+		float: right
+
+.icon_refresh
+	display: inline-block
+	vertical-align: middle
+	+s(refresh)
+	margin-right: 10px
