@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/chosen.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body class="is-popup">
+
+<!-- BEGIN popup -->
+<div class="popup">
+      <div class="popup__logo"></div>
+      <div class="login-form">
+            <div class="input-wrap">
+                  <input type="text" class="input input_simple" placeholder="Username">
+                  <i class="icon icon_user"></i>
+            </div>
+            <div class="input-wrap">
+                  <input type="password" class="input input_simple" placeholder="Password">
+                  <i class="icon icon_pass"></i>
+            </div>
+            <select class="chosen-select js-lang">
+                  <option value="English">English</option>
+                  <option value="Русский">Русский</option>
+            </select>
+            <script type="text/javascript">
+            $(".js-lang").chosen({disable_search_threshold: 10});
+            </script>
+            <input type="submit" class="btn" value="Log in">
+      </div>
+</div>
+<!-- END popup -->
+
+</body>
+</html>

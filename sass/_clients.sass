@@ -28,10 +28,12 @@ html
 		+box-shadow(0 0 10px rgba(#000, .2))
 		padding: 35px 20px 
 		position: relative
+.tabwindow__nav
+	@extend %clr
 .tabs
+	float: left
 	list-style: none
 	display: inline-block
-	width: 100%
 	vertical-align: bottom 
 	position: relative
 	li
@@ -46,6 +48,7 @@ html
 		background: #B0D0DA
 		font-size: 13px  
 		color: #86A3AD
+		font-size: 14px
 		text-decoration: none
 		text-shadow: 0 1px 0 #D2E2E8
 		+border-radius(8px 8px 0 0) 
@@ -66,6 +69,11 @@ html
 				background: #fff
 				bottom: -10px  
 				left: 0 
+.tabwindow__state
+	float: right
+	color: #6a6969
+	font-size: 18px
+	font-weight: bold 
 .button
 	display: inline-block
 	border-radius: 2px
@@ -146,10 +154,14 @@ html
 		padding: 4px 
 		&:first-child,&:last-child
 			padding-top: 6px 
+	tbody
+		tr
+			&:nth-child(2n)
+				background: #f0f0f0 
 .customcheckbox
 	position: relative
 	display: inline-block
-	input
+	input  
 		position: relative
 		width: 17px
 		height: 17px
@@ -207,3 +219,7 @@ html
 		border: 1px solid #aacdda
 		background: #bfe5f3
 		outline: none  
+		
+.chosen-container
+	display: block
+	width: 100% !important
