@@ -145,7 +145,9 @@ button::-moz-focus-inner { padding: 0; border: 0; }
 
 input[type="submit"]::-moz-focus-inner { padding: 0; border: 0; }
 
-body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; min-width: 960px; line-height: 1.4; }
+body { font-family: Tahoma, sans-serif; font-weight: normal; font-size: 12px; min-width: 960px; line-height: 1.4; }
+
+textarea, input { font-family: Tahoma, sans-serif; }
 
 a img, fieldset { border: none; }
 
