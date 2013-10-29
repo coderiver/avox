@@ -195,7 +195,7 @@ html { height: 100%; }
 .group .group__title { position: relative; left: -20px; font-size: 0; margin-bottom: 13px; }
 .group .group__title .customcheckbox { margin: 2px 5px 0 0; }
 .group .group__title h2 { display: inline-block; width: 186px; padding-left: 20px; background: #a3c1cb; font-weight: bold; height: 22px; line-height: 22px; color: white; text-transform: uppercase; text-shadow: 0 1px 1px #87a9b6; font-size: 12px; letter-spacing: 0.5px; margin-right: 4px; vertical-align: top; }
-.group .group__title .group__add { background: url('../img/icons-sc124995c9e.png') 0 -41px no-repeat; width: 26px; height: 22px; vertical-align: top; cursor: pointer; display: inline-block; }
+.group .group__title .group__add { background: url('../img/icons-sc124995c9e.png') 0 -41px no-repeat; width: 26px; height: 22px; vertical-align: top; cursor: pointer; display: inline-block; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .group_text .table tbody td { text-align: left; color: #5c5c5c; padding: 7px 10px; font-size: 12px; }
 .group_text .table tbody td strong { display: inline-block; margin-right: 25px; }
