@@ -4,10 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<meta name="viewport" content="width=device-width"/>
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
       <script src="js/jquery.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
       <script src="js/chosen.js"></script>
+      <script src="js/jquery.multiselect.js"></script>
+      <script src="js/jquery.multiselect.filter.js"></script>
       <script src="js/common.js"></script>
 </head>
 <body class="is-popup">
@@ -49,7 +52,7 @@
                                     <input type="text" class="input">  
                               </td>
                               <td>
-                                    <select data-placeholder="IP Address (es)" class="js-select" multiple  >
+                                    <select data-placeholder="IP Address (es)" class="js-select-multi-new" multiple  >
                                           <option value="192.168.0.1">Whatever</option>
                                           <option value="192.168.0.1">192.168.0.1</option>
                                           <option value="192.168.0.2">192.168.0.2</option>
@@ -118,7 +121,7 @@
                                                 <input type="text" class="input">            
                                           </td>
 							<td>
-                                                <select data-placeholder="IP Address (es)" class="chosen-select" multiple  >
+                                                <select class="js-multi-select" multiple="multiple" >
                                                       <option value="192.168.0.1">192.168.0.1</option>
                                                       <option value="192.168.0.1">192.168.0.2</option>
                                                       <option value="192.168.0.1">192.168.0.3</option>
@@ -130,7 +133,6 @@
 							<td>
                                                 <select data-placeholder="ORIG Rate Table" class="chosen-select" >
                                                       <option value="">&nbsp;</option>
-                                                     
                                                       <option value="Slovak premium some">Slovak premium some</option>
                                                       <option value="var2">var2</option>
                                                       <option value="var3">var3</option>
@@ -162,7 +164,7 @@
                                                 <input type="text" class="input">            
                                           </td>
                                           <td>
-                                                <select data-placeholder="IP Address (es)" class="chosen-select" multiple  >
+                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
                                                       <option value="192.168.0.1">192.168.0.1</option>
                                                       <option value="192.168.0.2">192.168.0.2</option>
                                                       <option value="192.168.0.3">192.168.0.3</option>
@@ -205,7 +207,7 @@
                                                 <input type="text" class="input">            
                                           </td>
                                           <td>
-                                                <select data-placeholder="IP Address (es)" class="chosen-select" multiple  >
+                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
                                                       <option value="192.168.0.1">192.168.0.1</option>
                                                       <option value="192.168.0.2">192.168.0.2</option>
                                                       <option value="192.168.0.3">192.168.0.3</option>
@@ -260,7 +262,7 @@
                                     <input type="text" class="input">            
                               </td>
                               <td>
-                                    <select data-placeholder="IP Address (es)" class="js-select" multiple  >
+                                    <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
                                           <option value="192.168.0.1">192.168.0.1</option>
                                           <option value="192.168.0.2">192.168.0.2</option>
                                           <option value="192.168.0.3">192.168.0.3</option>
@@ -279,7 +281,7 @@
                                     </select>                                  
                               </td>
                               <td>
-                                    <select data-placeholder="Groups" class="js-select" multiple>
+                                    <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
                                           <option value="">&nbsp;</option>
                                           <option value="Slovak premium some">Slovak premium some</option>
                                           <option value="var2">var2</option>
@@ -322,7 +324,7 @@
                                                 <input type="text" class="input">            
                                           </td>
                                           <td>
-                                                <select data-placeholder="IP Address (es)" class="chosen-select" multiple  >
+                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
                                                       <option value="192.168.0.1">192.168.0.1</option>
                                                       <option value="192.168.0.2">192.168.0.2</option>
                                                       <option value="192.168.0.3">192.168.0.3</option>
@@ -341,7 +343,7 @@
                                                 </select>                                   
                                           </td>
                                           <td>
-                                                <select data-placeholder="Groups" class="chosen-select"  multiple >
+                                                <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
                                                       <option value="Japan">Japan</option>
                                                       <option value="USA">USA</option>
                                                       <option value="Italy">Italy</option>
@@ -363,7 +365,7 @@
                                                 <input type="text" class="input">            
                                           </td>
                                           <td>
-                                                <select data-placeholder="IP Address (es)" class="chosen-select" multiple  >
+                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
                                                       <option value="192.168.0.1">192.168.0.1</option>
                                                       <option value="192.168.0.2">192.168.0.2</option>
                                                       <option value="192.168.0.3">192.168.0.3</option>
@@ -382,7 +384,7 @@
                                                 </select>                                    
                                           </td>
                                           <td>
-                                                <select data-placeholder="Groups" class="chosen-select"  multiple >
+                                                <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
                                                       <option value="">&nbsp;</option>
                                                       <option value="Japan">Japan</option>
                                                       <option value="USA">USA</option>

@@ -1,49 +1,35 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever{
-//         @include sized-sprite($icons, badge_hit); //or
-// 	@include s(badge_hit); //gets default value for spritemap as $icons
-//     }
-// ### animation example
-//     @include keyframes(rotate) {
-//        from {
-//           @include rotate(0);
-//        }
-//        to {
-//           @include rotate(360);
-//         }
-//     }
-// ## animation usage
-//     body:hover{
-// 	    @include animation(rotate 200s linear infinite);
-//     }
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in);
-// ## gradient example
-//     @include background-image(linear-gradient(#232323, #5c5c5c));
-// ## making bw-images
-//     img{@extend %gray;}
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     @include min-screen(320){ css goes here}
-// @max-screen(1000), @iphone5, @iphone4, @ipad-retina, @ipad, @hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3 {
-//       .item-#{$i} { width: 2em * $i; }
-//     }
-//     @each $s in a,b,c{
-// 	    #{$s}
-//     }
-// ## fonts   
-// +font(black, cytiapro-black-webfont) // sass way
-// BTW these comments will not render into css
-
-//*{-webkit-transition: .3s all;}
-
-*
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
+h6, p, blockquote, pre,a, abbr, acronym, address, big,
+cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small,
+strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt,
+dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary,time, mark, audio, video
+	margin: 0 
+	padding: 0
+	vertical-align: baseline
+body, html
+	height: 100%    
+img,fieldset 
+	border: none
+input[type="submit"],
+button
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+textarea 
+	overflow: auto
+input, button 
 	margin: 0
 	padding: 0
-
+	border: 0
+input, textarea, select,button,
+h1,h2,h3,h4,h5,h6,a,span,a:focus 
+	outline: none
+ul,ol    
+	list-style-type: none 
 +iphone
 	*
 		-webkit-text-size-adjust: none

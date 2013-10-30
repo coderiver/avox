@@ -64,7 +64,7 @@
 
 .chosen-container .chosen-results li em { font-style: normal; text-decoration: underline; }
 
-.chosen-container-multi .chosen-choices { position: relative; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; width: 100%; padding-right: 20px; height: auto !important; min-height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: white; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); cursor: text; }
+.chosen-container-multi .chosen-choices { position: relative; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; width: 100%; padding-right: 20px; height: auto !important; min-height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: white; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); }
 
 .chosen-container-multi .chosen-choices li { list-style: none; text-align: left; }
 
@@ -147,7 +147,76 @@
 
 .chosen-container a { text-decoration: none; color: #999999; text-align: left; }
 
-* { margin: 0; padding: 0; }
+.ui-multiselect { position: relative; overflow: hidden; padding: 2px 0 2px 4px; text-align: left; width: 100% !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-right: 20px; min-height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: white; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); }
+.ui-multiselect:focus, .ui-multiselect:active { outline: none; }
+.ui-multiselect.ui-state-active { background: #bfe6f4; }
+.ui-multiselect.ui-state-active span.ui-icon { background: url('../img/icons-s4efdc03548.png') 0 -296px no-repeat; width: 8px; height: 17px; }
+
+.ui-multiselect span.ui-icon { position: absolute; top: 50%; right: 10px; margin-top: -8px; background: url('../img/icons-s4efdc03548.png') 0 -269px no-repeat; width: 8px; height: 17px; }
+
+.ui-multiselect-single .ui-multiselect-checkboxes input { position: absolute !important; top: auto !important; left: -9999px; }
+
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding: 5px !important; }
+
+.ui-multiselect-header ul { font-size: 0.9em; }
+
+.ui-multiselect-header ul li { float: left; padding: 0 10px 0 0; }
+
+.ui-multiselect-header a { text-decoration: none; }
+
+.ui-multiselect-header a:hover { text-decoration: underline; }
+
+.ui-multiselect-header span.ui-icon { float: left; }
+
+.ui-multiselect-header li.ui-multiselect-close { float: right; text-align: right; padding-right: 0; }
+
+.ui-multiselect-menu { display: none; position: absolute; z-index: 10000; text-align: left; margin-top: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #f7f7f7; border: 1px solid #c8c8c8; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); }
+.ui-multiselect-menu:before, .ui-multiselect-menu:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
+.ui-multiselect-menu:before { top: -9px; left: 17px; border-width: 0 7px 10px 7px; border-color: transparent transparent #f7f7f7 transparent; z-index: 2; }
+.ui-multiselect-menu:after { top: -10px; left: 16px; border-width: 0 8px 10px 8px; border-color: transparent transparent #c8c8c8 transparent; }
+
+.ui-multiselect-checkboxes { position: relative; overflow-y: auto; list-style: none; max-height: 240px; height: auto !important; }
+
+.ui-multiselect-checkboxes label { cursor: default; display: block; border: 1px solid transparent; padding: 3px 1px; }
+
+.ui-multiselect-checkboxes label { display: block; cursor: pointer; position: relative; padding: 6px 5px 6px 30px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.ui-multiselect-checkboxes label input { position: absolute; left: 6px; top: 50%; margin-top: -8px; width: 17px; height: 17px; opacity: 0; z-index: 2; }
+.ui-multiselect-checkboxes label input:checked + span:before { display: block; }
+.ui-multiselect-checkboxes label span:before { display: none; content: ""; position: absolute; top: 50%; left: 10px; margin-top: -5px; background: url('../img/icons-s4efdc03548.png') 0 -226px no-repeat; width: 12px; height: 12px; z-index: 2; }
+.ui-multiselect-checkboxes label span:after { content: ""; position: absolute; top: 50%; left: 6px; margin-top: -8px; width: 16px; height: 16px; border: 1px solid #d5d5d5; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: white; -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); }
+
+.ui-multiselect-checkboxes li { display: list-item; }
+.ui-multiselect-checkboxes li:hover { background: #2cabdc; color: white; }
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label { text-align: center; font-weight: bold; border-bottom: 1px solid; }
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a { display: block; padding: 3px; margin: 1px 0; text-decoration: none; }
+
+.ui-multiselect-hasfilter ul { position: relative; top: 2px; }
+
+.ui-multiselect-filter { font-size: 0; position: relative; margin: 6px; }
+.ui-multiselect-filter:after { content: ""; position: absolute; top: 50%; margin-top: -7px; right: 10px; background: url('../img/icons-s4efdc03548.png') 0 -101px no-repeat; width: 15px; height: 15px; }
+
+.ui-multiselect-filter input { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px 30px 5px 5px; width: 100%; height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-size: 12px; background: white; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); }
+.ui-multiselect-filter input::-webkit-search-cancel-button { margin-right: 0; }
+.ui-multiselect-filter input:focus { border: 1px solid #aacdda; background: #bfe5f3; outline: none; color: black; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset { border: none; }
+
+input[type="submit"], button { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 button::-moz-focus-inner { padding: 0; border: 0; }

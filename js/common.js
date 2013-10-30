@@ -32,4 +32,10 @@ $(document).ready(function() {
             $(this).closest('tr').remove();
         }
     });
+
+    $(".js-multi-select").multiselect({
+        selectedList: 4,
+        noneSelectedText: "Select an Option",
+        header: ""
+    }).multiselectfilter();
 });
