@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-
-	//chosen stuff
-	var config = {
+  //chosen stuff
+  var config = {
       '.chosen-select'           : {stay_open:true},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
       '.chosen-select-no-single' : {disable_search_threshold:10},
