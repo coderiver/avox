@@ -27,7 +27,6 @@ $(document).ready(function() {
 
 
     $('.icon-delete').click(function (e) {
-      
       var strconfirm = confirm("Are you sure you want to delete?");
       if (strconfirm == true) {
             $(this).closest('tr').remove();
