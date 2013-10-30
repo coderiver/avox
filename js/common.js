@@ -37,4 +37,9 @@ $(document).ready(function() {
         noneSelectedText: "Select an Option",
         header: ""
     }).multiselectfilter();
+
+
+    $('.clearselect').click(function (e) {
+     $(this).siblings('select').multiselect("uncheckAll");
+    });
 });
