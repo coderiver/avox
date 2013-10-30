@@ -100,7 +100,7 @@
 
 .chosen-container-active.chosen-with-drop .chosen-single div b { background-position: -18px 2px; }
 
-.chosen-container-active .chosen-choices { position: relative; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; width: 100%; height: auto !important; min-height: 32px; border: 1px solid #abceda; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: #bfe6f4; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); cursor: text; }
+.chosen-container-active .chosen-choices { position: relative; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0 20px 0 0; width: 100%; height: auto !important; min-height: 32px; border: 1px solid #abceda; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: #bfe6f4; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); cursor: text; }
 
 .chosen-container-active .chosen-choices li.search-field input[type="text"] { color: #111111 !important; }
 
