@@ -7,7 +7,10 @@
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	<script src="js/chosen.js"></script>
+	<script src="js/jquery.multiselect.js"></script>
+	<script src="js/jquery.multiselect.filter.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body class="is-popup">
@@ -35,17 +38,31 @@
 		<div class="group group_text">
 			<div class="group__title">
 				<h2>ADD NOTE</h2>
-				<div class="group__add"></div>
+				<div class="group__add group__addnote is-activeelement">
+					
+					<div class="addnote" class="is-dropped" hidden>
+						<textarea name="" id="" cols="30" rows="10" class="input_textarea input"></textarea>
+						<div class="addnote__file toclone" hidden></div>
+						<div class="addnote__file">
+							<input type="file" name="" id="">
+							<div class="button">Add file</div>
+						</div>
+						<div class="addnote__submit">
+							<div class="button button_blue">Add note</div>
+						</div>
+					</div>
+				</div>
 			</div>
             <table hidden class="js-table-row">
                 <tr>
                       <td>
-                          
+                          &nbsp;
                       </td>
+                      <td>&nbsp;</td>
                       <td>
                       </td>
                       <td></td>
-                      <td><div class="icon-delete"></div></td>
+                      <td class="td_icon"><div class="icon-delete"></div></td>
                 </tr>
             </table>
 			<div class="group__content">
@@ -53,6 +70,7 @@
 					<thead>
 						<tr>
 							<th>Added by</th>
+							<th>Added on</th>
 							<th>Notes</th>
                                           <th>Attachments</th>
 							<th>&nbsp;</th>
@@ -60,22 +78,20 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>
-                                                <strong>Eddy</strong> 2013 Nov 25   20:17   +13:00
-                                          </td>
-                                          <td>We can attach a file to a note, it is very easy!</td>
-                                          <td><a href="#">Alaska tech forms.xlsx</a></td>
-                                          <td><div class="icon-delete"></div></td>
+							<td><strong>Eddy</strong></td> 
+                            <td>2013 Nov 25   20:17   +13:00</td>
+                              <td>We can attach a file to a note, it is very easy!</td>
+                              <td><a href="#">Alaska tech forms.xlsx</a></td>
+                              <td class="td_icon"><div class="icon-delete"></div></td>
 						</tr>
-                                    <tr>
-                                          <td>
-                                                <strong>Eddy</strong> 2013 Nov 25   20:17   +13:00
-                                          </td>
-                                          <td>We can attach a file to a note, it is very easy! Very easy, very funny, total free, smart,cool, so nice, for everybody, seven days per week. Enjoy!
-                                          </td>
-                                          <td><a href="#">Alaska tech forms.xlsx</a></td>
-                                          <td><div class="icon-delete"></div></td>
-                                    </tr>
+                        <tr>
+                              <td><strong>Eddy</strong></td> 
+                            <td>2013 Nov 25   20:17   +13:00</td>
+                              <td>We can attach a file to a note, it is very easy! Very easy, very funny, total free, smart,cool, so nice, for everybody, seven days per week. Enjoy!
+                              </td>
+                              <td><a href="#">Alaska tech forms.xlsx</a></td>
+                              <td class="td_icon"><div class="icon-delete"></div></td>
+                        </tr>
 					</tbody>
 				</table>
 			</div>

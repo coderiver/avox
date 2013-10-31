@@ -68,6 +68,9 @@
     background: #f7f7f7
     border: 1px solid #c8c8c8
     +box-shadow(0 3px 15px rgba(0,0,0,.2))
+    width: auto !important 
+    max-width: 460px
+    padding-right: 2px 
     &:before,
     &:after
         content: ""
@@ -90,6 +93,7 @@
 .ui-multiselect-checkboxes
     position: relative
     overflow-y: auto
+    overflow-x: hidden
     list-style: none
     max-height: 240px
     height: auto !important

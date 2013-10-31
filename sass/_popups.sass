@@ -55,4 +55,40 @@
 		border: 1px solid #2babdb
 		+box-shadow(0 0 5px rgba(44,171,220,.4), inset 0 1px 1px rgba(0,1,1,.05))
 
-
+.group__add
+	position: relative
+.addnote
+	position: absolute
+	cursor: default
+	left: -10px 
+	top: 32px 
+	border-radius: 2px
+	background: #DCDCDC
+	border: 1px solid #D1D1D1  
+	box-shadow: 0 0 10px rgba(#000, .2)
+	padding: 10px 
+	width: 310px 
+	&:before
+		position: absolute
+		top: -8px 
+		left: 16px 
+		+s(toparr)
+		content: ' '
+	textarea
+		margin-bottom: 10px 
+	.addnote__submit
+		text-align: center
+		padding-bottom: 5px 
+		margin-top: 10px 
+	.addnote__file
+		position: relative
+		padding-top: 3px 
+		min-height: 27px 
+		*
+			vertical-align: middle
+		.button
+			border: 1px solid #C4C4C4 
+			border-radius: 2px
+			position: absolute
+			right: 0
+			top: 0  

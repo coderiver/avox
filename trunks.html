@@ -6,30 +6,29 @@
 	<title>Template</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-      <script src="js/jquery.js"></script>
-      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-      <script src="js/chosen.js"></script>
-      <script src="js/jquery.multiselect.js"></script>
-      <script src="js/jquery.multiselect.filter.js"></script>
-      <script src="js/common.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script src="js/chosen.js"></script>
+	<script src="js/jquery.multiselect.js"></script>
+	<script src="js/jquery.multiselect.filter.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body class="is-popup">
-
 <!-- BEGIN popup -->
 <div class="tabwindow"><div class="tabwindow__in">
 	<!-- begin popup__nav  -->
 	<div class="tabwindow__nav">
 		<ul class="tabs">
 			<li><a href="client-info.html">Client info</a></li>
-                  <li><a href="ip.html">IP</a></li>
-                  <li><a href="trunks.html" class="is-active">Trunks</a></li>
-                  <li><a href="blocks.html">Blocks</a></li>
-                  <li><a href="translations.html">Translations</a></li>
-                  <li><a href="notes.html">Notes</a></li>
+			<li><a href="ip.html">IP</a></li>
+			<li><a href="trunks.html" class="is-active">Trunks</a></li>
+			<li><a href="blocks.html">Blocks</a></li>
+			<li><a href="translations.html">Translations</a></li>
+			<li><a href="notes.html">Notes</a></li>
 		</ul>
-            <div class="tabwindow__state">
-                  Alaska
-            </div>
+		<div class="tabwindow__state">
+			Alaska
+		</div>
 	</div>
 	<!-- end popup__nav -->
 	<!-- BEGIN popup__content -->
@@ -40,59 +39,58 @@
 				<h2>origination trunks</h2>
 				<div class="group__add"></div>
 			</div>
-                  <table hidden class="js-table-row">
-                        <tr>
-                              <td>
-                                    <label class="customcheckbox" for="">
-                                          <input type="checkbox" name="" id="">
-                                          <i></i>
-                                    </label>
-                              </td>
-                              <td>
-                                    <input type="text" class="input">  
-                              </td>
-                              <td>
-                                    <select data-placeholder="IP Address (es)" class="js-select-multi-new" multiple  >
-                                          <option value="192.168.0.1">Whatever</option>
-                                          <option value="192.168.0.1">192.168.0.1</option>
-                                          <option value="192.168.0.2">192.168.0.2</option>
-                                          <option value="192.168.0.3">192.168.0.3</option>
-                                          <option value="192.168.0.4">192.168.0.4</option>
-                                    </select>
-                                   
-                              </td>
-                              <td><input type="text" class="input">  </td>
-                              <td><input type="password" class="input">  </td>
-                              <td>
-                                    <select data-placeholder="ORIG Rate Table" class="js-select" >
-                                          <option value="">asd&nbsp;</option>
-                                          <option value="Slovak premium some">Slovak premium some</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                    </select>                                   
-                              </td>
-                              <td>
-                                    <select data-placeholder="Routing Plan" class="js-select" >
-                                          <option value="">&nbsp;</option>
-                                          <option value="Slovak premium some">Slovak premium some</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                    </select> 
-                              </td>
-                              <td><input type="text" class="input" style="width:40px"></td>
-                              <td></td>
-                              <td></td>
-                              <td><div class="icon-delete"></div></td>
-                        </tr>
-                  </table>
+			<table hidden class="js-table-row">
+				<tr>
+					<td class="td_icon">
+						<label class="customcheckbox" for="">
+							<input type="checkbox" name="" id="">
+							<i></i>
+						</label>
+					</td>
+					<td>
+						<input type="text" class="input">  
+					</td>
+					<td>
+						<select data-placeholder="IP Address (es)"  multiple  >
+							<option value="192.168.0.1">Whatever</option>
+							<option value="192.168.0.1">192.168.0.1</option>
+							<option value="192.168.0.2">192.168.0.2</option>
+							<option value="192.168.0.3">192.168.0.3</option>
+							<option value="192.168.0.4">192.168.0.4</option>
+						</select>
+					</td>
+					<td><input type="text" class="input">  </td>
+					<td><input type="password" class="input">  </td>
+					<td>
+						<select data-placeholder="ORIG Rate Table" class="js-select" >
+							<option value="">asd&nbsp;</option>
+							<option value="Slovak premium some">Slovak premium some</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+						</select>                                   
+					</td>
+					<td>
+						<select data-placeholder="Routing Plan" class="js-select" >
+							<option value="">&nbsp;</option>
+							<option value="Slovak premium some">Slovak premium some</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+						</select> 
+					</td>
+					<td><input type="text" class="input" style="width:40px"></td>
+					<td></td>
+					<td></td>
+					<td class="td_icon"><div class="icon-delete"></div></td>
+				</tr>
+			</table>
 			<div class="group__content">
 				<table class="table">
 					<thead>
@@ -112,137 +110,170 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td class="td_icon">
+						<label class="customcheckbox" for="">
+									<input type="checkbox" name="" id="">
+									<i></i>
+								</label>
+							</td>
 							<td>
-                                                <label class="customcheckbox" for="">
-                                                      <input type="checkbox" name="" id="">
-                                                      <i></i>
-                                                </label>
-                                          </td>
+								<input type="text" class="input">            
+							</td>
 							<td>
-                                                <input type="text" class="input">            
-                                          </td>
-							<td class="multipleselect">
-                                                <select class="js-multi-select" multiple="multiple" >
-                                                      <option value="192.168.0.1">192.168.0.1</option>
-                                                      <option value="192.168.0.1">192.168.0.2</option>
-                                                      <option value="192.168.0.1">192.168.0.3</option>
-                                                      <option value="192.168.0.1">192.168.0.4</option>
-                                                </select>
-                                                 <div class="clearselect">
-                                          ♺
-                                    </div>
-                                          </td>
+								<select class="js-select-multi" multiple="multiple" >
+									<option value="192.168.0.1">192.168.0.1192.168.0.1192.168.0.1192.168.0.1192.168.0.1192.168.0.1</option>
+									<option value="192.168.0.1">192.168.0.2</option>
+									<option value="192.168.0.1">192.168.0.3</option>
+									<option value="192.168.0.1">192.168.0.4</option>
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+								</select>
+							</td>
 							<td><input type="text" class="input">  </td>
 							<td><input type="password" class="input">  </td>
 							<td>
-                                                <select data-placeholder="ORIG Rate Table" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select>                                   
-                                          </td>
+								<select data-placeholder="ORIG Rate Table" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>                                   
+							</td>
 							<td>
-                                                <select data-placeholder="Routing Plan" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select> 
-                                          </td>
+								<select data-placeholder="Routing Plan" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select> 
+							</td>
 							<td><input type="text" class="input" style="width:40px"></td>
 							<td>2013 Sep 19   23:45:17   +03:00</td>
 							<td>Eddy</td>
-							<td><div class="icon-delete"></div></td>
+							<td class="td_icon"><div class="icon-delete"></div></td>
 						</tr>
-                                    <tr>
-                                          <td>
-                                                <label class="customcheckbox" for="">
-                                                      <input type="checkbox" name="" id="">
-                                                      <i></i>
-                                                </label>
-                                          </td>
-                                          <td>
-                                                <input type="text" class="input">            
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
-                                                      <option value="192.168.0.1">192.168.0.1</option>
-                                                      <option value="192.168.0.2">192.168.0.2</option>
-                                                      <option value="192.168.0.3">192.168.0.3</option>
-                                                      <option value="192.168.0.4">192.168.0.4</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input">  </td>
-                                          <td><input type="password" class="input">  </td>
-                                          <td>
-                                                <select data-placeholder="ORIG Rate Table" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select>                                   
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="Routing Plan" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select> 
-                                          </td>
-                                          <td><input type="text" class="input" style="width:40px"></td>
-                                          <td>2013 Sep 19   23:45:17   +03:00</td>
-                                          <td>Eddy</td>
-                                          <td><div class="icon-delete"></div></td>
-                                    </tr>
-                                    <tr>
-                                          <td>
-                                                <label class="customcheckbox" for="">
-                                                      <input type="checkbox" name="" id="">
-                                                      <i></i>
-                                                </label>
-                                          </td>
-                                          <td>
-                                                <input type="text" class="input">            
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
-                                                      <option value="192.168.0.1">192.168.0.1</option>
-                                                      <option value="192.168.0.2">192.168.0.2</option>
-                                                      <option value="192.168.0.3">192.168.0.3</option>
-                                                      <option value="192.168.0.4">192.168.0.4</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input">  </td>
-                                          <td><input type="password" class="input">  </td>
-                                          <td>
-                                                <select data-placeholder="ORIG Rate Table" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select>                                   
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="Routing Plan" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select> 
-                                          </td>
-                                          <td><input type="text" class="input" style="width:40px"></td>
-                                          <td>2013 Sep 19   23:45:17   +03:00</td>
-                                          <td>Eddy</td>
-                                          <td><div class="icon-delete"></div></td>
-                                    </tr>
+						<tr>
+							<td class="td_icon">
+						<label class="customcheckbox" for="">
+									<input type="checkbox" name="" id="">
+									<i></i>
+								</label>
+							</td>
+							<td>
+								<input type="text" class="input">            
+							</td>
+							<td>
+								<select data-placeholder="IP Address (es)" class="js-select-multi" multiple="multiple">
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+								</select>
+							</td>
+							<td><input type="text" class="input">  </td>
+							<td><input type="password" class="input">  </td>
+							<td>
+								<select data-placeholder="ORIG Rate Table" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>                                   
+							</td>
+							<td>
+								<select data-placeholder="Routing Plan" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select> 
+							</td>
+							<td><input type="text" class="input" style="width:40px"></td>
+							<td>2013 Sep 19   23:45:17   +03:00</td>
+							<td>Eddy</td>
+							<td class="td_icon"><div class="icon-delete"></div></td>
+						</tr>
+						<tr>
+							<td class="td_icon">
+						<label class="customcheckbox" for="">
+									<input type="checkbox" name="" id="">
+									<i></i>
+								</label>
+							</td>
+							<td>
+								<input type="text" class="input">            
+							</td>
+							<td>
+								<select data-placeholder="IP Address (es)" class="js-select-multi" multiple="multiple">
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+								</select>
+							</td>
+							<td><input type="text" class="input">  </td>
+							<td><input type="password" class="input">  </td>
+							<td>
+								<select data-placeholder="ORIG Rate Table" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>                                   
+							</td>
+							<td>
+								<select data-placeholder="Routing Plan" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select> 
+							</td>
+							<td><input type="text" class="input" style="width:40px"></td>
+							<td>2013 Sep 19   23:45:17   +03:00</td>
+							<td>Eddy</td>
+							<td class="td_icon"><div class="icon-delete"></div></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -254,51 +285,51 @@
 				<h2>termination trunks</h2>
 				<div class="group__add"></div>
 			</div>
-                  <table hidden class="js-table-row">
-                        <tr>
-                              <td>
-                                    <label class="customcheckbox" for="">
-                                          <input type="checkbox" name="" id="">
-                                          <i></i>
-                                    </label>
-                              </td>
-                              <td>
-                                    <input type="text" class="input">            
-                              </td>
-                              <td>
-                                    <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
-                                          <option value="192.168.0.1">192.168.0.1</option>
-                                          <option value="192.168.0.2">192.168.0.2</option>
-                                          <option value="192.168.0.3">192.168.0.3</option>
-                                          <option value="192.168.0.4">192.168.0.4</option>
-                                    </select>
-                              </td>
-                              <td><input type="text" class="input">  </td>
-                              <td><input type="password" class="input">  </td>
-                              <td>
-                                    <select data-placeholder="TERM Rate Table" class="js-select" >
-                                          <option value="">&nbsp;</option>
-                                          <option value="Slovak premium some">Slovak premium some</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                    </select>                                  
-                              </td>
-                              <td>
-                                    <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
-                                          <option value="">&nbsp;</option>
-                                          <option value="Slovak premium some">Slovak premium some</option>
-                                          <option value="var2">var2</option>
-                                          <option value="var3">var3</option>
-                                          <option value="var4">var4</option>
-                                    </select>
-                              </td>
-                              <td><input type="text" class="input" style="width:40px"></td>
-                              <td></td>
-                              <td></td>
-                              <td><div class="icon-delete"></div></td>
-                        </tr>
-                  </table>
+			<table hidden class="js-table-row">
+				<tr>
+					<td class="td_icon">
+						<label class="customcheckbox" for="">
+							<input type="checkbox" name="" id="">
+							<i></i>
+						</label>
+					</td>
+					<td>
+						<input type="text" class="input">            
+					</td>
+					<td>
+						<select data-placeholder="IP Address (es)"  multiple="multiple">
+							<option value="192.168.0.1">192.168.0.1</option>
+							<option value="192.168.0.2">192.168.0.2</option>
+							<option value="192.168.0.3">192.168.0.3</option>
+							<option value="192.168.0.4">192.168.0.4</option>
+						</select>
+					</td>
+					<td><input type="text" class="input">  </td>
+					<td><input type="password" class="input">  </td>
+					<td>
+						<select data-placeholder="TERM Rate Table" class="js-select" >
+							<option value="">&nbsp;</option>
+							<option value="Slovak premium some">Slovak premium some</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+						</select>                                  
+					</td>
+					<td>
+						<select data-placeholder="Groups"  multiple="multiple">
+							<option value="">&nbsp;</option>
+							<option value="Slovak premium some">Slovak premium some</option>
+							<option value="var2">var2</option>
+							<option value="var3">var3</option>
+							<option value="var4">var4</option>
+						</select>
+					</td>
+					<td><input type="text" class="input" style="width:40px"></td>
+					<td></td>
+					<td></td>
+					<td class="td_icon"><div class="icon-delete"></div></td>
+				</tr>
+			</table>
 			<div class="group__content">
 				<table class="table">
 					<thead>
@@ -318,88 +349,89 @@
 					</thead>
 					<tbody>
 						<tr>
-                                          <td>
-                                                <label class="customcheckbox" for="">
-                                                      <input type="checkbox" name="" id="">
-                                                      <i></i>
-                                                </label>
-                                          </td>
-                                          <td>
-                                                <input type="text" class="input">            
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
-                                                      <option value="192.168.0.1">192.168.0.1</option>
-                                                      <option value="192.168.0.2">192.168.0.2</option>
-                                                      <option value="192.168.0.3">192.168.0.3</option>
-                                                      <option value="192.168.0.4">192.168.0.4</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input">  </td>
-                                          <td><input type="password" class="input">  </td>
-                                          <td>
-                                                <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select>                                   
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
-                                                      <option value="Japan">Japan</option>
-                                                      <option value="USA">USA</option>
-                                                      <option value="Italy">Italy</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input" style="width:40px"></td>
-                                          <td>2013 Sep 19   23:45:17   +03:00</td>
-                                          <td>Eddy</td>
-                                          <td><div class="icon-delete"></div></td>
-                                    </tr>
-                                    <tr>
-                                          <td>
-                                                <label class="customcheckbox" for="">
-                                                      <input type="checkbox" name="" id="">
-                                                      <i></i>
-                                                </label>
-                                          </td>
-                                          <td>
-                                                <input type="text" class="input">            
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="IP Address (es)" class="js-multi-select" multiple="multiple">
-                                                      <option value="192.168.0.1">192.168.0.1</option>
-                                                      <option value="192.168.0.2">192.168.0.2</option>
-                                                      <option value="192.168.0.3">192.168.0.3</option>
-                                                      <option value="192.168.0.4">192.168.0.4</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input">  </td>
-                                          <td><input type="password" class="input">  </td>
-                                          <td>
-                                                <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Slovak premium some">Slovak premium some</option>
-                                                      <option value="var2">var2</option>
-                                                      <option value="var3">var3</option>
-                                                      <option value="var4">var4</option>
-                                                </select>                                    
-                                          </td>
-                                          <td>
-                                                <select data-placeholder="Groups" class="js-multi-select" multiple="multiple">
-                                                      <option value="">&nbsp;</option>
-                                                      <option value="Japan">Japan</option>
-                                                      <option value="USA">USA</option>
-                                                      <option value="Italy">Italy</option>
-                                                </select>
-                                          </td>
-                                          <td><input type="text" class="input" style="width:40px"></td>
-                                          <td>2013 Sep 19   23:45:17   +03:00</td>
-                                          <td>Eddy</td>
-                                          <td><div class="icon-delete"></div></td>
-                                    </tr>
+							<td class="td_icon">
+									<label class="customcheckbox" for="">
+									<input type="checkbox" name="" id="">
+									<i></i>
+								</label>
+							</td>
+							<td>
+								<input type="text" class="input">            
+							</td>
+							<td>
+								<select data-placeholder="IP Address (es)" class="js-select-multi" multiple="multiple">
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+
+								</select>
+							</td>
+							<td><input type="text" class="input">  </td>
+							<td><input type="password" class="input">  </td>
+							<td>
+								<select data-placeholder="TERM Rate Table" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>                                   
+							</td>
+							<td>
+								<select data-placeholder="Groups" class="js-select-multi" multiple="multiple">
+									<option value="Japan">Japan</option>
+									<option value="USA">USA</option>
+									<option value="Italy">Italy</option>
+								</select>
+							</td>
+							<td><input type="text" class="input" style="width:40px"></td>
+							<td>2013 Sep 19   23:45:17   +03:00</td>
+							<td>Eddy</td>
+							<td class="td_icon"><div class="icon-delete"></div></td>
+						</tr>
+						<tr>
+							<td class="td_icon">
+						<label class="customcheckbox" for="">
+									<input type="checkbox" name="" id="">
+									<i></i>
+								</label>
+							</td>
+							<td>
+								<input type="text" class="input">            
+							</td>
+							<td>
+								<select data-placeholder="IP Address (es)" class="js-select-multi" multiple="multiple">
+									<option value="192.168.0.1">192.168.0.1</option>
+									<option value="192.168.0.2">192.168.0.2</option>
+									<option value="192.168.0.3">192.168.0.3</option>
+									<option value="192.168.0.4">192.168.0.4</option>
+								</select>
+							</td>
+							<td><input type="text" class="input">  </td>
+							<td><input type="password" class="input">  </td>
+							<td>
+								<select data-placeholder="TERM Rate Table" class="chosen-select" >
+									<option value="">&nbsp;</option>
+									<option value="Slovak premium some">Slovak premium some</option>
+									<option value="var2">var2</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>                                    
+							</td>
+							<td>
+								<select data-placeholder="Groups" class="js-select-multi" multiple="multiple">
+									<option value="">&nbsp;</option>
+									<option value="Japan">Japan</option>
+									<option value="USA">USA</option>
+									<option value="Italy">Italy</option>
+								</select>
+							</td>
+							<td><input type="text" class="input" style="width:40px"></td>
+							<td>2013 Sep 19   23:45:17   +03:00</td>
+							<td>Eddy</td>
+							<td class="td_icon"><div class="icon-delete"></div></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
