@@ -72,6 +72,8 @@ $(document).ready(function() {
 			newhtml = '<tr><td>John Doe</td><td>1970</td><td>'+newtext+'</td><td><a href="#">filename</a></td><td class="td_icon"><div class="icon-delete"></div></td></tr>';
 			var wheretoprepend = $('.table tbody tr:first-child');
 			wheretoprepend.before(newhtml);
+			$('.addnote').hide();
+			return false;
 		});
 
 });
