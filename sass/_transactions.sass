@@ -1,0 +1,127 @@
+body    
+    font-size: 12px
+    color: #5c5c5c 
+.header__top
+    overflow: hidden
+    padding: 15px 0 24px 
+.header__info
+    float: right
+    span
+        position: relative
+        padding-left: 10px
+        margin-left: 10px
+        display: inline-block
+        &:first-child
+            padding-left: 0
+            margin-left: 0
+            &:before
+                display: none
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 2px
+            height: 14px
+            width: 1px
+            background: #c7c7c7  
+.header__user
+    float: right
+    span
+        display: inline-block
+        position: relative
+        padding-right: 10px
+        margin-right: 10px
+        &:before
+            content: ""
+            position: absolute
+            right: 0
+            top: 2px
+            height: 14px
+            width: 1px
+            background: #c7c7c7  
+    a
+        color: #5b5b5b
+        font-weight: bold
+        font-size: 12px
+        text-decoration: none 
+        
+.l-container
+    width: 90%
+    margin: 0 auto 
+
+.nav-wrap
+    background: #84b6c9
+    height: 52px
+    line-height: 52px 
+.nav
+    overflow: hidden
+    float: left
+    li
+        float: left
+        &:first-child
+            a
+                border-left: 2px solid #fff
+    .is-active
+        a
+            background: #2aa6da 
+    a
+        display: block
+        padding: 0 20px 
+        color: #fff
+        border-right: 2px solid #fff
+        font-size: 13px
+        font-weight: bold
+        text-decoration: none
+        text-shadow: 0 1px 0 rgba(132,182,201,.4)
+        +transition(background .2s linear)
+        &:hover
+            background: #2aa6da 
+
+.nav-info
+    float: right
+    li
+        float: left
+        margin-left: 20px
+        .icon
+            margin-right: 10px
+        .icon,
+        span
+            display: inline-block
+            vertical-align: middle
+        @for $i from 1 through 4
+            .icon_nav#{$i} 
+                +s(icon#{$i})
+    a
+        font-size: 12px
+        text-decoration: none
+        color: #5c5c5c 
+        
+.trans
+    table-layout: fixed
+    width: 100% 
+    thead
+        background: #ccc 
+    .is-rotate
+        display: block
+        +rotate(-90)
+    tbody
+        td
+            text-align: center
+            vertical-align: middle
+            border-left: 1px solid #e7e7e7 
+.btn-edit
+    +s(edit)
+.btn-routing
+    +s(routing)
+.btn-block
+    +s(block)
+.btn-rates
+    +s(rates)
+.btn-rates
+    +s(rates)
+.btn-dollar
+    +s(dollar)
+.btn-list
+    +s(list)
+.btn-traffic
+    +s(traffic)
