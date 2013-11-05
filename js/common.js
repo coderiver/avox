@@ -96,7 +96,7 @@ $(document).ready(function() {
 				var width = $(this).width();
 				$(this).attr("data-class","td-"+i);
 				var class_td = $(this).attr("data-class");
-				$("."+class_td).css("width", width);
+				$("."+class_td).css("width", width-6);
 			});
 		}
 		td_width();
@@ -104,5 +104,9 @@ $(document).ready(function() {
 		$(window).resize(function(){
 			td_width();
 		}); 
+
+		$(".trans-body tr").click(function(){
+			$(this).toggleClass("is-clicked");
+		});
 
 });

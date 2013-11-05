@@ -449,7 +449,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; }
 
 .trans-head { width: 100%; border-spacing: 0; border-collapse: collapse; background: #e7e7e7; }
 .trans-head div { position: relative; height: 20px; }
-.trans-head td { font-size: 13px; font-weight: normal; vertical-align: middle; text-align: center; border-left: 1px solid white; border-top: 1px solid white; padding: 2px 0; }
+.trans-head td { font-size: 13px; font-weight: normal; vertical-align: middle; text-align: center; border-left: 1px solid white; border-top: 1px solid white; padding: 2px 3px; }
 @media only screen and (max-width: 1650px) { .trans-head td { font-size: 11px; } }
 .trans-head .is-rotate { display: block; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
 .trans-head .td-6, .trans-head .td-7, .trans-head .td-8, .trans-head .td-9, .trans-head .td-10 { padding-bottom: 40px; }
@@ -462,7 +462,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; }
 .trans-body tr:hover { background: #cfe8f0; }
 .trans-body tr.is-clicked { background: #ffefe5; }
 .trans-body tr.is-clicked:nth-child(2n) { background: #f8e8de; }
-.trans-body td { text-align: center; padding: 2px 0; vertical-align: middle; border-left: 1px solid #e7e7e7; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
+.trans-body td { text-align: center; padding: 2px 3px; vertical-align: middle; border-left: 1px solid #e7e7e7; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
 .trans-body td:nth-child(2) { color: #5f889d; }
 .trans-body td.is-green { color: #438420; }
 .trans-body td.is-red { color: #990000; }
