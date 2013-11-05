@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 
 		function fixed_filter() {
-			var header_height = $(".header").outerHeight();
+			var header_height = $(".js-header").outerHeight();
 			if ($(window).scrollTop() >= header_height) {
 				$("body").addClass("is-fixed-table");
 			}

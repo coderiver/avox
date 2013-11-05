@@ -11,10 +11,11 @@
     <script src="js/chosen.js"></script>
     <script src="js/jquery.multiselect.js"></script>
     <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/paginator3000.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body class="is-fixed-table">
-    <header class="header">
+    <header class="header js-header">
         <div class="header__top l-container">
             <div class="header__user">
                 <span>
@@ -136,17 +137,46 @@
                 </div>
             </div>
             <div class="filter__bottom l-container">
-                <button class="button button_blue button_icon">
-                    <i class="icon icon_add"></i>Add Client
-                </button>
-                <button class="button button_blue button_icon">
-                    <i class="icon icon_export"></i>Export list
-                </button>
+                <div class="action">
+                    <button class="button button_blue button_icon">
+                        <i class="icon icon_add"></i>Add Client
+                    </button>
+                    <button class="button button_blue button_icon">
+                        <i class="icon icon_export"></i>Export list
+                    </button>
+                </div>
+                <div class="pagin">
+                    <div class="pagin__select">
+                        <div class="pagin__select-text">
+                            Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                        </div>
+                        <div class="pagin__select-main">
+                            <select class="chosen-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="pagin__nav">
+                        <div class="paginator" id="paginator1"></div>
+                        <div class="paginator_pages">1024 pages</div>
+                        <script type="text/javascript">
+                            pag1 = new Paginator('paginator1', 20, 7, 5, "");
+                        </script>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="l-container trans">
-        
         <div class="trans-head-wrap">
             <table class="trans-head">
                 <thead>
@@ -245,22 +275,6 @@
                             </div>
                         </td>
                     </tr>
-                    <!-- <tr>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_top"><i></i></button></td>
-                        <td><button class="btn-sort btn-sort_down"><i></i></button></td>
-                    </tr> -->
                 </thead>
             </table>
         </div>
@@ -1066,6 +1080,207 @@
                     <td colspan="2">15 000</td>
                     <td colspan="2">Darina Bondarets</td>
                 </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">ALOE</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1299</td>
+                    <td colspan="2" class="is-gray">AMB</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">ALOE</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1299</td>
+                    <td colspan="2" class="is-gray">AMB</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">ALOE</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1299</td>
+                    <td colspan="2" class="is-gray">AMB</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">ALOE</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1299</td>
+                    <td colspan="2" class="is-gray">AMB</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">ALOE</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+                <tr>
+                    <td>1299</td>
+                    <td colspan="2" class="is-gray">AMB</td>
+                    <td class="td-icon"><button class="btn-edit"></button></td>
+                    <td class="td-icon"><button class="btn-routing"></button></td>
+                    <td class="td-icon"><button class="btn-block"></button></td>
+                    <td class="td-icon"><button class="btn-rates"></button></td>
+                    <td colspan="2" class="is-green">55 456.50</td>
+                    <td class="td-icon"><button class="btn-dollar"></button></td>
+                    <td class="td-icon"><button class="btn-list"></button></td>
+                    <td colspan="2">0.00</td>
+                    <td colspan="2" class="is-red">-3 567.33</td>
+                    <td colspan="2">30net30</td>
+                    <td class="td-icon"><button class="btn-traffic"></button></td>
+                    <td>James Raynor</td>
+                    <td colspan="2">-12:00</td>
+                    <td colspan="2">2013 Sep 09</td>
+                    <td colspan="2">15 000</td>
+                    <td colspan="2">Darina Bondarets</td>
+                </tr>
+
             </tbody>
         </table>
     </div>

@@ -290,6 +290,27 @@ body
     +background-image(linear-gradient(top, #f5f5f5 0%, #e3e3e3 100%))  
 .filter__bottom
     padding: 32px 0 0
+    @extend %clr
+    .action
+        float: left
     .button
         margin-top: 32px
-    
+
+.pagin
+    float: right
+    @extend %clr
+    .chosen-container
+        min-width: 100% !important 
+.pagin__select,
+.pagin__nav,
+.pagin__select-text,
+.pagin__select-main
+    display: inline-block
+    vertical-align: middle
+.pagin__select
+    margin-right: 46px
+.pagin__select-main
+    width: 60px
+    margin-left: 20px
+.pagin__nav
+    width: 220px
