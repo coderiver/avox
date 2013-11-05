@@ -109,4 +109,10 @@ $(document).ready(function() {
 			$(this).toggleClass("is-clicked");
 		});
 
+		$(".js-clear-select").click(function(){
+			$(this).prev().find(".js-select-multi").multiselect("uncheckAll");
+			//alert();
+			return false;
+		});
+
 });
