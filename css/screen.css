@@ -226,7 +226,7 @@ button::-moz-focus-inner { padding: 0; border: 0; }
 
 input[type="submit"]::-moz-focus-inner { padding: 0; border: 0; }
 
-body { font-family: Tahoma, sans-serif; font-weight: normal; font-size: 12px; min-width: 960px; line-height: 1.4; }
+body { font-family: Tahoma, sans-serif; font-weight: normal; font-size: 12px; min-width: 1000px; line-height: 1.4; }
 
 textarea, input { font-family: Tahoma, sans-serif; }
 
@@ -236,8 +236,8 @@ a img, fieldset { border: none; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.l-col4 { float: left; padding-left: 1%; width: 25%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.l-col4:first-child { padding-left: 0; }
+.l-col3 { float: left; padding-left: 1%; width: 33%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.l-col3:first-child { padding-left: 0; }
 
 html ::-moz-scrollbar { width: 8px; margin-right: 10px; }
 html ::-webkit-scrollbar { width: 8px; margin-right: 10px; }
@@ -407,7 +407,8 @@ html { height: 100%; }
 
 body { font-size: 12px; color: #5c5c5c; }
 body.is-fixed-table .trans-body { margin-top: 361px; }
-body.is-fixed-table .trans-head-wrap { position: fixed; left: 5%; right: 5%; top: 277px; }
+body.is-fixed-table .trans-head-wrap { position: fixed; left: 5%; right: 5%; top: 277px; min-width: 980px; }
+@media only screen and (max-width: 1650px) { body.is-fixed-table .trans-head-wrap { left: 1%; right: 1%; } }
 body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; }
 
 .header__top { overflow: hidden; padding: 15px 0 24px; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); background-image: -webkit-linear-gradient(bottom, #ffffff 0%, #fbfbfb 100%); background-image: -moz-linear-gradient(bottom, #ffffff 0%, #fbfbfb 100%); background-image: -o-linear-gradient(bottom, #ffffff 0%, #fbfbfb 100%); background-image: linear-gradient(bottom, #ffffff 0%, #fbfbfb 100%); }
@@ -425,6 +426,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; }
 .header__user a:hover { color: #2cabdc; }
 
 .l-container { width: 90%; margin: 0 auto; }
+@media only screen and (max-width: 1650px) { .l-container { width: 98%; } }
 
 .nav-wrap { background: #84b6c9; height: 52px; line-height: 52px; }
 
@@ -446,13 +448,13 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; }
 .nav-info a { font-size: 12px; text-decoration: none; color: #5c5c5c; }
 
 .trans-head { width: 100%; border-spacing: 0; border-collapse: collapse; background: #e7e7e7; }
-.trans-head div { position: relative; }
+.trans-head div { position: relative; height: 20px; }
 .trans-head td { font-size: 13px; font-weight: normal; vertical-align: middle; text-align: center; border-left: 1px solid white; border-top: 1px solid white; padding: 2px 0; }
+@media only screen and (max-width: 1650px) { .trans-head td { font-size: 11px; } }
 .trans-head .is-rotate { display: block; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
 .trans-head .td-6, .trans-head .td-7, .trans-head .td-8, .trans-head .td-9, .trans-head .td-10 { padding-bottom: 40px; }
-.trans-head .btns-wrap { position: absolute; bottom: 0; left: 0; width: 100%; }
-.trans-head .td-1 .btns-wrap, .trans-head .td-11 .btns-wrap, .trans-head .td-14 .btns-wrap, .trans-head .td-15 .btns-wrap, .trans-head .td-16 .btns-wrap, .trans-head .td-17 .btns-wrap { bottom: -33px; }
-.trans-head .td-6 .btns-wrap, .trans-head .td-9 .btns-wrap, .trans-head .td-10 .btns-wrap { bottom: -40px; }
+.trans-head .btns-wrap { position: absolute; bottom: 0; left: 0; top: 30px; height: 22px; width: 100%; }
+.trans-head .td-6 .btns-wrap, .trans-head .td-9 .btns-wrap, .trans-head .td-10 .btns-wrap { top: 39px; }
 
 .trans-body { width: 100%; border-spacing: 0; border-collapse: collapse; }
 .trans-body tr { -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }

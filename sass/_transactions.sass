@@ -9,6 +9,10 @@ body
             left: 5%
             right: 5%
             top: 277px
+            min-width: 980px
+            +r(1650)
+                left: 1%
+                right: 1%
         .filter__in
             position: fixed
             left: 0
@@ -65,7 +69,8 @@ body
 .l-container
     width: 90%
     margin: 0 auto 
-
+    +r(1650)
+        width: 98%
 .nav-wrap
     background: #84b6c9
     height: 52px
@@ -121,6 +126,7 @@ body
     background: #e7e7e7 
     div
         position: relative
+        height: 20px
     tr
         &:first-child
             td
@@ -140,6 +146,8 @@ body
         border-left: 1px solid #fff
         border-top: 1px solid #fff 
         padding: 2px 0 
+        +r(1650)
+            font-size: 11px
     .is-rotate
         display: block
         +rotate(-90)
@@ -149,24 +157,20 @@ body
     .td-9,
     .td-10
         padding-bottom: 40px
+        +r(1650)
+            //padding-bottom: 60px
     .btns-wrap
         position: absolute
         bottom: 0
         left: 0
+        top: 30px
+        height: 22px
         width: 100%
-    .td-1,
-    .td-11,
-    .td-14,
-    .td-15,
-    .td-16,
-    .td-17
-        .btns-wrap
-            bottom: -33px
     .td-6,
     .td-9,
     .td-10
         .btns-wrap
-            bottom: -40px
+            top: 39px
 .trans-body
     width: 100% 
     border-spacing: 0
