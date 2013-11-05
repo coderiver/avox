@@ -110,7 +110,7 @@ $(document).ready(function() {
 		});
 
 		$(".js-clear-select").click(function(){
-			$(this).prev().find(".js-select-multi").multiselect("uncheckAll");
+			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
 			//alert();
 			return false;
 		});
