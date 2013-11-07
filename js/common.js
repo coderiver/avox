@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 		function td_width() {
 			$(".trans-body tr").first().find("td").each(function(i){
-				var width = $(this).width();
+				var width = $(this).outerWidth();
 				$(this).attr("data-class","td-"+i);
 				var class_td = $(this).attr("data-class");
 				$("."+class_td).css("width", width-6);

@@ -20,7 +20,7 @@ body
             right: 0
             z-index: 2
 .header
-    
+    border-bottom: 1px solid #fff 
 .header__top
     overflow: hidden
     padding: 15px 0 24px 
@@ -47,6 +47,7 @@ body
             background: #c7c7c7  
 .header__user
     float: right
+    margin-left: 73px
     span
         display: inline-block
         position: relative
@@ -77,29 +78,58 @@ body
     height: 52px
     line-height: 52px 
 .nav
-    overflow: hidden
+    @extend %clr
     float: left
-    li
-        float: left
-        &:first-child
-            a
-                border-left: 2px solid #fff
-    .is-active
-        a
+.nav__item
+    position: relative
+    float: left
+    &:first-child
+        .nav__link
+            border-left: 2px solid #fff
+    &.is-active
+        .nav__link
             background: #2aa6da 
-    a
-        display: block
-        padding: 0 20px 
-        color: #fff
-        border-right: 2px solid #fff
-        font-size: 13px
-        font-weight: bold
-        text-decoration: none
-        text-shadow: 0 1px 0 rgba(132,182,201,.4)
-        +transition(background .2s linear)
-        &:hover
-            background: #2aa6da 
-
+    &:hover
+        .subnav
+            display: block
+.nav__link
+    display: block
+    padding: 0 20px 
+    color: #fff
+    border-right: 2px solid #fff
+    font-size: 13px
+    font-weight: bold
+    text-decoration: none
+    text-shadow: 0 1px 0 rgba(132,182,201,.4)
+    +transition(background .2s linear)
+    &:hover
+        background: #2aa6da 
+.subnav
+    display: none
+    position: absolute
+    top: 52px
+    left: 0
+    right: 0
+    z-index: 100
+    background: #f7f7f7 
+    border-radius: 0 0 2px 2px
+    box-shadow: 0 4px 7px rgba(0,0,0,.4)
+.subnav__item
+    &.is-active
+        .subnzv__link
+            color: #fff 
+            background: #2aa6da
+.subnav__link
+    display: block
+    padding: 9px 5px 8px 18px 
+    line-height: 1.1
+    color: #505050 
+    font-size: 12px
+    text-decoration: none
+    //+transition(all .2s linear)
+    &:hover
+        background: #2aa6da
+        color: #fff  
 .nav-info
     float: right
     li
@@ -119,7 +149,6 @@ body
         text-decoration: none
         color: #5c5c5c 
         
-.trans-head-wrap
 .trans-head
     width: 100% 
     border-spacing: 0
@@ -131,14 +160,10 @@ body
     tr
         &:first-child
             td
-                //border-top: 0
-                &:first-child
-                    //width: 30px
-        // &:last-child
-        //     td
-        //         //padding: 0
-        //         &:hover
-        //             background: #c5c5c5 
+                border-top: 1px solid #dedede 
+        &:last-child
+            td
+                border-bottom: 1px solid #dedede 
     td
         font-size: 13px
         font-weight: normal
@@ -149,9 +174,47 @@ body
         padding: 2px 3px
         +r(1650)
             font-size: 11px
+        span
+            position: absolute
+            width: 100%
+            left: 0
+            text-align: center
     .is-rotate
         display: block
-        +rotate(-90)
+        width: 23px
+        span
+            position: static
+            display: block
+            +rotate(-90)
+    .td-1,
+    .td-14,
+    .td-15,
+    .td-16,
+    .td-17,
+        span
+            top: -8px
+    .td-2
+        .is-rotate
+            span
+                margin-top: 5px
+    .td-3
+        .is-rotate
+            span
+                margin-top: 21px
+    .td-4,
+    .td-5
+        .is-rotate
+            span
+                margin-top: 10px
+    .td-6,
+    .td-9,
+    .td-10
+        span
+            top: 10px
+    .td-12
+        .is-rotate
+            span
+                margin-top: 16px  
     .td-6,
     .td-7,
     .td-8,
@@ -163,10 +226,10 @@ body
     .btns-wrap
         position: absolute
         bottom: 0
-        left: 0
-        top: 30px
+        left: -3px
+        right: -3px
+        top: 32px
         height: 22px
-        width: 100%
     .td-6,
     .td-9,
     .td-10
@@ -189,23 +252,35 @@ body
                 background: #f8e8de 
     td
         text-align: center
-        padding: 2px 3px
+        padding: 7px 10px
         vertical-align: middle
         border-left: 1px solid #e7e7e7 
         +transition(background .2s linear)
+        &:nth-child(1),
+        &:nth-child(7),
+        &:nth-child(10),
+        &:nth-child(11)
+            text-align: right
         &:nth-child(2)
             color: #5f889d 
+        &:nth-child(2),
+        &:nth-child(14),
+        &:nth-child(18)
+            text-align: left
         &.is-green
             color: #438420 
         &.is-red
             color: #900 
         &.is-gray
-            color: #a9a9a9 
-        &:hover
-            background: #9ed6ea 
+            color: #a9a9a9  
     .td-icon
-        width: 42px
+        width: 30px
         padding: 0
+        &:hover
+            background: #9ed6ea
+    .is-hoverable
+        &:hover
+            background: #9ed6ea
 .btns-wrap
     overflow: hidden
 .btn-sort
@@ -265,12 +340,21 @@ body
         margin-bottom: 18px
     .row__text
         width: 25%
+        font-size: 14px
     .row__main
         width: 75%
+        padding-right: 30px
+        position: relative
+        .btn-bucket
+            position: absolute
+            top: 0
+            right: 0
     .ui-multiselect
         width: 100% !important
         max-width: 100%
         min-height: 30px
+        span
+            font-size: 13px
     .actions
         margin-top: 0
     .trans-title
@@ -286,6 +370,9 @@ body
         text-shadow: 0 1px 0 rgba(255,255,255,.8)
         background: #e3e3e3
         border-radius: 0 0 7px 7px
+    .button,
+    .input
+        font-size: 13px
 .filter__in
     height: 277px
     background: #fff 
@@ -331,10 +418,3 @@ body
         display: inline-block
         vertical-align: middle
         +s(bucket)
-.row__main
-    padding-right: 30px
-    position: relative
-    .btn-bucket
-        position: absolute
-        top: 0
-        right: 0
