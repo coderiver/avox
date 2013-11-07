@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 		$(".js-select-multi").multiselect({
 				selectedList: 4,
-				noneSelectedText: "Select an Option",
+				noneSelectedText: "",
 				header: "",
    		 	open: function () {$(this).multiselect("widget").find("input[type='search']:first").focus();}
  
