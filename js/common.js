@@ -14,10 +14,20 @@ $(document).ready(function() {
 		function add_new_row() {
 			if ($(".js-table-row").length > 0) {
 				$(".group__add:not(.group__addnote)").bind("click",function(){
-					var wheretoprepend = $(this).parent().parent().find(".table tbody tr:first-child");
 					var html = $(this).parent().parent().find(".js-table-row tr").html();
-					wheretoprepend.before('<tr>'+html+'</tr>');
-					newtr = wheretoprepend.prev();
+					if ($(this).parent().parent().find(".table tbody tr").length > 0) {
+						var wheretoprepend = $(this).parent().parent().find(".table tbody tr:first-child");
+						wheretoprepend.before('<tr>'+html+'</tr>');
+						console.log("yes-tr");
+						newtr = wheretoprepend.prev();
+					}
+					else {
+						var wheretoprepend = $(this).parent().parent().find(".table tbody");
+						$('<tr>'+html+'</tr>').prependTo(wheretoprepend);
+						console.log("no-tr");
+						newtr = wheretoprepend.find("tr:first");
+					}
+					//newtr = wheretoprepend.prev();
 						newtr.find(".js-select").chosen().change(function(){ $(this).trigger('chosen:updated') });
 						newtr.find("select[multiple]").multiselect({
 							selectedList: 4,
@@ -114,5 +124,16 @@ $(document).ready(function() {
 			//alert();
 			return false;
 		});
+
+	var tooltip = $(".js-tooltip");
+	$(".js-show-tooltip").bind("click", function(){
+		var top = $(this).offset().top;
+		var left = $(this).offset().left;
+		tooltip.css({
+			"left": left-12,
+			"top": top+37
+		});
+		tooltip.show();
+	});
 
 });

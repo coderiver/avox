@@ -557,6 +557,19 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .btn-bucket { display: inline-block; vertical-align: middle; width: 32px; height: 30px; border-radius: 0 2px 2px 0; background: #c5c5c5; text-align: center; }
 .btn-bucket i { display: inline-block; vertical-align: middle; background: url('../img/icons-sb23f3aa8f2.png') 0 -199px no-repeat; width: 13px; height: 20px; }
 
+.tooltip { display: none; position: absolute; top: 100px; left: 0; padding: 15px; background: white; border-radius: 3px; box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4); }
+.tooltip:before, .tooltip:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
+.tooltip:before { top: -8px; left: 16px; border-width: 0 6px 8px 6px; z-index: 2; border-color: transparent transparent white transparent; }
+.tooltip:after { top: -9px; left: 15px; border-width: 0 7px 9px 7px; border-color: transparent transparent #cccccc transparent; }
+
+.tooltip__table { width: 100%; border-spacing: 0; border-collapse: collapse; font-size: 12px; border: 1px solid #e6e6e6; }
+.tooltip__table thead { background: #e7e7e7; }
+.tooltip__table thead th { font-weight: normal; padding: 3px; border-left: 1px solid white; border-bottom: 1px solid #e6e6e6; }
+.tooltip__table thead th:first-child { border-left: 0; }
+.tooltip__table tbody tr:nth-child(2n) { background: #f7f7f7; }
+.tooltip__table tbody td { padding: 7px; border-left: 1px solid #e6e6e6; }
+.tooltip__table tbody td:first-child { font-weight: bold; border-left: 0; }
+
 .paginator { width: 210px; }
 
 .paginator table { border-collapse: collapse; table-layout: fixed; width: 100%; }
