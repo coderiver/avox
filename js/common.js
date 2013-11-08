@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$(document).click(function() {
+        tooltip.hide();
+    });
+
 	//chosen stuff
 	var config = {
 			'.chosen-select'           : {"disable_search_threshold": 15},
@@ -126,7 +130,10 @@ $(document).ready(function() {
 		});
 
 	var tooltip = $(".js-tooltip");
-	$(".js-show-tooltip").bind("click", function(){
+	tooltip.click(function(event){
+		event.stopPropagation();
+	});
+	$(".js-show-tooltip").bind("click", function(event){
 		var top = $(this).offset().top;
 		var left = $(this).offset().left;
 		tooltip.css({
@@ -134,6 +141,7 @@ $(document).ready(function() {
 			"top": top+37
 		});
 		tooltip.show();
+		event.stopPropagation();
 	});
 
 
