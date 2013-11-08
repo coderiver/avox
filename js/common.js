@@ -57,7 +57,13 @@ $(document).ready(function() {
 				selectedList: 4,
 				noneSelectedText: "",
 				header: "",
-   		 	open: function () {$(this).multiselect("widget").find("input[type='search']:first").focus();}
+   		 		open: function () {
+   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+   		 		},
+   		 		close: function () {
+   		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
+   		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+   		 		}
  
 		}).multiselectfilter();
 
@@ -153,7 +159,7 @@ $(document).ready(function() {
 	});
 
 
-	
-	
+
+
 
 });
