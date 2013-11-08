@@ -407,7 +407,7 @@ html { height: 100%; }
 .addnote .addnote__file .button { border: 1px solid #c4c4c4; border-radius: 2px; position: absolute; right: 0; top: 0; }
 
 body { font-size: 12px; color: #5c5c5c; }
-body.is-fixed-table .trans-body { margin-top: 361px; }
+body.is-fixed-table .trans { margin-top: 324px; }
 body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-index: 2; }
 
 .header { border-bottom: 1px solid white; }

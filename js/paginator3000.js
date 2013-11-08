@@ -147,7 +147,7 @@ Paginator.prototype.setScrollThumbWidth = function(){
 }
 
 Paginator.prototype.moveScrollThumb = function(){
-	this.html.scrollThumb.style.left = this.html.scrollThumb.xPos + "px";
+	this.html.scrollThumb.style.left = this.html.scrollThumb.xPos + "px ";
 }
 
 
