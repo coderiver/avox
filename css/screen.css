@@ -550,7 +550,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .pagin__select-main { width: 60px; margin-left: 20px; }
 
-.pagin__nav { width: 220px; }
+.pagin__nav { width: 220px; margin-right: 6px; }
 
 .btn-bucket { display: inline-block; vertical-align: middle; width: 32px; height: 30px; border-radius: 0 2px 2px 0; background: #c5c5c5; text-align: center; }
 .btn-bucket i { display: inline-block; vertical-align: middle; background: url('../img/icons-sb23f3aa8f2.png') 0 -199px no-repeat; width: 13px; height: 20px; }
