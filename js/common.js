@@ -136,4 +136,12 @@ $(document).ready(function() {
 		tooltip.show();
 	});
 
+
+	$(".js-reset-filter").bind("click", function(){
+		$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");
+		$(this).parents(".js-filter").find(".js-search-input").val("");
+		//alert();
+		return false;
+	});
+
 });

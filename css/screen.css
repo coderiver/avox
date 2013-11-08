@@ -464,7 +464,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .trans-head div { position: relative; height: 20px; }
 .trans-head tr:first-child td { border-top: 1px solid #dedede; }
 .trans-head tr:last-child td { border-bottom: 1px solid #dedede; }
-.trans-head td { font-size: 13px; font-weight: normal; vertical-align: middle; text-align: center; border-left: 1px solid white; border-top: 1px solid white; padding: 2px 7px; }
+.trans-head td { font-size: 13px; font-weight: normal; vertical-align: middle; text-align: center; border-left: 1px solid white; border-top: 1px solid white; padding: 2px 3px; }
 .trans-head td span { position: absolute; width: 100%; left: 0; text-align: center; }
 .trans-head .is-rotate { display: block; width: 23px; }
 .trans-head .is-rotate span { position: static; display: block; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
@@ -475,7 +475,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .trans-head .td-6 span, .trans-head .td-9 span, .trans-head .td-10 span { top: 10px; }
 .trans-head .td-12 .is-rotate span { margin-top: 16px; }
 .trans-head .td-6, .trans-head .td-7, .trans-head .td-8, .trans-head .td-9, .trans-head .td-10 { padding-bottom: 40px; }
-.trans-head .btns-wrap { position: absolute; bottom: 0; left: -7px; right: -7px; top: 32px; height: 22px; }
+.trans-head .btns-wrap { position: absolute; bottom: 0; left: -3px; right: -3px; top: 32px; height: 22px; }
 .trans-head .td-6 .btns-wrap, .trans-head .td-9 .btns-wrap, .trans-head .td-10 .btns-wrap { top: 39px; }
 
 .trans-body { width: 100%; border-spacing: 0; border-collapse: collapse; }
