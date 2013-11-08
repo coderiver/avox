@@ -148,148 +148,150 @@
                     <div class="trans-title">Clients</div>
                 </div>
             </div>
-            <div class="filter__bottom l-container">
-                <div class="action">
-                    <button class="button button_blue button_icon">
-                        <i class="icon icon_add"></i>Add Client
-                    </button>
-                    <button class="button button_blue button_icon">
-                        <i class="icon icon_export"></i>Export list
-                    </button>
+            <div class="l-container">
+                <div class="filter__bottom">
+                    <div class="action">
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_add"></i>Add Client
+                        </button>
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_export"></i>Export list
+                        </button>
+                    </div>
+                    <div class="pagin">
+                        <div class="pagin__select">
+                            <div class="pagin__select-text">
+                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                            </div>
+                            <div class="pagin__select-main">
+                                <select class="chosen-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="pagin__nav">
+                            <div class="paginator" id="paginator1"></div>
+                            <div class="paginator_pages">1024 pages</div>
+                            <script type="text/javascript">
+                                pag1 = new Paginator('paginator1', 20, 7, 5, "");
+                            </script>
+                        </div>
+                    </div>
                 </div>
-                <div class="pagin">
-                    <div class="pagin__select">
-                        <div class="pagin__select-text">
-                            Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
-                        </div>
-                        <div class="pagin__select-main">
-                            <select class="chosen-select">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="pagin__nav">
-                        <div class="paginator" id="paginator1"></div>
-                        <div class="paginator_pages">1024 pages</div>
-                        <script type="text/javascript">
-                            pag1 = new Paginator('paginator1', 20, 7, 5, "");
-                        </script>
-                    </div>
+                <div class="trans-head-wrap">
+                    <table class="trans-head">
+                        <thead>
+                            <tr>
+                                <td class="td-0" rowspan="3">ID</td>
+                                <td class="td-1" rowspan="2">
+                                    <div>
+                                        <span>Client</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2" rowspan="3"><div class="is-rotate"><span>Edit</span></div></td>
+                                <td class="td-3" rowspan="3"><div class="is-rotate"><span>Routing</span></div></td>
+                                <td class="td-4" rowspan="3"><div class="is-rotate"><span>Block</span></div></td>
+                                <td class="td-5" rowspan="3"><div class="is-rotate"><span>Rates</span></div></td>
+                                <td colspan="8">Balance</td>
+                                <td class="td-11" rowspan="2">
+                                    <div>
+                                        <span>Pay Terms</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-12" rowspan="3"><div class="is-rotate"><span>Traffic</span></div></td>
+                                <td class="td-13" rowspan="3">Groups</td>
+                                <td class="td-14" rowspan="2">
+                                    <div>
+                                        <span>Time zone</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-15" rowspan="2">
+                                    <div>
+                                        <span>Last Auto Invoice</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-16" rowspan="2">
+                                    <div>
+                                        <span>Credit limit</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-17" rowspan="2">
+                                    <div>
+                                        <span>Manager</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-6">
+                                    <div>
+                                        <span>Available</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="td-7"><div class="is-rotate"></div></td>
+                                <td rowspan="2" class="td-8"><div class="is-rotate"></div></td>
+                                <td class="td-9">
+                                    <div>
+                                        <span>Live</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-10">
+                                    <div>
+                                        <span>Fixed</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
     <div class="l-container trans">
-        <div class="trans-head-wrap">
-            <table class="trans-head">
-                <thead>
-                    <tr>
-                        <td class="td-0" rowspan="3">ID</td>
-                        <td class="td-1" rowspan="2">
-                            <div>
-                                <span>Client</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-2" rowspan="3"><div class="is-rotate"><span>Edit</span></div></td>
-                        <td class="td-3" rowspan="3"><div class="is-rotate"><span>Routing</span></div></td>
-                        <td class="td-4" rowspan="3"><div class="is-rotate"><span>Block</span></div></td>
-                        <td class="td-5" rowspan="3"><div class="is-rotate"><span>Rates</span></div></td>
-                        <td colspan="8">Balance</td>
-                        <td class="td-11" rowspan="2">
-                            <div>
-                                <span>Pay Terms</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-12" rowspan="3"><div class="is-rotate"><span>Traffic</span></div></td>
-                        <td class="td-13" rowspan="3">Groups</td>
-                        <td class="td-14" rowspan="2">
-                            <div>
-                                <span>Time zone</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-15" rowspan="2">
-                            <div>
-                                <span>Last Auto Invoice</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-16" rowspan="2">
-                            <div>
-                                <span>Credit limit</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-17" rowspan="2">
-                            <div>
-                                <span>Manager</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-6">
-                            <div>
-                                <span>Available</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td rowspan="2" class="td-7"><div class="is-rotate"></div></td>
-                        <td rowspan="2" class="td-8"><div class="is-rotate"></div></td>
-                        <td class="td-9">
-                            <div>
-                                <span>Live</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="td-10">
-                            <div>
-                                <span>Fixed</span>
-                                <div class="btns-wrap">
-                                    <button class="btn-sort btn-sort_top"><i></i></button>
-                                    <button class="btn-sort btn-sort_down"><i></i></button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
-        </div>
         <table class="trans-body">
             <tbody>
                 <tr>
