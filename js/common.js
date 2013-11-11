@@ -159,7 +159,17 @@ $(document).ready(function() {
 	});
 
 
-
+	function openWindow() {
+		$(".js-open-window").click(function(){
+			var window_url = $(this).attr("data-url")
+			var window_height = $(this).attr("data-window-height");
+			var window_width = $(this).attr("data-window-width");
+			myWindow=window.open(window_url,'','width='+window_width+',height='+window_height+'')
+	    	myWindow.focus();	
+		});
+	}
+	openWindow();
+	
 
 
 });
