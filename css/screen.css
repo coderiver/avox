@@ -566,8 +566,10 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .tooltip__table thead th { font-weight: normal; padding: 3px; border-left: 1px solid white; border-bottom: 1px solid #e6e6e6; }
 .tooltip__table thead th:first-child { border-left: 0; }
 .tooltip__table tbody tr:nth-child(2n) { background: #f7f7f7; }
-.tooltip__table tbody td { padding: 7px; border-left: 1px solid #e6e6e6; }
-.tooltip__table tbody td:first-child { font-weight: bold; border-left: 0; }
+.tooltip__table tbody td { padding: 0; border-left: 1px solid #e6e6e6; }
+.tooltip__table tbody td:first-child { font-weight: bold; border-left: 0; padding: 7px; }
+.tooltip__table tbody a { display: block; color: #5c5c5c; padding: 7px 7px; text-decoration: none; }
+.tooltip__table tbody a:hover { background: #cdeaf5; }
 
 .footer { margin-top: 55px; height: 45px; line-height: 45px; text-align: center; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e2e2e2), color-stop(100%, #bebebe)); background-image: -webkit-linear-gradient(#e2e2e2, #bebebe); background-image: -moz-linear-gradient(#e2e2e2, #bebebe); background-image: -o-linear-gradient(#e2e2e2, #bebebe); background-image: linear-gradient(#e2e2e2, #bebebe); }
 
