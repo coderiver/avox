@@ -47,6 +47,9 @@ $(document).ready(function() {
 		$('.table').on('click', '.icon-delete', function(){
 			$(this).closest('tr').remove();
 		});
+		$('.js-remove-tr').on('click', function(){
+			$(this).closest('tr').remove();
+		});
 		$('.group').on('change', 'h2 input[type=checkbox]', function(){
 			$(this).closest('.group').toggleClass('is-inactive-group');
 
@@ -168,8 +171,22 @@ $(document).ready(function() {
 	    	myWindow.focus();	
 		});
 	}
-	openWindow();
-	
+		openWindow();
+
+	// $(function() {
+	//     $( ".js-slider-time" ).slider({
+	//       value:0000,
+	//       min: 0,
+	//       max: 1440,
+	//       step: 1,
+	//       slide: function( event, ui ) {
+	//       	var hours = Math.floor(ui.value/60);
+	//       	var minutes = (ui.value/60);
+	//         $( ".js-slider-time .ui-slider-handle" ).text( hours+'год ' +minutes+'хв' );
+	//       }
+	//     });
+	//      //$( ".js-slider-time .ui-slider-handle" ).text( (ui.value/60)+'год ' +(ui.value/3600)+'хв' );
+ //  	});
 
 
 });

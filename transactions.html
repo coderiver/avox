@@ -1,0 +1,604 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Transactions</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header class="header js-header">
+        <div class="header__top l-container">
+            <div class="header__user">
+                <span>
+                    Logged in as: 
+                    <a href="#">Ed2</a>
+                </span>
+                <a href="#">Logout</a>
+            </div>
+            <div class="header__info js-in">
+                <span>2013 May 17</span>
+                <span>11:45:18</span>
+                <span>+02:00</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <div class="l-container">
+                <ul class="nav">
+                    <li class="nav__item is-active">
+                        <a href="#" class="nav__link">Management</a>
+                        <ul class="subnav">
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Clients</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Rate Tables</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Invoices</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Transactions</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Balance Report</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Resellers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">System</a></li>
+                </ul>
+                <ul class="nav-info">
+                    <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="filter">
+        <div class="filter__in js-fixed-header">
+            <div class="filter__top js-filter">
+                <div class="l-container">
+                    <div class="wrap">
+                        <div class="l-col4">
+                            <div class="radio-row">
+                                <label class="radio">
+                                    <input type="radio" name="name">
+                                    <i></i>
+                                    <span>Hourly</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="name" checked>
+                                    <i></i>
+                                    <span>Daily</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="name">
+                                    <i></i>
+                                    <span>Weekly</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="name">
+                                    <i></i>
+                                    <span>Monthly</span>
+                                </label>
+                            </div>
+                            <div class="radio-row">
+                                <label class="radio">
+                                    <input type="radio" name="name2">
+                                    <i></i>
+                                    <span>Payment</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="name2" checked>
+                                    <i></i>
+                                    <span>All</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="name2">
+                                    <i></i>
+                                    <span>Charge</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="l-col4">
+                            <div class="row">
+                                <span class="row__text">Clients:</span>
+                                <div class="row__main">
+                                    <select class="js-select-multi" multiple="multiple" >
+                                        <option value="var0">var0</option>
+                                        <option value="var1">var1</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select>
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span class="row__text">Pay Acc:</span>
+                                <div class="row__main">
+                                    <select class="js-select-multi" multiple="multiple" >
+                                        <option value="var0">var0</option>
+                                        <option value="var1">var1</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select>
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-col4">
+                            <div class="row">
+                                <span class="row__text">Group:</span>
+                                <div class="row__main">
+                                    <select class="js-select-multi" multiple="multiple" >
+                                        <option value="var0">var0</option>
+                                        <option value="var1">var1</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select>
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span class="row__text">Status:</span>
+                                <div class="row__main">
+                                    <select class="js-select-multi" multiple="multiple" >
+                                        <option value="var0">var0</option>
+                                        <option value="var1">var1</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select>
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-col4">
+                            <div class="row">
+                                <span class="row__text"></span>
+                                <div class="row__main">
+                                    <input type="text" class="input js-search-input" placeholder="Search">
+                                    <div class="actions actions_fluid">
+                                        <button class="button button_gray js-reset-filter">Reset All</button>
+                                        <button class="button button_blue">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trans-title">Transactions</div>
+                </div>
+            </div>
+            <div class="l-container">
+                <div class="filter__bottom">
+                    <div class="action">
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_add"></i>Add Transaction
+                        </button>
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_export"></i>Export list
+                        </button>
+                    </div>
+                    <div class="pagin">
+                        <div class="pagin__select">
+                            <div class="pagin__select-text">
+                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                            </div>
+                            <div class="pagin__select-main">
+                                <select class="chosen-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="pagin__nav">
+                            <div class="js-paginator">  
+                                <div class='paginator_p_wrap'> 
+                                    <div class='paginator_p_bloc'> 
+                                        <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                    </div> 
+                                </div>  
+                                <!-- slider --> 
+                                <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                    <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(".js-paginator").jPaginator({ 
+                                    nbPages: 21, 
+                                    selectedPage: 8,
+                                    minSlidesForSlider:1, 
+                                    nbVisible: 7,
+                                    onPageClicked: function(a,num) { 
+                                        $("#page1").html("demo1 - page : "+num); 
+                                    }
+                                });  
+                            </script>                                   
+                        </div>
+                    </div>
+                </div>
+                <div class="trans-head-wrap">
+                    <table class="trans-head trans-head_mod">
+                        <thead>
+                            <tr>
+                                <td class="td-0" rowspan="2">&nbsp;</td>
+                                <td class="td-1" rowspan="2">ID</td>
+                                <td class="td-2">
+                                    <div>
+                                        <span>Transaction Date</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-3" rowspan="2">&nbsp;</td>
+                                <td class="td-4">
+                                    <div>
+                                        <span>Payment Account</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-5">
+                                    <div>
+                                        <span>Client</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-6">
+                                    <div>
+                                        <span>Amount</span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-7" rowspan="2">
+                                    Comments
+                                </td>
+                                <td class="td-8" rowspan="2">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-container trans">
+        <table class="trans-body">
+            <tbody>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-mob"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-red">- 678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-edit js-open-window" data-url="client-info.html" data-window-width="1400" data-window-height="700"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+                <tr>
+                    <td class="to-center"><button class="btn-check"></button></td>
+                    <td class="to-center">234850</td>
+                    <td class="to-left">2013 Sep 14 16:34:12 +02:00</td>
+                    <td class="td-icon"><button class="btn-phone"></button></td>
+                    <td>Charge: Calls</td>
+                    <td class="to-left">Libra (Lemgrove Speedflow)</td>
+                    <td class="is-green">3678.98</td>
+                    <td class="to-left">Blah blah blah</td>
+                    <td><button class="icon-delete js-remove-tr"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<div class="tooltip js-tooltip">
+    <table class="tooltip__table">
+        <thead>
+            <tr>
+                <th>Trunk</th>
+                <th>ORIG Rates</th>
+                <th>TERM Rates</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-url="edit-rate-table.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+<div class="calendar">
+    <div class="calendar__wrap">
+        <ul class="calendar__years">
+            <li class="is-active">2013</li>
+            <li>2014</li>
+        </ul>
+        <ul class="calendar__monthes">
+            <li data-month-count="1">jan</li>
+            <li data-month-count="2">feb</li>
+            <li data-month-count="3" class="is-active">mar</li>
+            <li data-month-count="4">apr</li>
+            <li data-month-count="5">may</li>
+            <li data-month-count="6">jun</li>
+            <li data-month-count="7">jul</li>
+            <li data-month-count="8">aug</li>
+            <li data-month-count="9">sep</li>
+            <li data-month-count="10">oct</li>
+            <li data-month-count="11">nov</li>
+            <li data-month-count="12">dec</li>
+        </ul>
+        <ul class="calendar__days">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li class="is-active">12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>     
+            <li class="is-inactive">1</li>
+            <li class="is-inactive">2</li>
+            <li class="is-inactive">3</li>
+            <li class="is-inactive">4</li>
+            <li class="is-inactive">5</li>
+        </ul>
+        <div class="calendar__slider">
+            <div class="js-slider-time"></div>
+        </div>
+    </div>
+    <div class="calendar__btns"></div>
+</div>
+</body>
+</html>
