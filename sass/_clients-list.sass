@@ -598,7 +598,7 @@ body
             color: #fff
             background: #29a1d1  
 .calendar__wrap
-    padding: 26px 
+    padding: 26px 26px 0
 .calendar__monthes,
 .calendar__years
     li
@@ -618,6 +618,7 @@ body
     li
         padding: 3px 8px 
 .calendar__days
+    margin-bottom: 19px
     li
         font-size: 13px
         width: 28px
@@ -633,3 +634,35 @@ body
                 background: none
         &:nth-child(7n+1)
             margin-left: 0
+
+.calendar__slider-row
+    margin-bottom: 18px
+    span,div
+        display: inline-block
+        vertical-align: middle
+    span
+        width: 35px
+        font-size: 12px
+        margin: 0 0 0 10px  
+        &:first-child
+            margin-left: 0
+            margin-right: 10px
+            
+.calendar__btns
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    border-top: 1px solid #dbdbdb 
+    overflow: hidden
+    .button
+        float: left
+        background: none
+        width: 50%
+        height: 39px
+        font-size: 12px
+        border-left: 1px solid #dbdbdb 
+        +box-sizing(border-box)
+        font-weight: normal
+        &:first-child
+            border-left: 0

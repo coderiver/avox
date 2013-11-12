@@ -595,10 +595,18 @@
             <li class="is-inactive">5</li>
         </ul>
         <div class="calendar__slider">
-            <div class="js-slider-time"></div>
+            <div class="calendar__slider-row">
+                <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+            </div>
+            <div class="calendar__slider-row">
+                <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+            </div>
         </div>
     </div>
-    <div class="calendar__btns"></div>
+    <div class="calendar__btns">
+        <button class="button">Reset All</button>
+        <button class="button">Ok</button>
+    </div>
 </div>
 </body>
 </html>

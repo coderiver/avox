@@ -604,7 +604,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .calendar li { float: left; border-radius: 3px; cursor: pointer; font-weight: bold; }
 .calendar li:hover, .calendar li.is-active { color: white; background: #29a1d1; }
 
-.calendar__wrap { padding: 26px 26px 0; }
+.calendar__wrap { padding: 26px; }
 
 .calendar__monthes li, .calendar__years li { margin: 0 0 5px; color: #a6a6a6; font-size: 15px; text-transform: uppercase; }
 
@@ -614,20 +614,12 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .calendar__years { margin-bottom: 7px; }
 .calendar__years li { padding: 3px 8px; }
 
-.calendar__days { margin-bottom: 19px; }
 .calendar__days li { font-size: 13px; width: 28px; height: 28px; text-align: center; line-height: 28px; color: gray; margin: 0 0 3px 12px; }
 .calendar__days li.is-inactive { color: #a7a7a7; cursor: default; }
 .calendar__days li.is-inactive:hover { background: none; }
 .calendar__days li:nth-child(7n+1) { margin-left: 0; }
 
-.calendar__slider-row { margin-bottom: 18px; }
-.calendar__slider-row span, .calendar__slider-row div { display: inline-block; vertical-align: middle; }
-.calendar__slider-row span { width: 35px; font-size: 12px; margin: 0 0 0 10px; }
-.calendar__slider-row span:first-child { margin-left: 0; margin-right: 10px; }
-
-.calendar__btns { position: absolute; right: 0; left: 0; bottom: 0; border-top: 1px solid #dbdbdb; overflow: hidden; }
-.calendar__btns .button { float: left; background: none; width: 50%; height: 39px; font-size: 12px; border-left: 1px solid #dbdbdb; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-weight: normal; }
-.calendar__btns .button:first-child { border-left: 0; }
+.calendar__zone span, .calendar__zone div { display: inline-block; vertical-align: middle; }
 
 .paginator_p { text-align: center; float: left; width: 23px; height: 23px; line-height: 23px; border-radius: 2px; }
 
@@ -643,7 +635,6 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .paginator_slider .ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
 
-.ui-widget-content { position: relative; height: 5px; width: 180px; border: 1px solid #bababa; border-radius: 3px; background: #dedede; box-shadow: inset 0 0 4px rgba(44, 44, 44, 0.3); }
+.ui-widget-content { position: relative; height: 5px; width: 194px; border: 1px solid #bababa; border-radius: 3px; background: #dedede; box-shadow: inset 0 0 4px rgba(44, 44, 44, 0.3); }
 
-.ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; text-decoration: none; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
-.ui-slider-handle span { position: absolute; width: auto; top: -17px; color: #505050; }
+.ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }

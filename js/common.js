@@ -173,20 +173,61 @@ $(document).ready(function() {
 	}
 		openWindow();
 
-	// $(function() {
-	//     $( ".js-slider-time" ).slider({
-	//       value:0000,
-	//       min: 0,
-	//       max: 1440,
-	//       step: 1,
-	//       slide: function( event, ui ) {
-	//       	var hours = Math.floor(ui.value/60);
-	//       	var minutes = (ui.value/60);
-	//         $( ".js-slider-time .ui-slider-handle" ).text( hours+'год ' +minutes+'хв' );
-	//       }
-	//     });
-	//      //$( ".js-slider-time .ui-slider-handle" ).text( (ui.value/60)+'год ' +(ui.value/3600)+'хв' );
- //  	});
+	$(function() {
+	    $( ".js-slider-time" ).slider({
+	      value: 600,
+	      min: 0,
+	      max: 1440,
+	      step: 5,
+	      slide: function( event, ui ) {
+	      	var hours = Math.floor(ui.value/60);
+	      	var minutes = Math.floor(ui.value%60);
+	      	$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
+	      	if (hours < 10) {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+minutes);
+	      		if (minutes < 10) {
+		      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+"0"+minutes);
+		      	}
+	      	}
+	      	else {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+minutes);
+	      	}
+	      	if (hours == 24 ) {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text('23:59');
+	      	}
+	      }
+	    });
+      	$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
+	    $( ".js-slider-time .ui-slider-handle span" ).text('10:00');
+  	});
+  	$(function() {
+	    $( ".js-slider-zone" ).slider({
+	      value: 3,
+	      min: -12,
+	      max: 14,
+	      step: 1,
+	      slide: function( event, ui ) {
+	      	if (ui.value > 0) {
+	      		$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
+	      		$( ".js-slider-zone .ui-slider-handle span").text('+'+ui.value);
+	      	}
+	      	else {
+	      		$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
+	      		$( ".js-slider-zone .ui-slider-handle span").text(ui.value);
+	      	}
+	        
+	    }
+	    });
+	    if ($(".js-slider-zone").slider("value") > 0) {
+      		$( ".js-slider-zone .ui-slider-handle" ).html("<span></span>");
+      		$( ".js-slider-zone .ui-slider-handle span" ).text("+"+$(".js-slider-zone").slider("value"));
+      	}
+      	else {
+      		$( ".js-slider-zone .ui-slider-handle" ).html("<span></span>");
+      		$( ".js-slider-zone .ui-slider-handle span" ).text($(".js-slider-zone").slider("value"));
+      	}
+	    
+  	});
 
 
 });
