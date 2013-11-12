@@ -534,7 +534,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .filter .row__text { width: 25%; }
 .filter .row__main { width: 75%; padding-right: 30px; position: relative; }
 .filter .row__main .btn-bucket { position: absolute; top: 0; right: 0; }
-.filter .ui-multiselect { width: 100% !important; max-width: 100%; min-height: 30px; }
+.filter .ui-multiselect { width: 100% !important; max-width: 100%; min-height: 32px; }
 .filter .actions { margin-top: 0; }
 .filter .trans-title { position: absolute; bottom: -32px; padding: 0 30px; height: 32px; line-height: 32px; color: #6a6868; font-size: 12px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); background: #e3e3e3; border-radius: 0 0 7px 7px; }
 
@@ -557,7 +557,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .pagin__nav { width: 220px; margin-right: 6px; }
 
-.btn-bucket { display: inline-block; vertical-align: middle; width: 32px; height: 30px; border-radius: 0 2px 2px 0; background: #c5c5c5; text-align: center; }
+.btn-bucket { display: inline-block; vertical-align: middle; width: 32px; height: 32px; border-radius: 0 2px 2px 0; background: #c5c5c5; text-align: center; }
 .btn-bucket i { display: inline-block; vertical-align: middle; background: url('../img/icons-s4d7da29bb9.png') 0 -221px no-repeat; width: 13px; height: 20px; }
 
 .tooltip { display: none; position: absolute; top: 100px; left: 0; padding: 15px; background: white; border-radius: 3px; box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4); }
@@ -600,7 +600,10 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .radio input:checked + i:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px; width: 16px; height: 16px; border-radius: 50%; background: #2aa2d1; cursor: pointer; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
 .radio span { display: block; margin-top: 28px; color: #888888; font-size: 11px; }
 
-.calendar { position: absolute; top: 100px; left: 50%; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+.l-col4 { position: relative; }
+
+.calendar { display: none; position: absolute; top: 123px; left: 25%; z-index: 100; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+.calendar.is-active { display: block; }
 .calendar li { float: left; border-radius: 3px; cursor: pointer; font-weight: bold; }
 .calendar li:hover, .calendar li.is-active { color: white; background: #29a1d1; }
 
@@ -643,7 +646,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .paginator_slider .ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
 
-.ui-widget-content { position: relative; height: 5px; width: 180px; border: 1px solid #bababa; border-radius: 3px; background: #dedede; box-shadow: inset 0 0 4px rgba(44, 44, 44, 0.3); }
+.calendar .ui-widget-content { position: relative; height: 5px; width: 180px; border: 1px solid #bababa; border-radius: 3px; background: #dedede; box-shadow: inset 0 0 4px rgba(44, 44, 44, 0.3); }
 
-.ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; text-decoration: none; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
-.ui-slider-handle span { position: absolute; width: auto; top: -17px; color: #505050; }
+.calendar .ui-slider-handle { position: absolute; top: 50%; margin: -10px 0 0 -10px; width: 20px; height: 20px; border-radius: 10px; background: #2aa2d1; cursor: pointer; text-decoration: none; box-shadow: inset 2px -2px 2px rgba(0, 0, 0, 0.2), inset -2px 2px 2px rgba(255, 255, 255, 0.4); }
+.calendar .ui-slider-handle span { position: absolute; left: 50%; margin-left: -20px !important; width: 40px; text-align: center; top: -17px; color: #505050; }

@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 	$(document).click(function() {
         tooltip.hide();
+        $(".js-calendar").removeClass("is-active");
+        $(".js-date-input").parent().removeClass("is-active");
     });
 
 	//chosen stuff
@@ -178,27 +180,30 @@ $(document).ready(function() {
 	      value: 600,
 	      min: 0,
 	      max: 1440,
-	      step: 5,
+	      step: 15,
 	      slide: function( event, ui ) {
 	      	var hours = Math.floor(ui.value/60);
 	      	var minutes = Math.floor(ui.value%60);
 	      	$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
-	      	if (hours < 10) {
-	      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+minutes);
-	      		if (minutes < 10) {
-		      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+"0"+minutes);
-		      	}
+	      	if (hours <= 9 && minutes <= 9) {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+"0"+minutes);
+	      		$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
 	      	}
 	      	else {
 	      		$( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+minutes);
+	      		$( ".is-active .js-time" ).text(hours+':'+minutes);
 	      	}
 	      	if (hours == 24 ) {
 	      		$( ".js-slider-time .ui-slider-handle span" ).text('23:59');
+	      		$( ".js-time" ).text('23:59');
 	      	}
+	      	$( ".is-active .js-time" ).val(ui.value);
 	      }
 	    });
       	$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
 	    $( ".js-slider-time .ui-slider-handle span" ).text('10:00');
+	    $( ".is-active .js-time" ).val($( ".js-slider-time" ).slider( "value" ));
+	    //$( ".js-time" ).text($( ".js-slider-time" ).slider( "value" ));
   	});
   	$(function() {
 	    $( ".js-slider-zone" ).slider({
@@ -210,11 +215,18 @@ $(document).ready(function() {
 	      	if (ui.value > 0) {
 	      		$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
 	      		$( ".js-slider-zone .ui-slider-handle span").text('+'+ui.value);
+	      		$( ".is-active .js-zone" ).text('+'+ui.value);
 	      	}
 	      	else {
 	      		$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
 	      		$( ".js-slider-zone .ui-slider-handle span").text(ui.value);
+	      		$( ".is-active .js-zone" ).text(ui.value);
 	      	}
+	      	if (ui.value == 0) {
+	      		$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
+	      		$( ".js-slider-zone .ui-slider-handle span").text('UTC');
+	      	} 
+	        $( ".is-active .js-zone" ).val(ui.value);
 	        
 	    }
 	    });
@@ -226,8 +238,51 @@ $(document).ready(function() {
       		$( ".js-slider-zone .ui-slider-handle" ).html("<span></span>");
       		$( ".js-slider-zone .ui-slider-handle span" ).text($(".js-slider-zone").slider("value"));
       	}
+      	$( ".is-active .js-zone" ).val($( ".js-slider-zone" ).slider( "value" ));
+      	//$( ".js-zone" ).text($( ".js-slider-zone" ).slider( "value" ));
 	    
   	});
 
+	// $(".js-calendar li").bind("click",function(){
+	// 	$(this).parent().find("li").removeClass("is-active");
+	// 	$(this).addClass("is-active");
+	// 	var el = $(this).parent().attr("data-class");
+	// 	var id = $(this).text();
+	// 	$("."+el).val(id);
+	// });
+	function calendar() {
+		$(".js-calendar li").bind("click",function(){
+			$(this).parent().find("li").removeClass("is-active");
+			$(this).addClass("is-active");
+			var el = $(this).parent().attr("data-class");
+			var id = $(this).text();
+			var text = $(this).text();
+			$(".is-active").find("."+el).val(id);
+			$(".is-active").find("."+el).text(text);
+		});
+		$(".calendar__monthes li").bind("click", function(){
+			var id = $(this).attr("data-id");
+			var text = $(this).text();
+			var el = $(this).parent().attr("data-class");
+			$(".is-active").find("."+el).val(id);
+			$(".is-active").find("."+el).text(text);
+		});	
+		$(".js-ok").click(function(){
+			var text = $(".is-active .js-input-text").text();
+			$(".is-active .js-date-input").val(text);
+			$(".js-date-input").parent().removeClass("is-active");
+			$(".js-calendar").removeClass("is-active");
+		});
+	}
+	calendar();
+	$(".js-date-input").click(function(event){
+		$(".js-date-input").parent().removeClass("is-active");
+		$(this).parent().addClass("is-active");
+		$(".js-calendar").addClass("is-active");
+		event.stopPropagation();
+	});
+	$(".js-calendar").click(function(event) {
+		event.stopPropagation();
+	});
 
 });

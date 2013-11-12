@@ -355,7 +355,7 @@ body
     .ui-multiselect
         width: 100% !important
         max-width: 100%
-        min-height: 30px
+        min-height: 32px
         span
             //font-size: 13px
     .actions
@@ -415,7 +415,7 @@ body
     display: inline-block
     vertical-align: middle
     width: 32px
-    height: 30px
+    height: 32px
     border-radius: 0 2px 2px 0
     background: #c5c5c5
     text-align: center
@@ -576,16 +576,21 @@ body
         color: #888
         font-size: 11px  
         
-
+.l-col4
+    position: relative
 .calendar
+    display: none
     position: absolute
-    top: 100px
-    left: 50%
+    top: 123px
+    left: 25%
+    z-index: 100
     width: 324px
     height: 438px
     border-radius: 3px
     background: #f7f7f7
     box-shadow: 0 0 5px rgba(0,0,0,.4)
+    &.is-active
+        display: block
     ul
         @extend %clr
     li
