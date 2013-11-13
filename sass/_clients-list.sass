@@ -2,7 +2,7 @@ body
     font-size: 12px
     color: #5c5c5c 
     &.is-fixed-table
-        .trans
+        .table-wrap
             margin-top: 324px
         .filter__in
             position: fixed
@@ -139,9 +139,9 @@ body
         font-size: 12px
         text-decoration: none
         color: #5c5c5c 
-.trans-head-wrap
+.table-head-wrap
     border-bottom: 1px solid #fff       
-.trans-head
+.table-head
     width: 100% 
     border-spacing: 0
     border-collapse: collapse
@@ -232,7 +232,7 @@ body
     .td-10
         .btns-wrap
             top: 39px
-.trans-body
+.table
     width: 100% 
     border-spacing: 0
     border-collapse: collapse
@@ -253,6 +253,35 @@ body
         vertical-align: middle
         border-left: 1px solid #e7e7e7 
         +transition(background .2s linear)
+        &.to-left
+            text-align: left
+        &.is-green
+            color: #438420 !important
+        &.is-red
+            color: #900 !important
+        &.is-gray
+            color: #a9a9a9 !important
+        &.to-center
+            text-align: center 
+        &[data-href],
+        &[data-window-url]
+            cursor: pointer
+            &:hover
+                background: #9ed6ea
+    .td-icon
+        width: 30px
+        padding: 0
+        &:hover
+            background: #9ed6ea
+    .is-hoverable
+        &:hover
+            background: #9ed6ea 
+    button,
+    i
+        display: inline-block
+        vertical-align: middle
+.table_client-list
+    td
         &:nth-child(1),
         &:nth-child(7),
         &:nth-child(10),
@@ -264,26 +293,6 @@ body
         &:nth-child(2),
         &:nth-child(14),
         &:nth-child(18),
-        &.to-left
-            text-align: left
-        &.is-green
-            color: #438420 
-        &.is-red
-            color: #900 
-        &.is-gray
-            color: #a9a9a9 
-        &.to-center
-            text-align: center 
-    .td-icon
-        width: 30px
-        padding: 0
-        &:hover
-            background: #9ed6ea
-    .is-hoverable
-        &:hover
-            background: #9ed6ea 
-    button
-        vertical-align: middle
 .btns-wrap
     overflow: hidden
 .btn-sort
@@ -496,7 +505,7 @@ body
     +background-image(linear-gradient(#e2e2e2, #bebebe))
     
 
-.trans-head_mod
+.table-head_mod
     .btns-wrap
         top: 20px  
     .td-6

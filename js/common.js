@@ -117,7 +117,7 @@ $(document).ready(function() {
 		}); 
 
 		function td_width() {
-			$(".trans-body tr").first().find("td").each(function(i){
+			$(".js-table tr").first().find("td").each(function(i){
 				var width = $(this).outerWidth();
 				$(this).attr("data-class","td-"+i);
 				var class_td = $(this).attr("data-class");
@@ -130,7 +130,7 @@ $(document).ready(function() {
 			td_width();
 		}); 
 
-		$(".trans-body tr").click(function(){
+		$(".js-table tr").click(function(){
 			$(this).toggleClass("is-clicked");
 		});
 
@@ -166,7 +166,7 @@ $(document).ready(function() {
 
 	function openWindow() {
 		$(".js-open-window").click(function(){
-			var window_url = $(this).attr("data-url")
+			var window_url = $(this).attr("data-window-url")
 			var window_height = $(this).attr("data-window-height");
 			var window_width = $(this).attr("data-window-width");
 			myWindow=window.open(window_url,'','width='+window_width+',height='+window_height+'')
