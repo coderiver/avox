@@ -193,18 +193,49 @@
                             </div>
                         </div>
                     </div>
-                    <div class="trans-title">Statistics</div>
+                    <div class="trans-title">Invoices</div>
                 </div>
             </div>
             <div class="l-container">
                 <div class="filter__bottom">
                     <div class="action">
                         <button class="button button_blue button_icon">
-                            <i class="icon icon_add"></i>Add Client
+                            <i class="icon icon_add"></i>Add Invoice
                         </button>
                         <button class="button button_blue button_icon">
-                            <i class="icon icon_export"></i>Export list
+                            <i class="icon icon_export"></i>Export Filtered
                         </button>
+                        <div class="button-wrap">
+                            <button class="button button_blue button_icon js-show-tooltip">
+                                <i class="icon icon_edit"></i>Mass Edit
+                            </button>
+                            <div class="tooltip tooltip_gray js-tooltip">
+                                <div class="row">
+                                    <span class="row__text">Set State:</span>
+                                    <div class="row__main">
+                                        <select class="chosen-select">
+                                            <option value="">&nbsp;</option>
+                                            <option value="var0">var0</option>
+                                            <option value="var1">var1</option>
+                                            <option value="var2">var2</option>
+                                            <option value="var3">var3</option>
+                                            <option value="var4">var4</option>
+                                        </select> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="row__text"></span>
+                                    <div class="row__main">
+                                        <button class="button button_red">
+                                            Delete 
+                                        </button>
+                                        <button class="button button_blue">
+                                            Go
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="pagin">
                         <div class="pagin__select">
@@ -256,137 +287,73 @@
                     <table class="table-head table-head_simple">
                         <thead>
                             <tr>
-                                <td colspan="3">Originator</td>
-                                <td colspan="3">Originator</td>
-                                <td class="td-6 td-height">
-                                    <div>
-                                        <span>A-number</span>
-                                        <!-- <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div> -->
-                                    </div>
-                                </td>
-                                <td class="td-7 td-height">
-                                    <div>
-                                        <span>B-number</span>
-                                        <!-- <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div> -->
-                                    </div>
-                                </td>
-                                <td class="td-8 td-height">
-                                    <div>
-                                        <span>Status</span>
-                                        <!-- <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div> -->
-                                    </div>
-                                </td>
-                                <td class="td-9 td-height">
-                                    <div>
-                                        <span>Duration sec</span>
-                                        <!-- <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div> -->
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="td-0">
                                     <div>
-                                        <span>Name</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Mass Edit</span>
                                     </div>
                                 </td>
                                 <td class="td-1">
                                     <div>
-                                        <span>Trunk</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Invoice No.</span>
                                     </div>
                                 </td>
                                 <td class="td-2">
                                     <div>
-                                        <span>Rate</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>In/Out</span>
                                     </div>
                                 </td>
                                 <td class="td-3">
                                     <div>
-                                        <span>Name</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Client</span>
                                     </div>
                                 </td>
                                 <td class="td-4">
                                     <div>
-                                        <span>Trunk</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Amount ($)</span>
                                     </div>
                                 </td>
                                 <td class="td-5">
                                     <div>
-                                        <span>Rate</span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Period</span>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="td-6">
                                     <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Time Zone</span>
                                     </div>
                                 </td>
-                                <td >
+                                <td class="td-7">
                                     <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Due Date</span>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="td-8">
                                     <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
+                                        <span>Invoice Date</span>
                                     </div>
                                 </td>
-                                <td>
-                                    <div>
+                                <td class="td-9">
+                                    <div class="">
+                                        <span>File</span>
+                                    </div>
+                                </td>
+                                <td class="td-10">
+                                    <div class="">
+                                        <span>Traffic</span>
+                                    </div>
+                                </td>
+                                <td class="td-11">
+                                    <div class="">
+                                        <span>CDRS</span>
+                                    </div>
+                                </td>
+                                <td class="td-11">
+                                    <div class="">
                                         <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
-                                        </div>
                                     </div>
                                 </td>
                             </tr>
+
                         </thead>
                     </table>
                 </div>
@@ -396,302 +363,55 @@
     <div class="l-container table-wrap">
         <table class="table table_active-calls js-table">
             <tbody>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
+                 <tr>
+                    <td class="td_icon">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                     </td>
+                    <td class="to-left" data-href="#">INV-031567</td>
+                    <td data-href="#">→</td>
+                    <td class="to-left" data-href="#">Slovak Zadolbak Telecom</td>
+                    <td class="is-red to-right" data-href="#">68.20</td>
+                    <td data-href="#">2013 Sep 01 - 2013 Nov 30</td>
+                    <td data-href="#">+2</td>
+                    <td data-href="#"><strong>in 6 days</strong> 2013 Nov 25</td>
+                    <td data-href="#">2013 Nov 25  23:16:34  +03:00</td>
+                    <td class="td-icon" data-href="#"><button class="btn-traffic"></button></td>
+                    <td class="td-icon" data-href="#"><button class="btn-traffic"></button></td>
+                    <td class="td-icon" data-href="#"><button class="btn-traffic"></button></td>
+                    <td class="td-icon" data-href="#"><button class="btn-delete"></button></td>
                 </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                <tr>
-                    <td class="is-green" data-href="#">Slovak</td>
-                    <td class="is-green" data-href="#">Slovak_O_gw_Cli</td>
-                    <td class="is-green" data-href="#">0.067</td>
-                    <td class="is-green" data-href="#">Astel</td>
-                    <td class="is-red" data-href="#">Astel_t_gw2</td>
-                    <td class="is-red" data-href="#">0.034</td>
-                    <td class="is-red" data-href="#">380971234567</td>
-                    <td data-href="#">987928749822</td>
-                    <td data-href="#">In call</td>
-                    <td data-href="#">927</td>
-                </tr>
-                
             </tbody>
         </table>
     </div>
 
-<div class="tooltip js-tooltip">
-    <table class="tooltip__table">
-        <thead>
-            <tr>
-                <th>Trunk</th>
-                <th>ORIG Rates</th>
-                <th>TERM Rates</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="transactions.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="tooltip tooltip_gray js-tooltip">
+    <div class="row">
+        <span class="row__text">Set State:</span>
+        <div class="row__main">
+            <select class="chosen-select">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <button class="button button_red">
+                Delete 
+            </button>
+            <button class="button button_blue">
+                Go
+            </button>
+        </div>
+    </div>
 </div>
 <footer class="footer">
     <p>(&copy;) Avox 2013</p>

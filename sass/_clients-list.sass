@@ -431,68 +431,6 @@ body
         vertical-align: middle
         +s(bucket)
 
-.tooltip
-    display: none
-    position: absolute
-    top: 100px
-    left: 0
-    padding: 15px 
-    background: #fff
-    //width: 377px
-    border-radius: 3px
-    box-shadow: 0 4px 7px rgba(0,0,0,.4)
-    &:before,
-    &:after 
-        content: "" 
-        position: absolute
-        width: 0px
-        height: 0px
-        border-style: solid
-    &:before
-        top: -8px
-        left: 16px
-        border-width: 0 6px 8px 6px
-        z-index: 2
-        border-color: transparent transparent #fff transparent
-    &:after
-        top: -9px
-        left: 15px
-        border-width: 0 7px 9px 7px
-        border-color: transparent transparent #ccc transparent
-
-.tooltip__table
-    width: 100% 
-    border-spacing: 0
-    border-collapse: collapse
-    font-size: 12px
-    border: 1px solid #e6e6e6
-    thead
-        background: #e7e7e7 
-        th
-            font-weight: normal
-            padding: 3px 
-            border-left: 1px solid #fff
-            border-bottom: 1px solid #e6e6e6 
-            &:first-child
-                border-left: 0
-    tbody
-        tr
-            &:nth-child(2n)
-                background: #f7f7f7 
-        td
-            padding: 0
-            border-left: 1px solid #e6e6e6 
-            &:first-child
-                font-weight: bold
-                border-left: 0
-                padding: 7px
-        a
-            display: block
-            color: #5c5c5c 
-            padding: 7px 7px 
-            text-decoration: none
-            &:hover
-                background: #cdeaf5
             
 
 .footer

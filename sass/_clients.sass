@@ -26,6 +26,8 @@ html
 	+s(add)
 .icon_export
 	+s(export)
+.icon_edit
+	+s(edit-white)
 
 .tabwindow
 	.tabwindow__in
@@ -81,116 +83,7 @@ html
 	color: #6a6969
 	font-size: 18px
 	font-weight: bold 
-.button
-	display: inline-block
-	border-radius: 2px
-	height: 28px
-	position: relative
-	overflow: hidden
-	padding: 0 5%
-	color: #838383 
-	font: bold 13px/28px Tahoma,Arial,sans-serif
-	font-weight: bold
-	background: #E8E8E8
-	text-shadow: 0 1px 0 #FAFAFA 
-	cursor: pointer
-	border: 0
-	text-decoration: none
-	+box-sizing(border-box)
-	+transition(background .2s linear)
-	&.button_blue
-		background: #2cabdc
-		color: #fff
-		text-shadow: 0 1px 2px rgba(#000, .4)   
-		&:hover
-			+opacity(1)
-			background: #238db5 
-	&:hover
-		+opacity(.95)
-	&:focus
-		outline: none
-	&:active
-		position: relative
-		top: 1px 
-.button_big
-	height: 32px
-	font: bold 14px/32px Tahoma,Arial,sans-serif
-.button_gray
-	background: #c5c5c5
-	color: #5c5c5c  
-.button_icon
-	padding: 0 10px
-	.icon
-		margin-right: 13px
-		vertical-align: middle
 
-
-.actions
-	margin-top: 45px 
-	text-align: right
-	&>*
-		margin-left: 3% 
-.actions_fluid
-	overflow: hidden
-	.button
-		display: block
-		float: right
-		padding: 0
-		margin: 0
-		width: 47%
-		&:first-child
-			float: left
-
-.group
-	margin-bottom: 30px 
-	.group__title
-		position: relative
-		left: -20px 
-		font-size: 0 
-		margin-bottom: 13px 
-		.customcheckbox
-			margin: 2px 5px 0 0 
-		h2
-			display: inline-block
-			width: 186px 
-			padding-left: 20px 
-			background: #A3C1CB
-			font-weight: bold
-			height: 22px  
-			line-height: 22px
-			color: #fff  
-			text-transform: uppercase
-			text-shadow: 0 1px 1px #87A9B6
-			font-size: 12px  
-			letter-spacing: .5px
-			margin-right: 4px 
-			vertical-align: top
-		.group__add
-			+s(trunkadd)
-			vertical-align: top
-			cursor: pointer
-			display: inline-block
-			+unselectable
-.group_text
-	.table-simple
-		tbody
-			td
-				text-align: left
-				color: #5c5c5c 
-				padding: 7px 10px 
-				font-size: 12px
-				strong
-					display: inline-block
-					margin-right: 25px
-				a
-					font-size: 12px
-					color: #2cabdc
-					font-weight: bold
-					text-decoration: none 
-					
-		.icon-delete
-			margin: 0 auto
-			display: block 
 .table-simple
 	border-spacing: 0
 	border-collapse: collapse

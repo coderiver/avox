@@ -55,3 +55,193 @@ textarea,input
 // resets
 a img,fieldset
 	border: none
+
+.button
+	display: inline-block
+	border-radius: 2px
+	height: 28px
+	position: relative
+	overflow: hidden
+	padding: 0 5%
+	color: #838383 
+	font: bold 13px/28px Tahoma,Arial,sans-serif
+	font-weight: bold
+	background: #E8E8E8
+	text-shadow: 0 1px 0 #FAFAFA 
+	cursor: pointer
+	border: 0
+	text-decoration: none
+	+box-sizing(border-box)
+	+transition(background .2s linear)
+	&.button_blue
+		background: #2cabdc
+		color: #fff
+		text-shadow: 0 1px 2px rgba(#000, .4)   
+		&:hover
+			+opacity(1)
+			background: #238db5 
+	&:hover
+		+opacity(.95)
+	&:focus
+		outline: none
+	&:active
+		position: relative
+		top: 1px 
+.button_big
+	height: 32px
+	font: bold 14px/32px Tahoma,Arial,sans-serif
+.button_gray
+	background: #c5c5c5
+	color: #5c5c5c  
+.button_icon
+	padding: 0 10px
+	.icon
+		margin-right: 13px
+		vertical-align: middle
+.button_red
+	background: #DE5454 
+	color: #fff
+	text-shadow: 0 1px 0 #c21717 
+.tooltip
+	display: none
+	position: absolute
+	top: 100px
+	left: 0
+	z-index: 1000
+	padding: 15px 
+	background: #fff
+	//width: 377px
+	border-radius: 3px
+	box-shadow: 0 4px 7px rgba(0,0,0,.4)
+	&:before,
+	&:after 
+		content: "" 
+		position: absolute
+		width: 0px
+		height: 0px
+		border-style: solid
+	&:before
+		top: -8px
+		left: 16px
+		border-width: 0 6px 8px 6px
+		z-index: 2
+		border-color: transparent transparent #fff transparent
+	&:after
+		top: -9px
+		left: 15px
+		border-width: 0 7px 9px 7px
+		border-color: transparent transparent #ccc transparent
+	.button
+		float: right
+		margin-top: 0
+		width: 75px
+		&:first-child
+			float: left
+.tooltip_gray
+	background: #f7f7f7
+	padding-top: 23px
+	width: 315px   
+	margin-left: 10px
+	&:after,
+	&:before
+		display: none
+.tooltip__table
+	width: 100% 
+	border-spacing: 0
+	border-collapse: collapse
+	font-size: 12px
+	border: 1px solid #e6e6e6
+	thead
+		background: #e7e7e7 
+		th
+			font-weight: normal
+			padding: 3px 
+			border-left: 1px solid #fff
+			border-bottom: 1px solid #e6e6e6 
+			&:first-child
+				border-left: 0
+	tbody
+		tr
+			&:nth-child(2n)
+				background: #f7f7f7 
+		td
+			padding: 0
+			border-left: 1px solid #e6e6e6 
+			&:first-child
+				font-weight: bold
+				border-left: 0
+				padding: 7px
+		a
+			display: block
+			color: #5c5c5c 
+			padding: 7px 7px 
+			text-decoration: none
+			&:hover
+				background: #cdeaf5
+
+.actions
+	margin-top: 45px 
+	text-align: right
+	&>*
+		margin-left: 3% 
+.actions_fluid
+	overflow: hidden
+	.button
+		display: block
+		float: right
+		padding: 0
+		margin: 0
+		width: 47%
+		&:first-child
+			float: left
+
+.group
+	margin-bottom: 30px 
+	.group__title
+		position: relative
+		left: -20px 
+		font-size: 0 
+		margin-bottom: 13px 
+		.customcheckbox
+			margin: 2px 5px 0 0 
+		h2
+			display: inline-block
+			width: 186px 
+			padding-left: 20px 
+			background: #A3C1CB
+			font-weight: bold
+			height: 22px  
+			line-height: 22px
+			color: #fff  
+			text-transform: uppercase
+			text-shadow: 0 1px 1px #87A9B6
+			font-size: 12px  
+			letter-spacing: .5px
+			margin-right: 4px 
+			vertical-align: top
+		.group__add
+			+s(trunkadd)
+			vertical-align: top
+			cursor: pointer
+			display: inline-block
+			+unselectable
+.group_text
+	.table-simple
+		tbody
+			td
+				text-align: left
+				color: #5c5c5c 
+				padding: 7px 10px 
+				font-size: 12px
+				strong
+					display: inline-block
+					margin-right: 25px
+				a
+					font-size: 12px
+					color: #2cabdc
+					font-weight: bold
+					text-decoration: none 
+					
+		.icon-delete
+			margin: 0 auto
+			display: block 
