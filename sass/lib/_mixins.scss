@@ -1,16 +1,45 @@
-// responsive example, edit or remove
-$break-small: 500px;
-$break1650: 1650px;
-@mixin r($media) {
-	@if $media == pda {
+$step1: 1400px;
+$step2: 1000px;
+$step3: 940px;
+$step4: 830px;
+$step5: 700px;
+$step6: 550px;
+$steplast: 401px;
+$step7: 320px;
+@mixin r($media:'step1') {
+	@if $media == step1 {
 		// narrower than $width
-		@media only screen and (max-width: $break-small) { @content; }
+		@media only screen and (max-width: $step1) { @content; }
 	}
-	@else if $media == 1650 {
+	@else if $media == step2 {
 		// wider than $width
-		@media only screen and (max-width: $break1650) { @content; }
+		@media only screen and (max-width: $step2) { @content; }
 	}
-}
+	@else if $media == step3 {
+		// wider than $width
+		@media only screen and (max-width: $step3) { @content; }
+	}
+	@else if $media == step4 {
+		// wider than $width
+		@media only screen and (max-width: $step4) { @content; }
+	}
+	@else if $media == step5 {
+		// wider than $width
+		@media only screen and (max-width: $step5) { @content; }
+	}
+	@else if $media == step6 {
+		// wider than $width
+		@media only screen and (max-width: $step6) { @content; }
+	}
+	@else if $media == steplast {
+		// wider than $width
+		@media only screen and (max-width: $steplast) { @content; }
+	}
+	@else if $media == step7 {
+		// wider than $width
+		@media only screen and (max-width: $step7) { @content; }
+	}
+}  
 // retina bg
 @mixin retina{
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {

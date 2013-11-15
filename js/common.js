@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 
 		$(".js-select-multi").multiselect({
-				selectedList: 4,
+				selectedList: 7,
 				noneSelectedText: "",
 				header: "",
    		 		open: function () {
