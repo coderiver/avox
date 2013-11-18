@@ -71,7 +71,21 @@ $(document).ready(function() {
    		 		}
  
 		}).multiselectfilter();
-
+		$(".js-select-multi.is-placeholder").each(function () {
+			var placeholder = $(this).attr("data-placeholder");
+			$(this).multiselect({
+				selectedList: 7,
+				noneSelectedText: placeholder,
+				header: "",
+		 		open: function () {
+		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+		 		},
+		 		close: function () {
+		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
+		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+		 		}
+			}).multiselectfilter();
+		})
 
 		// hiding on blur, needs class, is-shown
 		mouseOverActiveElement = false;
