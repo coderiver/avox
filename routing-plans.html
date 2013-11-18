@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Rate tables</title>
+	<title>Routing plans</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.js"></script>
@@ -80,22 +80,9 @@
                         </div>
                         <div class="l-col3 l-col3_width">
                             <div class="row">
-                                <span class="row__text">Managers:</span>
+                                <span class="row__text">ORIG Client:</span>
                                 <div class="row__main">
-                                    <select class="js-select-multi" multiple="multiple">
-                                        <option value="var0">var0</option>
-                                        <option value="var1">var1</option>
-                                        <option value="var2">var2</option>
-                                        <option value="var3">var3</option>
-                                        <option value="var4">var4</option>
-                                    </select>
-                                    <button class="btn-bucket js-clear-select"><i></i></button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <span class="row__text">Groups:</span>
-                                <div class="row__main">
-                                    <select class="js-select-multi" multiple="multiple">
+                                    <select class="js-select-multi is-placeholder" multiple="multiple" data-placeholder="Managers">
                                         <option value="var0">var0</option>
                                         <option value="var1">var1</option>
                                         <option value="var2">var2</option>
@@ -118,14 +105,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="trans-title">Routing Plans</div>
+                    <div class="trans-title">Rate tables</div>
                 </div>
             </div>
             <div class="l-container">
                 <div class="filter__bottom">
                     <div class="action">
                         <button class="button button_blue button_icon">
-                            <i class="icon icon_add"></i>Add Routing Plan
+                            <i class="icon icon_add"></i>Add Rate Table
+                        </button>
+                        <button class="button button_icon is-disabled">
+                            <i class="icon icon_export"></i>Mass Import
                         </button>
                     </div>
                     <div class="pagin">
@@ -178,37 +168,42 @@
                     <table class="table-head table-head_invoices">
                         <thead>
                             <tr>
-                                <td class="td-0 td-height">
+                                <td class="td-0">
                                     <div>
                                         <span>ID</span>
                                     </div>
                                 </td>
-                                <td class="td-1 td-height">
+                                <td class="td-1">
                                     <div>
-                                        <span></span>
+                                        <span>Name</span>
                                     </div>
                                 </td>
                                 <td class="td-2">
                                     <div>
-                                        <span>Rate Table Name</span>
+                                        <span>Managers</span>
                                     </div>
                                 </td>
-                                <td class="td-3">
+                                <td class="td-3 td-height">
                                     <div>
-                                        <span>Managers (resellers)</span>
+                                        <span>Dependencies</span>
                                     </div>
                                 </td>
-                                <td class="td-4">
+                                <td class="td-4 td-height">
                                     <div>
-                                        <span>Notes</span>
+                                        <span>Rules</span>
                                     </div>
                                 </td>
-                                <td class="td-5">
+                                <td class="td-5 td-height">
                                     <div>
-                                        <span>Used</span>
+                                        <span>Uses</span>
                                     </div>
                                 </td>
                                 <td class="td-6 td-height">
+                                    <div>
+                                        <span>Clone</span>
+                                    </div>
+                                </td>
+                                <td class="td-7 td-height">
                                     <div>
                                         <span></span>
                                     </div>
@@ -219,20 +214,6 @@
                                     <div>
                                         <span></span>
                                         <div class="btns-wrap">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
                                             <button class="btn-sort btn-sort_top"><i></i></button>
                                             <button class="btn-sort btn-sort_down"><i></i></button>
                                         </div>
@@ -260,8 +241,6 @@
                                     <div>
                                         <span></span>
                                         <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down"><i></i></button>
                                         </div>
                                     </div>
                                 </td>
@@ -269,7 +248,27 @@
                                     <div>
                                         <span></span>
                                         <div class="btns-wrap">
-                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
                                         </div>
                                     </div>
                                 </td>
@@ -285,215 +284,186 @@
             <tbody>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
-                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                </tr>
-                <tr>
-                    <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
-                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                </tr>
-                <tr>
-                    <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
-                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                </tr>
-                <tr>
-                    <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
 
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
                 <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <td class="to-right">34</td>
-                    <td class="to-center">
-                        <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-left" data-href="#">Slovak ORIG</td>
-                    <td data-href="#" class="to-left">Ed Whitehoof</td>
-                    <td class="to-left" data-href="#">Premium, all with CLI/fax</td>
-                    <td class="is-red to-right" data-href="#">1</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
                     <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                 </tr>
 
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
+                <tr>
+                    <td class="to-right">34</td>
+                    <td class="to-left" data-href="#">Slovak Telecom RP</td>
+                    <td class="to-left" data-href="#">Sveta, Katya</td>
+                    <td class="to-left" data-href="#">7 slaves</td>
+                    <td class="to-right" data-href="#">4</td>
+                    <td class="to-right" data-href="#">1</td>
+                    <td class=""><button class="icon icon_clone"></button></td>
+                    <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                </tr>
             </tbody>
         </table>
     </div>
