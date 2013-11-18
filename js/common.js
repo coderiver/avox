@@ -117,13 +117,28 @@ $(document).ready(function() {
 
 
 		function fixed_filter() {
-			var header_height = $(".js-header").outerHeight();
-			if ($(window).scrollTop() >= header_height) {
-				$("body").addClass("is-fixed-table");
+			if ($(".js-header").length > 0) {
+				var header_height = $(".js-header").outerHeight();
+				if ($(window).scrollTop() >= header_height) {
+					$("body").addClass("is-fixed-table");
+				}
+				else {
+					$("body").removeClass("is-fixed-table");
+				}
+
 			}
 			else {
-				$("body").removeClass("is-fixed-table");
+				var filter_pos = $(".js-filter").offset().top;
+				if ($(window).scrollTop() >= filter_pos) {
+					$("body").addClass("is-fixed-table");
+				}
+				else {
+					$("body").removeClass("is-fixed-table");
+				}
+				console.log($(window).scrollTop());
+				console.log(filter_pos);
 			}
+			
 		}
 		fixed_filter();
 		$(window).scroll(function(){

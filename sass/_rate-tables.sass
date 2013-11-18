@@ -21,3 +21,35 @@
 			top: 12px
 			z-index: 2
 			background: #e7e7e7
+			
+.actions-wrap
+	.button_extend
+		float: left
+		margin-right: 5%
+		i
+			display: inline-block
+			+s(arr4)
+	.actions
+		overflow: hidden
+		
+.tabwindow_extend
+	.tabwindow__content
+		padding: 35px 0 0
+	.l-container
+		width: 96%
+	
+body
+	&.is-fixed-table 
+		.tabwindow_extend
+			.filter__in
+				left: 20px
+				right: 20px
+.group_width
+	margin-bottom: 0
+	.group__title
+		left: 0
+		margin-bottom: 0
+		h2
+			display: block
+			width: 100%
+			+box-sizing(border-box)
