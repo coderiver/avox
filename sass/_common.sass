@@ -372,3 +372,14 @@ a img,fieldset
 	background: #f6f6f6 
 	&+i
 		display: none
+		
+.input-file
+	height: 32px
+	width: 100%
+	+box-sizing(border-box)
+input[type="file"]
+	&::-webkit-file-upload-button
+		height: 24px
+		border-radius: 2px
+		background: #e7e7e7
+		border: 0

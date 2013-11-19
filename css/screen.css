@@ -317,6 +317,10 @@ a img, fieldset { border: none; }
 .input_gray { background: #f6f6f6; }
 .input_gray + i { display: none; }
 
+.input-file { height: 32px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2px; background: #e7e7e7; border: 0; }
+
 .l { width: 100%; display: inline-block; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
@@ -835,3 +839,9 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 .table-simple.is-hoverable td[data-href]:hover { cursor: pointer; background: #9ed8ef; }
 
 .l-container_width { width: 96%; }
+
+.l-col-equal { padding-right: 1%; }
+.l-col-equal .row { margin-bottom: 10px; }
+
+.row__main-fluid .row__main-col { width: 50%; padding-left: 5%; padding-right: 0; }
+.row__main-fluid .row__main-col:first-child { padding-left: 0; }
