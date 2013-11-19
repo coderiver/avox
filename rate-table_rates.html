@@ -115,7 +115,7 @@
                                         <div class="row__main">
                                             <input type="text" class="input js-search-input" placeholder="Search">
                                             <div class="actions-wrap">
-                                                <button class="button button_gray button_icon button_extend"><i></i></button>
+                                                <button class="button button_gray button_icon button_expand js-show-expand"><i></i></button>
                                                 <div class="actions actions_fluid">
                                                     <button class="button button_gray js-reset-filter">Reset All</button>
                                                     <button class="button button_blue">Filter</button>
@@ -141,32 +141,6 @@
                                     <button class="button button_blue button_icon js-show-tooltip">
                                         <i class="icon icon_edit"></i>Mass Edit filtered
                                     </button>
-                                    <div class="tooltip tooltip_gray js-tooltip">
-                                        <div class="row">
-                                            <span class="row__text">Set State:</span>
-                                            <div class="row__main">
-                                                <select class="chosen-select">
-                                                    <option value="">&nbsp;</option>
-                                                    <option value="var0">var0</option>
-                                                    <option value="var1">var1</option>
-                                                    <option value="var2">var2</option>
-                                                    <option value="var3">var3</option>
-                                                    <option value="var4">var4</option>
-                                                </select> 
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <span class="row__text"></span>
-                                            <div class="row__main">
-                                                <button class="button button_red">
-                                                    Delete 
-                                                </button>
-                                                <button class="button button_blue">
-                                                    Go
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="pagin">
@@ -371,23 +345,68 @@
                             </table>
                         </div>
                     </div>
+                    <div class="expand js-expand">
+                        <div class="expand__col">
+                            <div class="row row_inline-items">
+                                <span class="row__text">Rates:</span>
+                                <div class="row__main">
+                                    <input type="text" class="input input_s"> 
+                                    <i class="row-separator"></i>
+                                    <input type="text" class="input input_s"> 
+                                    <span>USD</span>
+                                </div>
+                            </div>
+                            <div class="row row_inline-items">
+                                <span class="row__text">Time Profile:</span>
+                                <div class="row__main">
+                                    <select class="js-select-multi" multiple="multiple" >
+                                        <option value="var0">var0</option>
+                                        <option value="var1">var1</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expand__col">
+                            <div class="row row_inline-items">
+                                <span class="row__text">First Interval:</span>
+                                <div class="row__main">
+                                    
+                                    <input type="text" class="input input_s"> 
+                                    <i class="row-separator"></i>
+                                    <input type="text" class="input input_s"> 
+                                </div>
+                            </div>
+                            <div class="row row_inline-items">
+                                <span class="row__text">Next Interval:</span>
+                                <div class="row__main">
+                                    
+                                    <input type="text" class="input input_s"> 
+                                    <i class="row-separator"></i>
+                                    <input type="text" class="input input_s"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="l-container table-wrap">
-                <table class="table table_left-aligh js-table">
+                <table class="table table_left-aligh table_input js-table">
                     <tbody>
                         <tr>
                             <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -408,61 +427,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Algeria 
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -475,11 +445,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -487,15 +463,9 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
                                 </div>
                             </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -506,12 +476,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -524,11 +494,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -536,15 +512,9 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
                                 </div>
                             </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -555,12 +525,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -573,67 +543,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
                             </td>
                             <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Algeria 
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -643,7 +563,7 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -654,12 +574,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -672,11 +592,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -684,15 +610,9 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
                                 </div>
                             </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -703,12 +623,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -721,11 +641,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -733,15 +659,9 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
                                 </div>
                             </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -752,12 +672,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -770,67 +690,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
                             </td>
                             <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon">
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Algeria 
-                            </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -840,7 +710,7 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -851,12 +721,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -869,11 +739,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -881,15 +757,9 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
-                                    <i class="icon icon_glass"></i>
                                 </div>
                             </td>
-                            <td>
-                                <div class="input-wrap">
-                                    <input type="text" class="input">
-                                </div>
-                            </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -900,12 +770,12 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -918,11 +788,17 @@
                             <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td width="100">
                                 Algeria 
                             </td>
                             <td>
-                                <div class="input-wrap">
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
                                     <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
@@ -930,6 +806,49 @@
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
                                     <i class="icon icon_glass"></i>
                                 </div>
                             </td>
@@ -938,7 +857,7 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td>2</td>
+                            <td  width="100">2</td>
                             <td>
                                 <div class="input-wrap">
                                     <input type="text" class="input">
@@ -949,12 +868,257 @@
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
                             </td>
-                            <td class="td-icon">
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td width="100">
+                                Algeria 
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap input-wrap_right-glass">
+                                    <input type="text" class="input">
+                                    <i class="icon icon_glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td  width="100">2</td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
+                                <div class="input-wrap">
+                                    <input type="text" class="input">
+                                </div>
+                            </td>
+                            <td class="td-input-small">
                                 <div class="input-wrap">
                                     <input type="text" class="input">
                                 </div>
@@ -969,32 +1133,111 @@
                     </tbody>
                 </table>
             </div>
+            <div class="actions">
+                <div class="button">Ok</div>
+                <div class="button">Cancel</div>
+                <div class="button button_blue">Apply</div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="tooltip tooltip_gray js-tooltip">
-    <div class="row">
+<div class="tooltip tooltip_gray js-tooltip tooltip_419">
+    <div class="row row_inline-items">
         <span class="row__text">Set State:</span>
         <div class="row__main">
-            <select class="chosen-select">
+            <select class="chosen-select chosen-select_small">
                 <option value="">&nbsp;</option>
                 <option value="var0">var0</option>
                 <option value="var1">var1</option>
                 <option value="var2">var2</option>
                 <option value="var3">var3</option>
                 <option value="var4">var4</option>
-            </select> 
+            </select>
+            <input type="text" class="input input_s"> 
+            <span>USD</span>
         </div>
     </div>
-    <div class="row">
+    <div class="row row_inline-items">
+        <span class="row__text">Min Time:</span>
+        <div class="row__main">
+            <select class="chosen-select chosen-select_small">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select>
+            <input type="text" class="input input_s"> 
+            <span>sec</span>
+        </div>
+    </div>
+    <div class="row row_inline-items">
+        <span class="row__text">Interval:</span>
+        <div class="row__main">
+            <select class="chosen-select chosen-select_small">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select>
+            <input type="text" class="input input_s"> 
+            <span>sec</span>
+        </div>
+    </div>
+    <div class="row row_inline-items">
+        <span class="row__text">Effective Date:</span>
+        <div class="row__main">
+            <select class="chosen-select chosen-select_small">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select>
+            <input type="text" class="input"> 
+        </div>
+    </div>
+    <div class="row row_inline-items">
+        <span class="row__text">End Date:</span>
+        <div class="row__main">
+            <select class="chosen-select chosen-select_small">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select>
+            <input type="text" class="input"> 
+        </div>
+    </div>
+    <div class="row row_inline-items">
+        <span class="row__text">Notes:</span>
+        <div class="row__main">
+            <select class="chosen-select chosen-select_small">
+                <option value="">&nbsp;</option>
+                <option value="var0">var0</option>
+                <option value="var1">var1</option>
+                <option value="var2">var2</option>
+                <option value="var3">var3</option>
+                <option value="var4">var4</option>
+            </select>
+            <input type="text" class="input input_gray" disabled> 
+        </div>
+    </div>
+    <div class="row row_inline-items">
         <span class="row__text"></span>
         <div class="row__main">
-            <button class="button button_red">
-                Delete 
+            <button class="button button_red button_auto">
+                Delete Filtered
             </button>
-            <button class="button button_blue">
-                Go
+            <button class="button button_blue button_auto">
+                Preview
             </button>
         </div>
     </div>

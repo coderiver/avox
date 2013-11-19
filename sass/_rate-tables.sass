@@ -23,20 +23,25 @@
 			background: #e7e7e7
 			
 .actions-wrap
-	.button_extend
+	.button_expand
 		float: left
 		margin-right: 5%
 		i
 			display: inline-block
 			+s(arr4)
-	.actions
+	.actions_fluid
 		overflow: hidden
+		margin-top: 0 !important
+		width: auto !important
 		
 .tabwindow_extend
 	.tabwindow__content
-		padding: 35px 0 0
-	.l-container
+		padding: 35px 0 30px
+	.l-container,
+	.actions
 		width: 96%
+	.actions
+		margin: 47px auto 0
 	
 body
 	&.is-fixed-table 
@@ -53,3 +58,78 @@ body
 			display: block
 			width: 100%
 			+box-sizing(border-box)
+
+.table_input
+	td
+		padding: 4px 
+	tr
+		&:last-child
+			td
+				border-bottom: 1px solid #e7e7e7
+.td-input-small
+	width: 35px
+	
+.row_inline-items
+	margin-bottom: 10px
+	.chosen-select_small,
+	.chosen-container
+		width: 100px !important
+	.input,
+	.chosen-select_small,
+	.chosen-container,
+	span
+		display: inline-block
+		vertical-align: middle
+	.input
+		width: 190px
+		margin: 0 0 0 10px
+	.input_s
+		width: 75px
+		margin: 0 10px
+	span
+		font-size: 12px
+	.button_auto
+		width: auto
+
+.tooltip_419
+	width: 419px
+	padding-right: 30px
+.input-wrap_right-glass
+	.icon_glass
+		right: 12px
+		left: auto
+	.input
+		padding-right: 30px
+		
+.expand
+	display: none
+	position: absolute
+	right: 0
+	top: 181px
+	z-index: 1000
+	padding: 25px 25px 25px 10px
+	width: 600px
+	border-radius: 0 0 2px 2px
+	background-color: #e3e3e3
+	+box-sizing(border-box)
+	+clr
+	box-shadow: 0 8px 9px rgba(0,0,0,.1)
+	.row__text
+		width: 30%
+		margin-left: 0
+	.row__main
+		width: 70%
+		padding-right: 0
+		.ui-multiselect
+			width: 87% !important
+	.input_s
+		width: 62px
+		margin: 0
+	span
+		margin-left: 10px
+.expand__col
+	float: left
+	width: 50%
+.is-fixed-table
+	.expand
+		top: 124px

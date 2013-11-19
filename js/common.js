@@ -4,6 +4,7 @@ $(document).ready(function() {
         tooltip.hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
+        $(".js-expand").hide();
     });
 
 	//chosen stuff
@@ -173,17 +174,37 @@ $(document).ready(function() {
 	tooltip.click(function(event){
 		event.stopPropagation();
 	});
-	$(".js-show-tooltip").bind("click", function(event){
-		var top = $(this).offset().top;
-		var left = $(this).offset().left;
+	function tooltipShow() {
+		$(".js-show-tooltip").bind("click", function(event){
+			var top = $(this).offset().top;
+			var left = $(this).offset().left;
+			tooltip.css({
+				"left": left-12,
+				"top": top+37
+			});
+			tooltip.show();
+			event.stopPropagation();
+		});
+	}
+	tooltipShow();
+	$(window).scroll(function(){
+
+		var top = $(".js-show-tooltip").offset().top;
+		var left = $(".js-show-tooltip").offset().left;
 		tooltip.css({
 			"left": left-12,
 			"top": top+37
 		});
-		tooltip.show();
-		event.stopPropagation();
 	});
 
+
+	$(".js-show-expand").bind("click",function(event){
+		$(".js-expand").toggle();
+		event.stopPropagation();
+	});
+	$(".js-expand").click(function(event){
+		event.stopPropagation();
+	})
 
 	$(".js-reset-filter").bind("click", function(){
 		$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");
@@ -315,3 +336,4 @@ $(document).ready(function() {
 	});
 
 });
+
