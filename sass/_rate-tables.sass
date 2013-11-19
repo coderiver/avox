@@ -133,3 +133,110 @@ body
 .is-fixed-table
 	.expand
 		top: 124px
+		
+
+// export page
+.export-param
+	padding-left: 20px
+	font-size: 12px
+	li
+		margin-bottom: 10px
+.rate-export-content
+	.row
+		margin-bottom: 10px
+	.row_radio
+		.row__text
+			.radio-simple
+				margin-left: 30px
+.row_height
+	> .row__text,
+	> .row__main
+		vertical-align: top
+.row
+	&.is-inactive-row
+		.row__text,
+		.row__main
+			opacity: .7
+			
+.row_aligh-top
+	.row__text,
+	.row__main
+		vertical-align: top
+.select-group
+	float: right
+	padding: 30px 0 25px 25px 
+	width: 540px
+	background: #e8e8e8 
+	+clr
+	+box-sizing(border-box)
+.select-group__title
+	margin-bottom: 28px
+	font-weight: bold
+	font-size: 12px
+.chosen-select-row
+	margin-bottom: 10px
+	.chosen-select,
+	.chosen-container
+		display: inline-block
+		vertical-align: middle
+	.chosen-container
+		width: 220px !important
+
+.date-format-opt
+	float: left
+	margin-right: 20px
+	width: 400px
+	+box-sizing(border-box)
+	.group__title
+		left: 0
+	.row__text
+		width: 31%
+	.row__main
+		width: 69%
+.tabwindow_no-padding 
+	.tabwindow__content
+		padding: 35px 0
+.tabwindow_fixed-width
+	.tabwindow__in
+		max-width: 1000px
+		+box-sizing(border-box)
+.actions
+	clear: both
+.group_no-left
+	.group__title
+		left: 0
+.row_500
+	width: 500px 
+	padding-left: 40px
+	.ui-multiselect
+		width: 290px !important	
+		max-width: 290px !important	
+.table-simple
+	.to-center
+		text-align: center
+	.to-left
+		text-align: left
+	.to-right
+		text-align: right	
+	.is-green
+		color: #438420 !important
+	.is-red
+		color: #900 !important
+	.is-gray
+		color: #a9a9a9 !important
+	&.is-hoverable
+		tr
+			&:hover
+				td
+					background: #cfecf7 
+			&.is-clicked
+				background: #ffefe5
+				&:nth-child(2n)
+					background: #f8e8de 
+		td			
+			&[data-href]
+				&:hover
+					cursor: pointer
+					background: #9ed8ef 
+.l-container_width
+	width: 96%

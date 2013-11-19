@@ -1,0 +1,235 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Rate tables export</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="is-popup">
+<div class="tabwindow tabwindow_no-padding">
+    <div class="tabwindow__in">
+        <div class="tabwindow__nav">
+            <ul class="tabs">
+                <li><a href="">Rates</a></li>
+                <li><a href="" class="is-active">Export</a></li>
+                <li><a href="">Import</a></li>
+                <li><a href="">Parameters</a></li>
+            </ul>
+            <div class="tabwindow__state">
+                  Alaska
+            </div>
+        </div>
+        <div class="tabwindow__content rate-export-content">
+            <div class="wrap">
+                <div class="date-format-opt">
+                    <div class="group">
+                        <div class="group__title">
+                            <h2>FILTER PARAMETERS</h2>
+                        </div>
+                        <ul class="export-param">
+                            <li><strong>Current/New</strong> | on 2013 Dec 16  15:56:12  +02:00 </li>
+                            <li><strong>Changes</strong> | News </li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <div class="group__title">
+                            <h2>DATE & FORMAT OPTIONS</h2>
+                        </div>
+                        <div class="row">
+                            <span class="row__text">Last Export Date:</span>
+                            <div class="row__main">
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="row__text">Date format:</span>
+                            <div class="row__main">
+                                <input type="text" class="input">
+                            </div>
+                        </div> 
+                        <div class="row row_height">
+                            <span class="row__text">File format:</span>
+                            <div class="row__main">
+                                <div class="row row_radio">
+                                    <div class="row__text">
+                                        <label class="radio-simple">
+                                            <input type="radio" name="name1">
+                                            <span>XLS</span>
+                                        </label>
+                                    </div>
+                                    <div class="row__main">
+                                        <label class="radio-simple">
+                                            <input type="radio" name="name1">
+                                            <span>CSV</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row is-inactive-row">
+                                    <div class="row__text">
+                                        Fields Delimiter: 
+                                    </div>
+                                    <div class="row__main">
+                                        <input type="text" class="input" disabled>
+                                    </div>
+                                </div>
+                                <div class="row is-inactive-row">
+                                    <div class="row__text">
+                                        Headres Row: 
+                                    </div>
+                                    <div class="row__main">
+                                        <label class="customcheckbox" for="">
+                                            <input type="checkbox" name="" id="" disabled>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row_aligh-top">
+                            <span class="row__text">Header Text:</span>
+                            <div class="row__main">
+                                <textarea class="input input_textarea">This rate notification is FULL. All other codes/rates must be deleted. Billing step Mexico is 60/60, for all others 1/1 if other not indicated explicitly.</textarea>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="select-group">
+                    <div class="select-group__title">Choose columns:</div>
+                    <div class="l-col-equal">
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">1:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">2:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">3:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">4:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">5:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">6:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="l-col-equal">
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">1:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">2:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">3:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">4:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                        <div class="chosen-select-row">  
+                            <span class="chosen-select-row__text">5:</span>
+                            <select class="chosen-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="button button_green">Save</div>
+                    <div class="button">Cancel</div>
+                    <div class="button button_blue">Export</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>

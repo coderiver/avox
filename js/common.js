@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$(document).click(function() {
-        tooltip.hide();
+        $(".js-tooltip").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
         $(".js-expand").hide();
@@ -141,9 +141,14 @@ $(document).ready(function() {
 			}
 			
 		}
-		fixed_filter();
-		$(window).scroll(function(){
+		if ($(".js-filter").length > 0 ) {
 			fixed_filter();
+		}
+		
+		$(window).scroll(function(){
+			if ($(".js-filter").length > 0 ) {
+			fixed_filter();
+		}
 		}); 
 
 		function td_width() {

@@ -97,7 +97,10 @@ a img,fieldset
 .button_gray
 	background: #c5c5c5
 	color: #5c5c5c  
-
+.button_green
+	background: #66bb38
+	color: #fff 
+	text-shadow: 0 1px 0 #54ad2a
 .button_icon
 	padding: 0 10px
 	.icon
@@ -251,3 +254,121 @@ a img,fieldset
 		.icon-delete
 			margin: 0 auto
 			display: block 
+			
+.radio
+	position: relative
+	display: inline-block
+	width: 50px
+	min-height: 24px
+	input,i
+		position: absolute
+		left: 50%
+		top: 0
+		margin-left: -12px
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		+box-sizing(border-box)
+	i
+		background: #d8d8d8
+		border: 1px solid #bababa
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.15)
+	input
+		opacity: 0
+		&:checked
+			+ i
+				&:before
+					content: ""
+					position: absolute
+					top: 50%
+					left: 50%
+					margin: -8px 0 0 -8px 
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					background: #2aa2d1
+					cursor: pointer
+					box-shadow: inset 2px -2px 2px rgba(0,0,0,.2), inset -2px 2px 2px rgba(255,255,255,.4) 
+	span
+		display: block
+		margin-top: 28px
+		color: #888
+		font-size: 11px  
+
+.radio-simple
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -10px
+		width: 20px
+		height: 20px
+	input
+		opacity: 0
+		&:checked
+			+ span
+				&:after
+					display: block
+	span
+		position: relative
+		padding-left: 25px
+		font-size: 12px
+		display: inline-block
+		text-transform: uppercase
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+		&:before
+			left: 0
+			margin-top: -9px
+			border: 1px solid #cecece
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			background: #fff
+			box-shadow: inset 0 2px 1px rgba(0,0,0,.07)
+		&:after
+			display: none
+			left: 5px
+			margin-top: -4px
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background: #2babdb
+
+.row__main
+	.row__text,
+	.row__main
+		width: 50%
+	.row_radio
+		.row__text
+			text-align: left 
+			
+
+.input,.textarea
+	+box-sizing(border-box)
+	padding: 5px
+	width: 100%
+	height: 32px
+	border: 1px solid #d5d5d5
+	+border-radius(3px)
+	font-size: 12px 
+	background: #fff
+	color: #5c5c5c 
+	+box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
+	&:focus
+		border: 1px solid #aacdda
+		background: #bfe5f3
+		outline: none  
+.input_textarea
+	resize: vertical
+	height: 62px
+	max-height: 120px
+.input_gray
+	background: #f6f6f6 
+	&+i
+		display: none
