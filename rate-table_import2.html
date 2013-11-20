@@ -1,0 +1,199 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Rate tables import 2</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="is-popup">
+<div class="tabwindow tabwindow_no-padding">
+    <div class="tabwindow__in">
+        <div class="tabwindow__nav">
+            <ul class="tabs">
+                <li><a href="">Rates</a></li>
+                <li><a href="">Export</a></li>
+                <li><a href="" class="is-active">Import</a></li>
+                <li><a href="">Parameters</a></li>
+            </ul>
+            <div class="tabwindow__state">
+                  Alaska
+            </div>
+        </div>
+        <div class="tabwindow__content">
+            <div class="group group_no-left">
+                <div class="group__title">
+                    <h2>DEFAULTS</h2>
+                </div>
+            </div>
+            <div class="l-container l-container_width">
+                <div class="wrap">
+                    <div class="l-col-equal">
+                        <div class="row">
+                            <span class="row__text">Effective Date:</span>
+                            <div class="row__main wrap">
+                                <div class="input-wrap">
+                                    <input type="text" class="input js-date-input">
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="row__text"></span>
+                            <div class="row__main row__main_ml">
+                                <div class="input-wrap input-wrap_inline">
+                                    <span>Rate:</span>
+                                    <input type="text" class="input js-date-input">
+                                </div>
+                                <div class="input-wrap input-wrap_inline">
+                                    <span>Rate:</span>
+                                    <input type="text" class="input js-date-input">
+                                </div>
+                                <div class="input-wrap input-wrap_inline">
+                                    <span>Rate:</span>
+                                    <input type="text" class="input js-date-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-col-equal">
+                        <div class="row">
+                            <span class="row__text">End Date:</span>
+                            <div class="row__main">
+                                <div class="input-wrap">
+                                    <input type="text" class="input js-date-input">
+                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="row__text">Notes:</span>
+                            <div class="row__main">
+                                <input type="text" class="input js-date-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="button button_blue">Preview</div>
+                </div>
+            </div>
+            <div class="group group_no-left">
+                <div class="group__title">
+                    <h2>PARSER DETECTED</h2>
+                </div>
+            </div>
+            <div class="l-container l-container_width">
+                <table class="table-simple is-hoverable js-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <select class="chosen-select">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Any">Any</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Urkaine">Urkaine</option>
+                                    <option value="India">India</option>
+                                </select> 
+                            </th>
+                            <th>
+                                <select class="chosen-select">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Any">Any</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Urkaine">Urkaine</option>
+                                    <option value="India">India</option>
+                                </select> 
+                            </th>
+                            <th>
+                                <select class="chosen-select">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Any">Any</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Urkaine">Urkaine</option>
+                                    <option value="India">India</option>
+                                </select> 
+                            </th>
+                            <th>
+                                <select class="chosen-select">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Any">Any</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Urkaine">Urkaine</option>
+                                    <option value="India">India</option>
+                                </select> 
+                            </th>
+                            <th>Skip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#">
+                                <label class="customcheckbox" for="">
+                                      <input type="checkbox" name="" id="" checked>
+                                      <i></i>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#">
+                                <label class="customcheckbox" for="">
+                                      <input type="checkbox" name="" id="" checked>
+                                      <i></i>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#">
+                                <label class="customcheckbox" for="">
+                                      <input type="checkbox" name="" id="" checked>
+                                      <i></i>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#"></td>
+                            <td data-href="#">
+                                <label class="customcheckbox" for="">
+                                      <input type="checkbox" name="" id="" checked>
+                                      <i></i>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <div class="button">Cancel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>

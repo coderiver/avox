@@ -838,6 +838,8 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 .table-simple.is-hoverable tr.is-clicked:nth-child(2n) { background: #f8e8de; }
 .table-simple.is-hoverable td[data-href]:hover { cursor: pointer; background: #9ed8ef; }
 .table-simple a { color: #2cabdc; text-decoration: none; }
+.table-simple th { padding: 7px; }
+.table-simple thead .ui-multiselect { width: 100% !important; max-width: 100% !important; }
 
 .l-container_width { width: 96%; }
 
@@ -850,3 +852,13 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 .icon-undo { display: inline-block; vertical-align: middle; background: url('../img/icons-s02729125e3.png') 0 -713px no-repeat; width: 18px; height: 14px; }
 
 .pagin_margin { margin-bottom: 30px; }
+
+.input-wrap { position: relative; }
+.input-wrap .btn-bucket { position: absolute; right: 0; top: 0; }
+
+.input-wrap_inline { float: left; width: 33.3%; font-size: 0; }
+.input-wrap_inline span, .input-wrap_inline .input { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.input-wrap_inline span { float: left; margin-top: 7px; padding-right: 8px; font-size: 12px; width: 54px; text-align: right; }
+.input-wrap_inline .input { float: right; width: 45%; }
+
+.row__main_ml { margin-left: -54px; }

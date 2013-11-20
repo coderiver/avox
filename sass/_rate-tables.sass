@@ -241,6 +241,12 @@ body
 	a
 		color: #2cabdc
 		text-decoration: none
+	th
+		padding: 7px
+	thead
+		.ui-multiselect
+			width: 100% !important
+			max-width: 100% !important
 .l-container_width
 	width: 96%
 .l-col-equal
@@ -261,3 +267,30 @@ body
 	+s(undo)
 .pagin_margin
 	margin-bottom: 30px
+	
+.input-wrap
+	position: relative
+	.btn-bucket
+		position: absolute
+		right: 0
+		top: 0
+.input-wrap_inline
+	float: left
+	width: 33.3%
+	font-size: 0
+	span, 
+	.input
+		+box-sizing(border-box)
+	span
+		float: left
+		margin-top: 7px
+		padding-right: 8px
+		font-size: 12px
+		width: 54px
+		text-align: right
+	.input
+		float: right
+		width: 45%
+		
+.row__main_ml
+	margin-left: -54px
