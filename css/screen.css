@@ -864,3 +864,9 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 .row__main_ml { margin-left: -54px; }
 
 .pagin_indep { position: relative; top: 20px; margin: 20px 0; }
+
+.row_400 { width: 400px; margin-bottom: 10px; }
+.row_400 .row__main .ui-multiselect { width: 100% !important; max-width: 100% !important; }
+.row_400 .row__main span { display: inline-block; margin-left: 10px; vertical-align: middle; font-size: 12px; }
+.row_400 .input-wrap_inline { float: none; display: inline-block; vertical-align: middle; }
+.row_400 .input-wrap_inline .input { width: 100%; }
