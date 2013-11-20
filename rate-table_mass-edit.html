@@ -1,0 +1,503 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Rate tables mass edit</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="is-popup">
+<div class="tabwindow tabwindow_no-padding">
+    <div class="tabwindow__in">
+        <div class="tabwindow__nav">
+            <ul class="tabs">
+                <li><a href="">Rates</a></li>
+                <li><a href="">Export</a></li>
+                <li><a href="" class="is-active">Import</a></li>
+                <li><a href="">Parameters</a></li>
+            </ul>
+            <div class="tabwindow__state">
+                  Alaska
+            </div>
+        </div>
+        <div class="tabwindow__content">
+            <div class="group group_no-left">
+                <div class="group__title">
+                    <h2>MASS EDIT / AFTER</h2>
+                </div>
+            </div>
+            <div class="l-container l-container_width table-wrap">
+                <div class="table-head-wrap">
+                    <table class="table-head table-head_very-simple">
+                        <thead>
+                            <tr>
+                                <td data-href="#" class="td-0">
+                                    <div>
+                                        <span>Country</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-1">
+                                    <div>
+                                        <span>Code name</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-2">
+                                    <div>
+                                        <span>Code</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-3 td-height">
+                                    <div>
+                                        <span>Rate</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-4 td-height">
+                                    <div>
+                                        <span>Changes</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-5">
+                                    <div>
+                                        <span>Effective Date</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-6">
+                                    <div>
+                                        <span>End Date</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-7 td-height td-rotate">
+                                    <div class="is-rotate">
+                                        <span>First</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-8 td-height td-rotate">
+                                    <div class="is-rotate">
+                                        <span>Next</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-9 td-height">
+                                    <div>
+                                        <span>Notes</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-10 td-height">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <table class="table table_left-aligh table_input js-table">
+                    <tbody>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <div class="button button_blue">Update Current</div>
+                    <div class="button button_green">Insert As New</div>
+                </div>
+                <div class="wrap">
+                    <div class="pagin pagin_indep">
+                        <div class="pagin__select">
+                            <div class="pagin__select-text">
+                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                            </div>
+                            <div class="pagin__select-main">
+                                <select class="chosen-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="pagin__nav">
+                            <div class="js-paginator">  
+                                <div class='paginator_p_wrap'> 
+                                    <div class='paginator_p_bloc'> 
+                                        <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                    </div> 
+                                </div>  
+                                <!-- slider --> 
+                                <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                    <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(".js-paginator").jPaginator({ 
+                                    nbPages: 21, 
+                                    selectedPage: 8,
+                                    minSlidesForSlider:1, 
+                                    nbVisible: 7,
+                                    onPageClicked: function(a,num) { 
+                                        $("#page1").html("demo1 - page : "+num); 
+                                    }
+                                });  
+                            </script>                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group group_no-left">
+                <div class="group__title">
+                    <h2>MASS EDIT / BEFORE</h2>
+                </div>
+            </div>
+            <div class="l-container l-container_width table-wrap">
+                <div class="table-head-wrap">
+                    <table class="table-head table-head_very-simple">
+                        <thead>
+                            <tr>
+                                <td data-href="#" class="td-0">
+                                    <div>
+                                        <span>Country</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-1">
+                                    <div>
+                                        <span>Code name</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-2">
+                                    <div>
+                                        <span>Code</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-3 td-height">
+                                    <div>
+                                        <span>Rate</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-4 td-height">
+                                    <div>
+                                        <span>Changes</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-5">
+                                    <div>
+                                        <span>Effective Date</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-6">
+                                    <div>
+                                        <span>End Date</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-7 td-height td-rotate">
+                                    <div class="is-rotate">
+                                        <span>First</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-8 td-height td-rotate">
+                                    <div class="is-rotate">
+                                        <span>Next</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-9 td-height">
+                                    <div>
+                                        <span>Notes</span>
+                                    </div>
+                                </td>
+                                <td data-href="#" class="td-10 td-height">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-href="#">
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <table class="table table_left-aligh table_input js-table">
+                    <tbody>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-href="#" width="100">Algeria </td>
+                            <td data-href="#">Algeria mobile Orascom</td>
+                            <td data-href="#">213</td>
+                            <td data-href="#">0.22</td>
+                            <td data-href="#"  width="100"></td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">2013 Dec 14  16:23:12  +01:00</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">1</td>
+                            <td data-href="#">Bla bla bla</td>
+                            <td data-href="#" class="td-icon" data-href="#"><i class="icon-delete"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <div class="button button_gray-light">Cancel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>
