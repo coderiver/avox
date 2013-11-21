@@ -4,7 +4,7 @@ $(document).ready(function() {
         $(".js-tooltip").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
-        $(".js-expand").hide();
+        //$(".js-expand").hide();
     });
 
 	//chosen stuff
@@ -216,13 +216,12 @@ $(document).ready(function() {
 	});
 
 
-	$(".js-show-expand").bind("click",function(event){
+	$(".js-show-expand").bind("click",function(){
 		$(".js-expand").toggle();
-		event.stopPropagation();
 	});
-	$(".js-expand").click(function(event){
-		event.stopPropagation();
-	})
+	// $(".js-expand").click(function(event){
+	// 	event.stopPropagation();
+	// })
 
 	$(".js-reset-filter").bind("click", function(){
 		$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");

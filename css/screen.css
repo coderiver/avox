@@ -233,7 +233,7 @@ textarea, input { font-family: Tahoma, sans-serif; }
 
 a img, fieldset { border: none; }
 
-.button { display: inline-block; border-radius: 2px; height: 28px; position: relative; overflow: hidden; padding: 0 5%; color: #838383; font: bold 13px/28px Tahoma, Arial, sans-serif; font-weight: bold; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
+.button { display: inline-block; border-radius: 2px; height: 28px; position: relative; overflow: hidden; padding: 0 15px; min-width: 120px; color: #838383; text-align: center; font: bold 13px/28px Tahoma, Arial, sans-serif; font-weight: bold; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
 .button.button_blue { background: #2cabdc; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 .button.button_blue:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; background: #238db5; }
 .button.is-disabled { background: #e7e7e7; color: white; text-shadow: 0 1px 0 rgba(191, 191, 191, 0.2); }
@@ -764,9 +764,9 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .table-head_very-simple tr:first-child td { border-bottom-color: transparent; }
 .table-head_very-simple .td-height div { left: 0; right: 0; top: 12px; z-index: 2; background: #e7e7e7; }
 
-.actions-wrap .button_expand { float: left; margin-right: 5%; }
+.actions-wrap .button_expand { float: left; margin-right: 5%; min-width: 30px; }
 .actions-wrap .button_expand i { display: inline-block; background: url('../img/icons-s02729125e3.png') 0 -737px no-repeat; width: 12px; height: 8px; }
-.actions-wrap .actions_fluid { overflow: hidden; margin-top: 0 !important; width: auto !important; }
+.actions-wrap .actions_fluid { overflow: hidden; margin-top: 0 !important; width: auto !important; clear: none; min-width: 10px; }
 
 .tabwindow_extend .tabwindow__content { padding: 35px 0 30px; }
 .tabwindow_extend .l-container, .tabwindow_extend .actions { width: 96%; }
