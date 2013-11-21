@@ -301,7 +301,7 @@ a img, fieldset { border: none; }
 .radio-simple input { position: absolute; left: 0; top: 50%; margin-top: -10px; width: 20px; height: 20px; }
 .radio-simple input { opacity: 0; }
 .radio-simple input:checked + span:after { display: block; }
-.radio-simple span { position: relative; padding-left: 25px; font-size: 12px; display: inline-block; text-transform: uppercase; }
+.radio-simple span { position: relative; padding-left: 25px; font-size: 12px; display: inline-block; }
 .radio-simple span:before, .radio-simple span:after { content: ""; position: absolute; top: 50%; }
 .radio-simple span:before { left: 0; margin-top: -9px; border: 1px solid #cecece; width: 18px; height: 18px; border-radius: 50%; background: white; box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.07); }
 .radio-simple span:after { display: none; left: 5px; margin-top: -4px; width: 10px; height: 10px; border-radius: 50%; background: #2babdb; }
@@ -718,6 +718,26 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .icon_clone { background: url('../img/icons-s02729125e3.png') 0 -1004px no-repeat; width: 16px; height: 20px; }
 
+.chosen-select_100 { width: 100px; }
+.chosen-select_100 + .chosen-container { display: inline-block; vertical-align: middle; max-width: 100px !important; width: 100px !important; }
+
+.input_inline, .chosen-select_inline { display: inline-block; vertical-align: middle; }
+
+.input_80 { width: 80px; margin-left: 10px; }
+
+.row_600 { max-width: 600px; margin-bottom: 10px; }
+
+.row__main-33 { float: left; width: 33%; }
+
+.row_radio { margin: 20px 0; }
+
+.inline-input { display: inline-block; margin-left: 10px; vertical-align: middle; }
+.inline-input:first-child { margin-left: 0; }
+.inline-input span, .inline-input .input { display: inline-block; vertical-align: middle; }
+.inline-input span { font-size: 12px; margin: 0; }
+.inline-input .input { margin: 0 10px; }
+.inline-input .input:first-child { margin-left: 0; }
+
 .paginator_p { text-align: center; float: left; width: 23px; height: 23px; line-height: 23px; border-radius: 2px; }
 
 .paginator_p_wrap { width: 100px; }
@@ -824,7 +844,7 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 
 .group_no-left .group__title { left: 0; }
 
-.row_500 { width: 500px; padding-left: 40px; }
+.row_500 { width: 500px; padding-left: 40px; margin-bottom: 10px; }
 .row_500 .ui-multiselect { width: 290px !important; max-width: 290px !important; }
 
 .table-simple .to-center { text-align: center; }

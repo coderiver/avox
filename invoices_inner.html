@@ -1,0 +1,179 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Invoices inner</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="is-popup">
+<div class="tabwindow tabwindow_no-padding">
+    <div class="tabwindow__in">
+        <div class="tabwindow__nav">
+            <ul class="tabs">
+                <li><a href="" class="is-active">New/Edit Invoice</a></li>
+            </ul>
+            <div class="tabwindow__state">
+                  Alaska
+            </div>
+        </div>
+        <div class="tabwindow__content">
+            <div class="group group_no-left">
+                <div class="group__title">
+                    <h2>system information</h2>
+                </div>
+                <div class="group__content">
+                    <div class="row row_600">
+                        <span class="row__text">Client:</span>
+                        <div class="row__main">
+                            <div class="input-wrap input-wrap_right-glass">
+                                <input type="text" class="input">
+                                <i class="icon icon_glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_600">
+                        <span class="row__text">Period:</span>
+                        <div class="row__main">
+                            <select class="chosen-select chosen-select_inline chosen-select_100">
+                                <option value="">&nbsp;</option>
+                                <option value="Any">Any</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Urkaine">Urkaine</option>
+                                <option value="India">India</option>
+                            </select>
+                            <input type="text" class="input input_80 input_inline">
+                            <input type="text" class="input input_80 input_inline">
+                            <input type="text" class="input input_80 input_inline">
+                        </div>
+                    </div>
+                    <div class="row row_600 row_radio">
+                        <span class="row__text">Type: </span>
+                        <div class="row__main">
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name1" checked>
+                                    <span>In</span>
+                                </label>
+                            </div>
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name1">
+                                    <span>Out</span>
+                                </label>
+                            </div>
+                            <div class="row__main-33"></div>
+                        </div>
+                    </div>
+                    <div class="row row_600 row_radio">
+                        <span class="row__text">State:</span>
+                        <div class="row__main">
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name2">
+                                    <span>To Verify</span>
+                                </label>
+                            </div>
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name2">
+                                    <span>To Send</span>
+                                </label>
+                            </div>
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name2" checked>
+                                    <span>Normal</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_600">
+                        <span class="row__text">Invoice No:</span>
+                        <div class="row__main">
+                            <input type="text" class="input input_s">
+                        </div>
+                    </div>
+                    <div class="row row_600">
+                        <span class="row__text">Invoice Date:</span>
+                        <div class="row__main">
+                            <input type="text" class="input input_s input_inline">
+                            <div class="inline-input">
+                                <span>due in</span>
+                                <input type="text" class="input input_80">
+                                <span>days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_600">
+                        <span class="row__text">Comment:</span>
+                        <div class="row__main">
+                            <input type="text" class="input input_s">
+                        </div>
+                    </div>
+                    <div class="row row_600 row_radio js-radio-group">
+                        <span class="row__text">State:  </span>
+                        <div class="row__main">
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name3" checked>
+                                    <span>Generate New</span>
+                                </label>
+                            </div>
+                            <div class="row__main-33">
+                                <label class="radio-simple">
+                                    <input type="radio" name="name3" class="js-radio-attach">
+                                    <span>Attach Existing</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-attach">
+                        <div class="row row_600">
+                            <span class="row__text">Amount For Calls:</span>
+                            <div class="row__main">
+                                <input type="text" class="input input_s input_inline">
+                                <div class="inline-input">
+                                    <span>USD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row_600">
+                            <span class="row__text">Amount For Other:</span>
+                            <div class="row__main">
+                                <input type="text" class="input input_s input_inline">
+                                <div class="inline-input">
+                                    <span>USD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row_600">
+                            <span class="row__text">Attach Invoice:</span>
+                            <div class="row__main">
+                                <input type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_600 actions">
+                        <div class="button">Cancel</div>
+                        <div class="button button_blue">Ok</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>

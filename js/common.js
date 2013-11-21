@@ -103,7 +103,7 @@ $(document).ready(function() {
 		$("html").click(function(){ 
 		    if (!mouseOverActiveElement) {
 		    	$('.is-dropped').hide();
-		        console.log('clicked outside active element');
+		        //console.log('clicked outside active element');
 		    }
 		});
 		$(".addnote__submit").click(function (e) {
@@ -345,5 +345,20 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
+	$(".js-attach").hide();
+	function check_radio() {
+		if ($('.js-radio-attach').is(":checked")) {
+			$(".js-attach").show();
+			console.log("checked")
+		}
+		else {
+			$(".js-attach").hide();
+			console.log("UNchecked")
+		}
+	}
+	$(".js-radio-group input[type='radio']").on("change",function(){
+		check_radio();
+	});
+	check_radio();
 });
 
