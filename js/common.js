@@ -110,8 +110,16 @@ $(document).ready(function() {
 			$('.addnote').hide();
 			newtext = $('.addnote').find('textarea').val();
 			newhtml = '<tr><td>John Doe</td><td>1970</td><td>'+newtext+'</td><td><a href="#">filename</a></td><td class="td_icon"><div class="icon-delete"></div></td></tr>';
-			var wheretoprepend = $('.js-table-simple tbody tr:first-child');
-			wheretoprepend.before(newhtml);
+			if ($(".js-table-simple tbody tr").length > 0) {
+				var wheretoprepend = $('.js-table-simple tbody tr:first-child');
+				wheretoprepend.before(newhtml);
+			}
+			else {
+				var wheretoprepend = $('.js-table-simple tbody');
+				wheretoprepend.before();
+				$(newhtml).prependTo(wheretoprepend);
+			}
+			
 			$('.addnote').hide();
 			return false;
 		});
