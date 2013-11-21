@@ -320,7 +320,7 @@ $(document).ready(function() {
 			$(".is-active").find("."+el).val(id);
 			$(".is-active").find("."+el).text(text);
 		});
-		$(".calendar__monthes li").bind("click", function(){
+		$(".calendar__months li").bind("click", function(){
 			var id = $(this).attr("data-id");
 			var text = $(this).text();
 			var el = $(this).parent().attr("data-class");
@@ -333,6 +333,51 @@ $(document).ready(function() {
 			$(".js-date-input").parent().removeClass("is-active");
 			$(".js-calendar").removeClass("is-active");
 		});
+		var date = new Date();
+		var year = date.getFullYear();
+		var month_int = (date.getMonth() + 1).toString();
+		var day = date.getDate();
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var zone_offset = date.getTimezoneOffset()/60;
+		if (zone_offset > 0) {
+			var zone = zone_offset;
+		}
+		else {
+			var zone = -zone_offset;
+		}
+		
+
+		var month = new Array(12);
+		month[0] = "Jan";
+		month[1] = "Feb";
+		month[2] = "Mar";
+		month[3] = "Apr";
+		month[4] = "May";
+		month[5] = "Jun";
+		month[6] = "Jul";
+		month[7] = "Aug";
+		month[8] = "Sep";
+		month[9] = "Oct";
+		month[10] = "Nov";
+		month[11] = "Dec";
+
+		// write date in string format
+		$(".js-calendar .js-year").text(year);
+		$(".js-calendar .js-month").text(month[date.getMonth()]);
+		$(".js-calendar .js-date").text(day);
+		$(".js-calendar .js-time").text(hours+":"+minutes);
+		$(".js-calendar .js-zone").text(zone);
+
+		$(".js-calendar .js-year").val(year);
+		$(".js-calendar .js-month").val(month);
+		$(".js-calendar .js-date").val(day);
+		$(".js-calendar .js-time").val(hours+":"+minutes);
+		$(".js-calendar .js-zone").val(zone);
+
+		
+
+
 	}
 	calendar();
 	$(".js-date-input").click(function(event){
@@ -349,11 +394,9 @@ $(document).ready(function() {
 	function check_radio() {
 		if ($('.js-radio-attach').is(":checked")) {
 			$(".js-attach").show();
-			console.log("checked")
 		}
 		else {
 			$(".js-attach").hide();
-			console.log("UNchecked")
 		}
 	}
 	$(".js-radio-group input[type='radio']").on("change",function(){

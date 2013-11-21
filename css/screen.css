@@ -652,10 +652,10 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .calendar__wrap { padding: 26px 26px 0; }
 
-.calendar__monthes li, .calendar__years li { margin: 0 0 5px; color: #a6a6a6; font-size: 15px; text-transform: uppercase; }
+.calendar__months li, .calendar__years li { margin: 0 0 5px; color: #a6a6a6; font-size: 15px; text-transform: uppercase; }
 
-.calendar__monthes { margin-bottom: 9px; border-bottom: 1px solid #cfcfcf; }
-.calendar__monthes li { padding: 3px 0; width: 45px; text-align: center; }
+.calendar__months { margin-bottom: 9px; border-bottom: 1px solid #cfcfcf; }
+.calendar__months li { padding: 3px 0; width: 45px; text-align: center; }
 
 .calendar__years { margin-bottom: 7px; }
 .calendar__years li { padding: 3px 8px; }
