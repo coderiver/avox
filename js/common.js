@@ -223,12 +223,12 @@ $(document).ready(function() {
 	// 	event.stopPropagation();
 	// })
 
-	$(".js-reset-filter").bind("click", function(){
-		$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");
-		$(this).parents(".js-filter").find(".js-search-input").val("");
-		//alert();
-		return false;
-	});
+	// $(".js-reset-filter").bind("click", function(){
+	// 	$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");
+	// 	$(this).parents(".js-filter").find(".js-search-input").val("");
+	// 	//alert();
+	// 	return false;
+	// });
 
 
 	function openWindow() {
@@ -339,6 +339,7 @@ $(document).ready(function() {
 			$(".is-active .js-date-input").val(text);
 			$(".js-date-input").parent().removeClass("is-active");
 			$(".js-calendar").removeClass("is-active");
+			return false;
 		});
 		var date = new Date();
 		var year = date.getFullYear();
@@ -382,6 +383,9 @@ $(document).ready(function() {
 		$(".js-calendar .js-time").val(hours+":"+minutes);
 		$(".js-calendar .js-zone").val(zone);
 
+		$(".calendar__months li").each(function(){
+			console.log($(this));
+		});
 		
 
 
