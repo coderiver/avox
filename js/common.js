@@ -199,12 +199,12 @@ $(document).ready(function() {
 			event.stopPropagation();
 		});
 	}
-	if (tooltip.length > 0) {
+	if ($(".js-show-tooltip").length > 0) {
 		tooltipShow();
 	}
 	
 	$(window).scroll(function(){
-		if (tooltip.length > 0) {
+		if ($(".js-show-tooltip").length > 0) {
 			var top = $(".js-show-tooltip").offset().top;
 			var left = $(".js-show-tooltip").offset().left;
 			tooltip.css({
@@ -218,6 +218,7 @@ $(document).ready(function() {
 
 	$(".js-show-expand").bind("click",function(){
 		$(".js-expand").toggle();
+		return false;
 	});
 	// $(".js-expand").click(function(event){
 	// 	event.stopPropagation();
