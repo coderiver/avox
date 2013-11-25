@@ -225,17 +225,6 @@ $(document).ready(function() {
 		$(".js-expand").toggle();
 		return false;
 	});
-	// $(".js-expand").click(function(event){
-	// 	event.stopPropagation();
-	// })
-
-	// $(".js-reset-filter").bind("click", function(){
-	// 	$(this).parents(".js-filter").find(".js-select-multi").multiselect("uncheckAll");
-	// 	$(this).parents(".js-filter").find(".js-search-input").val("");
-	// 	//alert();
-	// 	return false;
-	// });
-
 
 	function openWindow() {
 		$(".js-open-window").click(function(){
@@ -299,27 +288,22 @@ $(document).ready(function() {
 		    if (hours <= 9 && minutes <= 9) {
 		      	handle.text("0"+hours+':'+"0"+minutes);
 		      	$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
-		      	//$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider("value"));
 		    }
 		    if (hours <= 9 && minutes > 9) {
 		      	handle.text("0"+hours+':'+minutes);
 		      	$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
-		      	//$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider("value"));
 		    }
 		    if (hours > 9 && minutes <= 9) {
 		      	handle.text(hours+':'+"0"+minutes);
 		      	$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
-		      	//$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider("value"));
 		    }
 		    if (hours > 9 && minutes > 9) {
 		      	handle.text(hours+':'+minutes);
 		      	$( ".is-active .js-time" ).text(hours+':'+minutes);
-		      	//$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider("value"));
 		    }
 		    if (hours == 24 ) {
 		      	handle.text('23:59');
 		      	$( ".js-time" ).text('23:59');
-		      	//$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider("value"));
 		    }
 		    var text_input = $(".is-active .js-input-text").text(text_input);
 			$(".is-active .js-date-input").val(text_input);
@@ -367,10 +351,6 @@ $(document).ready(function() {
 		      				$( ".is-active .js-zone" ).text('-'+Math.abs(ui.value)+":00");
 		      			}
 		      		}
-		      		if (ui.value == 0) {
-		      			$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
-		      			$( ".js-slider-zone .ui-slider-handle span").text('+00:00');
-		      		} 
 		        	$( ".is-active .js-zone" ).val(ui.value);
 		        	var text_input = $(".is-active .js-input-text").text();
 					$(".is-active .js-date-input").val(text_input);
@@ -399,10 +379,6 @@ $(document).ready(function() {
 	      			$( ".is-active .js-zone" ).text("-"+zone+":00");
 	      		}
 	      	}
-	      	if (zone == 0) {
-	      			$( ".js-slider-zone .ui-slider-handle").html("<span></span>");
-	      			$( ".js-slider-zone .ui-slider-handle span").text('+00:00');
-	      		} 
 		});
 	 
   	}
@@ -535,9 +511,11 @@ $(document).ready(function() {
 	calendar();
 
 	$(".js-date-input").click(function(event){
+		$(".js-calendar").removeClass("is-active");
+		$(".row__main").removeClass("is-active");
 		$(".js-date-input").parent().removeClass("is-active");
-		$(this).parent().addClass("is-active");
-		$(this).parent().find(".js-calendar").addClass("is-active");
+		$(this).parents(".row__main").addClass("is-active");
+		$(this).parents(".row__main").find(".js-calendar").addClass("is-active");
 		event.stopPropagation();
 	});
 
