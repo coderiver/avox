@@ -256,16 +256,27 @@ $(document).ready(function() {
 	      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+"0"+minutes);
 	      		$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
 	      	}
-	      	else {
+	      	if (hours <= 9 && minutes > 9) {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text("0"+hours+':'+minutes);
+	      		$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
+	      	}
+	      	if (hours > 9 && minutes <= 9) {
+	      		$( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+"0"+minutes);
+	      		$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
+	      	}
+	      	if (hours > 9 && minutes > 9) {
 	      		$( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+minutes);
 	      		$( ".is-active .js-time" ).text(hours+':'+minutes);
 	      	}
+	      	// else {
+	      	// 	$( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+minutes);
+	      	// 	$( ".is-active .js-time" ).text(hours+':'+minutes);
+	      	// }
 	      	if (hours == 24 ) {
 	      		$( ".js-slider-time .ui-slider-handle span" ).text('23:59');
 	      		$( ".js-time" ).text('23:59');
 	      	}
-	      	$( ".is-active .js-time" ).val(ui.value);
-	      	//$(".is-active .js-date-input").val(hours+':'+minutes);
+	      	//$( ".is-active .js-time" ).val(ui.value);
 	      }
 	    });
 	    var date = new Date();
@@ -442,7 +453,7 @@ $(document).ready(function() {
 			$(".js-attach").hide();
 		}
 	}
-	$(".js-radio-group input[type='radio']").on("change",function(){
+	$(".js-radio-group input[type='radio']").on("change", function(){
 		check_radio();
 	});
 	check_radio();
