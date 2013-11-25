@@ -499,16 +499,14 @@ body
 .calendar
     display: none
     position: absolute
-    top: 100px
-    left: 25%
+    top: 50px
+    left: 0
     z-index: 100
     width: 324px
     height: 438px
     border-radius: 3px
     background: #f7f7f7
     box-shadow: 0 0 5px rgba(0,0,0,.4)
-    &.is-active
-        display: block
     ul
         @extend %clr
     li
@@ -580,6 +578,7 @@ body
     overflow: hidden
     .button
         float: left
+        margin: 0
         background: none
         width: 50%
         height: 39px

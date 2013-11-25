@@ -306,6 +306,8 @@ a img, fieldset { border: none; }
 .radio-simple span:before { left: 0; margin-top: -9px; border: 1px solid #cecece; width: 18px; height: 18px; border-radius: 50%; background: white; box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.07); }
 .radio-simple span:after { display: none; left: 5px; margin-top: -4px; width: 10px; height: 10px; border-radius: 50%; background: #2babdb; }
 
+.row__main { position: relative; }
+.row__main.is-active .calendar { display: block; }
 .row__main .row__text, .row__main .row__main { width: 50%; }
 .row__main .row_radio .row__text { text-align: left; }
 
@@ -645,8 +647,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .l-col4 { position: relative; }
 
-.calendar { display: none; position: absolute; top: 100px; left: 25%; z-index: 100; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
-.calendar.is-active { display: block; }
+.calendar { display: none; position: absolute; top: 50px; left: 0; z-index: 100; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
 .calendar li { float: left; border-radius: 3px; cursor: pointer; font-weight: bold; }
 .calendar li:hover, .calendar li.is-active { color: white; background: #29a1d1; }
 
@@ -672,7 +673,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .calendar__slider-row span:first-child { margin-left: 0; margin-right: 10px; }
 
 .calendar__btns { position: absolute; right: 0; left: 0; bottom: 0; border-top: 1px solid #dbdbdb; overflow: hidden; }
-.calendar__btns .button { float: left; background: none; width: 50%; height: 39px; font-size: 12px; border-left: 1px solid #dbdbdb; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-weight: normal; }
+.calendar__btns .button { float: left; margin: 0; background: none; width: 50%; height: 39px; font-size: 12px; border-left: 1px solid #dbdbdb; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-weight: normal; }
 .calendar__btns .button:first-child { border-left: 0; }
 
 .filter_mod .filter__in { height: 358px; }

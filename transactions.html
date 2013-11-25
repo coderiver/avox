@@ -152,6 +152,79 @@
                                     <div class="row__main">
                                         <input type="text" class="input js-date-input" placeholder="Date From">
                                         <button class="btn-bucket js-clear-select"><i></i></button>
+                                        <div class="calendar js-calendar">
+                                            <div class="calendar__wrap">
+                                                <ul class="calendar__years" data-class="js-year">
+                                                    <li>2013</li>
+                                                    <li>2014</li>
+                                                </ul>
+                                                <ul class="calendar__months" data-class="js-month">
+                                                    <li data-id="0">Jan</li>
+                                                    <li data-id="1">Feb</li>
+                                                    <li data-id="2">Mar</li>
+                                                    <li data-id="3">Apr</li>
+                                                    <li data-id="4">May</li>
+                                                    <li data-id="5">Jun</li>
+                                                    <li data-id="6">Jul</li>
+                                                    <li data-id="7">Aug</li>
+                                                    <li data-id="8">Sep</li>
+                                                    <li data-id="9">Oct</li>
+                                                    <li data-id="10">Nov</li>
+                                                    <li data-id="11">Dec</li>
+                                                </ul>
+                                                <ul class="calendar__days" data-class="js-date">
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>     
+                                                    <li class="is-inactive">1</li>
+                                                    <li class="is-inactive">2</li>
+                                                    <li class="is-inactive">3</li>
+                                                    <li class="is-inactive">4</li>
+                                                    <li class="is-inactive">5</li>
+                                                </ul>
+                                                <div class="calendar__slider">
+                                                    <div class="calendar__slider-row" data-class="js-time">
+                                                        <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                    </div>
+                                                    <div class="calendar__slider-row" data-class="js-zone">
+                                                        <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="calendar__btns">
+                                                <button class="button">Reset All</button>
+                                                <button class="button js-ok">Ok</button>
+                                            </div>
+                                            
+                                            <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -159,80 +232,80 @@
                                     <div class="row__main">
                                         <input type="text" class="input js-date-input" placeholder="Date To">
                                         <button class="btn-bucket js-clear-select"><i></i></button>
-                                    </div>
-                                </div>
-                                <div class="calendar js-calendar">
-                                    <div class="calendar__wrap">
-                                        <ul class="calendar__years" data-class="js-year">
-                                            <li>2013</li>
-                                            <li>2014</li>
-                                        </ul>
-                                        <ul class="calendar__months" data-class="js-month">
-                                            <li data-id="0">Jan</li>
-                                            <li data-id="1">Feb</li>
-                                            <li data-id="2">Mar</li>
-                                            <li data-id="3">Apr</li>
-                                            <li data-id="4">May</li>
-                                            <li data-id="5">Jun</li>
-                                            <li data-id="6">Jul</li>
-                                            <li data-id="7">Aug</li>
-                                            <li data-id="8">Sep</li>
-                                            <li data-id="9">Oct</li>
-                                            <li data-id="10">Nov</li>
-                                            <li data-id="11">Dec</li>
-                                        </ul>
-                                        <ul class="calendar__days" data-class="js-date">
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
-                                            <li>7</li>
-                                            <li>8</li>
-                                            <li>9</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li>
-                                            <li>13</li>
-                                            <li>14</li>
-                                            <li>15</li>
-                                            <li>16</li>
-                                            <li>17</li>
-                                            <li>18</li>
-                                            <li>19</li>
-                                            <li>20</li>
-                                            <li>21</li>
-                                            <li>22</li>
-                                            <li>23</li>
-                                            <li>24</li>
-                                            <li>25</li>
-                                            <li>26</li>
-                                            <li>27</li>
-                                            <li>28</li>
-                                            <li>29</li>
-                                            <li>30</li>     
-                                            <li class="is-inactive">1</li>
-                                            <li class="is-inactive">2</li>
-                                            <li class="is-inactive">3</li>
-                                            <li class="is-inactive">4</li>
-                                            <li class="is-inactive">5</li>
-                                        </ul>
-                                        <div class="calendar__slider">
-                                            <div class="calendar__slider-row" data-class="js-time">
-                                                <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                        <div class="calendar js-calendar">
+                                            <div class="calendar__wrap">
+                                                <ul class="calendar__years" data-class="js-year">
+                                                    <li>2013</li>
+                                                    <li>2014</li>
+                                                </ul>
+                                                <ul class="calendar__months" data-class="js-month">
+                                                    <li data-id="0">Jan</li>
+                                                    <li data-id="1">Feb</li>
+                                                    <li data-id="2">Mar</li>
+                                                    <li data-id="3">Apr</li>
+                                                    <li data-id="4">May</li>
+                                                    <li data-id="5">Jun</li>
+                                                    <li data-id="6">Jul</li>
+                                                    <li data-id="7">Aug</li>
+                                                    <li data-id="8">Sep</li>
+                                                    <li data-id="9">Oct</li>
+                                                    <li data-id="10">Nov</li>
+                                                    <li data-id="11">Dec</li>
+                                                </ul>
+                                                <ul class="calendar__days" data-class="js-date">
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>     
+                                                    <li class="is-inactive">1</li>
+                                                    <li class="is-inactive">2</li>
+                                                    <li class="is-inactive">3</li>
+                                                    <li class="is-inactive">4</li>
+                                                    <li class="is-inactive">5</li>
+                                                </ul>
+                                                <div class="calendar__slider">
+                                                    <div class="calendar__slider-row" data-class="js-time">
+                                                        <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                    </div>
+                                                    <div class="calendar__slider-row" data-class="js-zone">
+                                                        <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="calendar__slider-row" data-class="js-zone">
-                                                <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                            <div class="calendar__btns">
+                                                <button class="button">Reset All</button>
+                                                <button class="button js-ok">Ok</button>
                                             </div>
+                                            
+                                            <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
                                         </div>
                                     </div>
-                                    <div class="calendar__btns">
-                                        <button class="button">Reset All</button>
-                                        <button class="button js-ok">Ok</button>
-                                    </div>
-                                    
-                                    <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
                                 </div>
                             </div>
                             <div class="l-col4">
