@@ -268,8 +268,11 @@ $(document).ready(function() {
 	      	$( ".is-active .js-time" ).val(ui.value);
 	      }
 	    });
+	    var date = new Date();
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
       	$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
-	    $( ".js-slider-time .ui-slider-handle span" ).text('10:00');
+	    $( ".js-slider-time .ui-slider-handle span" ).text(hours+':'+minutes);
 	    $( ".is-active .js-time" ).val($( ".js-slider-time" ).slider( "value" ));
 	    //$( ".js-time" ).text($( ".js-slider-time" ).slider( "value" ));
   	});
@@ -298,15 +301,23 @@ $(document).ready(function() {
 	        
 	    }
 	    });
+	    var date = new Date();
+		var zone_offset = date.getTimezoneOffset()/60;
+		// if (zone_offset > 0) {
+		// 	var zone = zone_offset;
+		// }
+		// else {
+		// 	var zone = -zone_offset;
+		// }
 	    if ($(".js-slider-zone").slider("value") > 0) {
-      		$( ".js-slider-zone .ui-slider-handle" ).html("<span></span>");
-      		$( ".js-slider-zone .ui-slider-handle span" ).text("+"+$(".js-slider-zone").slider("value"));
+      		$(".js-slider-zone .ui-slider-handle" ).html("<span></span>");
+      		$(".js-slider-zone .ui-slider-handle span" ).text("+"+-zone_offset);
       	}
       	else {
-      		$( ".js-slider-zone .ui-slider-handle" ).html("<span></span>");
-      		$( ".js-slider-zone .ui-slider-handle span" ).text($(".js-slider-zone").slider("value"));
+      		$(".js-slider-zone .ui-slider-handle" ).html("<span></span>");
+      		$(".js-slider-zone .ui-slider-handle span" ).text(zone_offset);
       	}
-      	$( ".is-active .js-zone" ).val($( ".js-slider-zone" ).slider( "value" ));
+      	$(".is-active .js-zone" ).val($( ".js-slider-zone" ).slider( "value" ));
       	//$( ".js-zone" ).text($( ".js-slider-zone" ).slider( "value" ));
 	    
   	});
@@ -356,6 +367,30 @@ $(document).ready(function() {
 			var zone = -zone_offset;
 		}
 		
+		$(".calendar__days li").each(function(){
+			if ($(this).text() == day) {
+				$(".calendar__days li").removeClass("is-active");
+				$(this).addClass("is-active");
+			}
+		});
+		$(".calendar__months li").each(function(){
+			if ($(this).attr("data-id") == date.getMonth()) {
+				$(".calendar__months li").removeClass("is-active");
+				$(this).addClass("is-active");
+			}
+			//alert(date.getMonth());
+			//alert($(this).attr("data-id"));
+		});
+		$(".calendar__years li").each(function(){
+			if ($(this).text() == year) {
+				$(".calendar__years li").removeClass("is-active");
+				$(this).addClass("is-active");
+			}
+		});
+
+		//$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
+	    //$( ".js-slider-time .ui-slider-handle span" ).text('10:00');
+	    //$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider( "value" ));
 
 		var month = new Array(12);
 		month[0] = "Jan";
