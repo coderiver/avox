@@ -265,6 +265,7 @@ $(document).ready(function() {
 	      		$( ".js-time" ).text('23:59');
 	      	}
 	      	$( ".is-active .js-time" ).val(ui.value);
+	      	//$(".is-active .js-date-input").val(hours+':'+minutes);
 	      }
 	    });
 	    var date = new Date();
