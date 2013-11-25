@@ -179,7 +179,6 @@ $(document).ready(function() {
 
 		$(".js-clear-select").click(function(){
 			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
-			//alert();
 			return false;
 		});
 
@@ -338,14 +337,12 @@ $(document).ready(function() {
 			var text = $(this).text();
 			$(".is-active").find("."+el).val(id);
 			$(".is-active").find("."+el).text(text);
+
+			var text_input = $(".is-active .js-input-text").text();
+			$(".is-active .js-date-input").val(text_input);
+
 		});
-		$(".calendar__months li").bind("click", function(){
-			var id = $(this).attr("data-id");
-			var text = $(this).text();
-			var el = $(this).parent().attr("data-class");
-			$(".is-active").find("."+el).val(id);
-			$(".is-active").find("."+el).text(text);
-		});	
+
 		$(".js-ok").click(function(){
 			var text = $(".is-active .js-input-text").text();
 			$(".is-active .js-date-input").val(text);
@@ -353,6 +350,14 @@ $(document).ready(function() {
 			$(".js-calendar").removeClass("is-active");
 			return false;
 		});
+
+		$(".calendar__months li").bind("click", function(){
+			var id = $(this).attr("data-id");
+			var text = $(this).text();
+			var el = $(this).parent().attr("data-class");
+			$(".is-active").find("."+el).val(id);
+			$(".is-active").find("."+el).text(text);
+		});	
 		var date = new Date();
 		var year = date.getFullYear();
 		var month_int = (date.getMonth() + 1).toString();
@@ -367,6 +372,7 @@ $(document).ready(function() {
 			var zone = -zone_offset;
 		}
 		
+		// set current date
 		$(".calendar__days li").each(function(){
 			if ($(this).text() == day) {
 				$(".calendar__days li").removeClass("is-active");
@@ -378,8 +384,6 @@ $(document).ready(function() {
 				$(".calendar__months li").removeClass("is-active");
 				$(this).addClass("is-active");
 			}
-			//alert(date.getMonth());
-			//alert($(this).attr("data-id"));
 		});
 		$(".calendar__years li").each(function(){
 			if ($(this).text() == year) {
@@ -387,10 +391,6 @@ $(document).ready(function() {
 				$(this).addClass("is-active");
 			}
 		});
-
-		//$(".js-slider-time .ui-slider-handle" ).html("<span></span>");
-	    //$( ".js-slider-time .ui-slider-handle span" ).text('10:00');
-	    //$( ".is-active .js-time" ).val($( ".js-slider-time" ).slider( "value" ));
 
 		var month = new Array(12);
 		month[0] = "Jan";
@@ -417,12 +417,7 @@ $(document).ready(function() {
 		$(".js-calendar .js-month").val(month);
 		$(".js-calendar .js-date").val(day);
 		$(".js-calendar .js-time").val(hours+":"+minutes);
-		$(".js-calendar .js-zone").val(zone);
-
-		$(".calendar__months li").each(function(){
-			console.log($(this));
-		});
-		
+		$(".js-calendar .js-zone").val(zone);		
 
 
 	}

@@ -645,7 +645,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .l-col4 { position: relative; }
 
-.calendar { display: none; position: absolute; top: 50px; left: 25%; z-index: 100; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+.calendar { display: none; position: absolute; top: 100px; left: 25%; z-index: 100; width: 324px; height: 438px; border-radius: 3px; background: #f7f7f7; box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
 .calendar.is-active { display: block; }
 .calendar li { float: left; border-radius: 3px; cursor: pointer; font-weight: bold; }
 .calendar li:hover, .calendar li.is-active { color: white; background: #29a1d1; }
