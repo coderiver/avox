@@ -277,6 +277,8 @@ $(document).ready(function() {
 	      		$( ".js-time" ).text('23:59');
 	      	}
 	      	//$( ".is-active .js-time" ).val(ui.value);
+	      	var text_input = $(".is-active .js-input-text").text();
+			$(".is-active .js-date-input").val(text_input);
 	      }
 	    });
 	    var date = new Date();
@@ -309,7 +311,8 @@ $(document).ready(function() {
 	      		$( ".js-slider-zone .ui-slider-handle span").text('UTC');
 	      	} 
 	        $( ".is-active .js-zone" ).val(ui.value);
-	        
+	        var text_input = $(".is-active .js-input-text").text();
+			$(".is-active .js-date-input").val(text_input);
 	    }
 	    });
 	    var date = new Date();
