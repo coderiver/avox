@@ -179,6 +179,7 @@ $(document).ready(function() {
 
 		$(".js-clear-select").click(function(){
 			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
+			$(this).parent().find(".js-date-input").val("");
 			return false;
 		});
 
