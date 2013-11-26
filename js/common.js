@@ -379,6 +379,10 @@ $(document).ready(function() {
 	      			$( ".is-active .js-zone" ).text("-"+zone+":00");
 	      		}
 	      	}
+	      	// if (zone == 0) {
+	      	// 	handle.text("+00:00");
+	      	// 	$( ".is-active .js-zone" ).text("+00:00");
+	      	// }
 		});
 	 
   	}
@@ -403,8 +407,8 @@ $(document).ready(function() {
 		$(".js-ok").click(function(){
 			var text = $(".is-active .js-input-text").text();
 			$(".is-active .js-date-input").val(text);
-			$(".js-date-input").parent().removeClass("is-active");
-			$(".js-date-input").parent().find(".js-calendar").removeClass("is-active");
+			$(".js-date-input").parents(".js-with-calendar").removeClass("is-active");
+			$(".js-date-input").parents(".js-with-calendar").find(".js-calendar").removeClass("is-active");
 			return false;
 		});
 
@@ -514,8 +518,8 @@ $(document).ready(function() {
 		$(".js-calendar").removeClass("is-active");
 		$(".row__main").removeClass("is-active");
 		$(".js-date-input").parent().removeClass("is-active");
-		$(this).parents(".row__main").addClass("is-active");
-		$(this).parents(".row__main").find(".js-calendar").addClass("is-active");
+		$(this).parents(".js-with-calendar").addClass("is-active");
+		$(this).parents(".js-with-calendar").find(".js-calendar").addClass("is-active");
 		event.stopPropagation();
 	});
 

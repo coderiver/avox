@@ -344,9 +344,6 @@ a img,fieldset
 
 .row__main
 	position: relative
-	&.is-active 
-		.calendar
-			display: block
 	.row__text,
 	.row__main
 		width: 50%
@@ -354,6 +351,9 @@ a img,fieldset
 		.row__text
 			text-align: left 
 			
+.is-active
+	.calendar
+		display: block
 
 .input,.textarea
 	+box-sizing(border-box)
