@@ -25,16 +25,16 @@ $(document).ready(function() {
 		}
 		function add_new_row() {
 			if ($(".js-table-row").length > 0) {
-				$(".group__add:not(.group__addnote)").bind("click",function(){
-					var html = $(this).parent().parent().find(".js-table-row tr").html();
-					if ($(this).parent().parent().find(".js-table-simple tbody tr").length > 0) {
-						var wheretoprepend = $(this).parent().parent().find(".js-table-simple tbody tr:first-child");
+				$(".js-add-tr:not(.group__addnote)").bind("click",function(){
+					var html = $(this).parents(".js-table-group").find(".js-table-row tr").html();
+					if ($(this).parents(".js-table-group").find(".js-table-simple tbody tr").length > 0) {
+						var wheretoprepend = $(this).parents(".js-table-group").find(".js-table-simple tbody tr:first-child");
 						wheretoprepend.before('<tr>'+html+'</tr>');
 						console.log("yes-tr");
 						newtr = wheretoprepend.prev();
 					}
 					else {
-						var wheretoprepend = $(this).parent().parent().find(".js-table-simple tbody");
+						var wheretoprepend = $(this).parents(".js-table-group").find(".js-table-simple tbody");
 						$('<tr>'+html+'</tr>').prependTo(wheretoprepend);
 						console.log("no-tr");
 						newtr = wheretoprepend.find("tr:first");
