@@ -38,8 +38,10 @@ $(document).ready(function() {
 						$('<tr>'+html+'</tr>').prependTo(wheretoprepend);
 						console.log("no-tr");
 						newtr = wheretoprepend.find("tr:first");
+
 					}
-					newtr = wheretoprepend.prev();
+					//newtr = wheretoprepend.prev();
+					alert('adding');
 						newtr.find(".js-select").chosen().change(function(){ $(this).trigger('chosen:updated') });
 						newtr.find("select[multiple]").multiselect({
 							selectedList: 4,
