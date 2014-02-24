@@ -389,3 +389,43 @@ input[type="file"]
 		border-radius: 2px
 		background: #e7e7e7
 		border: 0
+
+.group_search
+	padding-right: 30px
+	+clr
+	.pagin__nav	
+		width: 200px
+.search-field
+	float: left
+	+box-sizing(border-box)
+	width: 235px   
+	padding: 8px 8px 8px 21px 
+	background: #a5c1cc 
+	.input-wrap
+		margin-bottom: 0
+	.input
+		border: 1px solid #93adb7
+		
+.table_easy
+	border-bottom: 1px solid #e7e7e7 
+	border-right: 1px solid #e7e7e7 
+	.table-head 
+		tr
+			&:first-child 
+				td
+					border-color: #fff
+					border-bottom: 0
+		.btns-wrap
+			position: static
+		.btn-sort
+			border-top: 0
+			&:first-child
+				border-left: 1px solid #fff 
+	tr
+		&[data-href]    
+			&:hover
+				cursor: pointer
+				td
+					background: #9ed8ef !important
+	.table__btns
+		padding: 0
