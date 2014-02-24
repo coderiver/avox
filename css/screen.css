@@ -258,9 +258,13 @@ a img, fieldset { border: none; }
 .tooltip:after { top: -9px; left: 15px; border-width: 0 7px 9px 7px; border-color: transparent transparent #cccccc transparent; }
 .tooltip .button { float: right; margin-top: 0; width: 75px; }
 .tooltip .button:first-child { float: left; }
+.tooltip .row { margin-bottom: 20px; }
+.tooltip .row__main .button { min-width: 80px; }
 
 .tooltip_gray { background: #f7f7f7; padding-top: 23px; width: 315px; margin-left: 10px; }
 .tooltip_gray:after, .tooltip_gray:before { display: none; }
+
+.tooltip_pad { padding-right: 37px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .tooltip__table { width: 100%; border-spacing: 0; border-collapse: collapse; font-size: 12px; border: 1px solid #e6e6e6; }
 .tooltip__table thead { background: #e7e7e7; }
@@ -319,6 +323,7 @@ a img, fieldset { border: none; }
 
 .input, .textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px; width: 100%; height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-size: 12px; background: white; color: #5c5c5c; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); }
 .input:focus, .textarea:focus { border: 1px solid #aacdda; background: #bfe5f3; outline: none; }
+.input[disabled], .textarea[disabled] { border-color: #e6e6e6; }
 
 .input_textarea { resize: vertical; height: 62px; max-height: 120px; }
 

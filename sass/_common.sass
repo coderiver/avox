@@ -148,6 +148,13 @@ a img,fieldset
 		width: 75px
 		&:first-child
 			float: left
+	.row
+		margin-bottom: 20px
+	.row__main
+		.button
+			min-width: 80px
+
+
 .tooltip_gray
 	background: #f7f7f7
 	padding-top: 23px
@@ -156,6 +163,9 @@ a img,fieldset
 	&:after,
 	&:before
 		display: none
+.tooltip_pad
+	padding-right: 37px
+	+box-sizing(border-box)
 .tooltip__table
 	width: 100% 
 	border-spacing: 0
@@ -375,6 +385,8 @@ a img,fieldset
 		border: 1px solid #aacdda
 		background: #bfe5f3
 		outline: none  
+	&[disabled]
+		border-color: #e6e6e6
 .input_textarea
 	resize: vertical
 	height: 62px

@@ -147,7 +147,7 @@
                         </button>
                         <div class="button-wrap">
                             <button class="button button_blue button_icon js-show-tooltip">
-                                <i class="icon icon_edit"></i>Mass Edit filtered
+                                <i class="icon icon_edit"></i>Mass Edit
                             </button>
                         </div>
                     </div>
@@ -462,33 +462,36 @@
         </table>
     </div>
 
-<div class="tooltip js-tooltip">
-    <table class="tooltip__table">
-        <thead>
-            <tr>
-                <th>Trunk</th>
-                <th>ORIG Rates</th>
-                <th>TERM Rates</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-            <tr>
-                <td>Alaska_gw1</td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
-                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="tooltip tooltip_gray tooltip_pad js-tooltip">
+    <div class="row">
+        <span class="row__text">Action:</span>
+        <div class="row__main">
+            <select data-placeholder="Choose a country..." class="chosen-select">
+                <option value="">&nbsp;</option>
+                <option value="Any">Any</option>
+                <option value="Italy">Italy</option>
+                <option value="Urkaine">Urkaine</option>
+                <option value="India">India</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <input type="text" class="input" disabled placeholder="Disable">
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <button class="button button_red">
+                Delete 
+            </button>
+            <button class="button button_blue button_icon">
+                Preview
+            </button>
+        </div>
+    </div>
 </div>
 <footer class="footer">
     <p>(&copy;) Avox 2013</p>
