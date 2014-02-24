@@ -410,8 +410,8 @@ input[type="file"]
 .group_search
 	padding-right: 30px
 	+clr
-	.pagin__nav	
-		width: 200px
+	.pagin__select
+		margin-top: 11px
 .search-field
 	float: left
 	+box-sizing(border-box)
@@ -445,13 +445,6 @@ input[type="file"]
 			border-top: 0
 			border-left: 0
 			&:first-child
-				
-tr
-	&[data-href]    
-		&:hover
-			cursor: pointer
-			td
-				background: #9ed8ef !important
 	.table__btns
 		padding: 0
 		border-left: 1px solid #fff 
@@ -463,6 +456,25 @@ tr
 			.btn-sort
 				&:first-child
 					border-left: 0  
+
+.table					
+	td
+		&.with-checkbox  
+			padding: 0
+			.customcheckbox
+				display: block
+				i
+					left: 50%
+					top: 50%
+					margin: -9px 0 0 -9px
+				    
+tr
+	&[data-href]    
+		&:hover
+			cursor: pointer
+			td
+				background: #9ed8ef !important
+	
 					
 .btn-import
 	margin-top: 17px
@@ -480,3 +492,6 @@ tr
 .table_border
 	border-bottom: 1px solid #e7e7e7
 	border-right: 1px solid #e7e7e7
+	
+.paginator_p
+	cursor: pointer

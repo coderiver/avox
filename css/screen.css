@@ -337,7 +337,7 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .group_search { padding-right: 30px; *zoom: 1; }
 .group_search:before, .group_search:after { content: " "; display: table; }
 .group_search:after { clear: both; }
-.group_search .pagin__nav { width: 200px; }
+.group_search .pagin__select { margin-top: 11px; }
 
 .search-field { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 235px; padding: 8px 8px 8px 21px; background: #a5c1cc; }
 .search-field .input-wrap { margin-bottom: 0; }
@@ -349,18 +349,24 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .table-easy .table-head tr:first-child td { border-color: white; border-bottom: 0; border-left: 0; }
 .table-easy .table-head .btns-wrap { position: static; height: 20px; }
 .table-easy .table-head .btn-sort { border-top: 0; border-left: 0; }
+.table-easy .table__btns { padding: 0; border-left: 1px solid white; }
+.table-easy .table__btns .btn-sort:first-child { border-right: 1px solid white; }
+.table-easy .table__btns:first-child { border-left: 0; }
+.table-easy .table__btns:first-child .btn-sort:first-child { border-left: 0; }
+
+.table td.with-checkbox { padding: 0; }
+.table td.with-checkbox .customcheckbox { display: block; }
+.table td.with-checkbox .customcheckbox i { left: 50%; top: 50%; margin: -9px 0 0 -9px; }
 
 tr[data-href]:hover { cursor: pointer; }
 tr[data-href]:hover td { background: #9ed8ef !important; }
-tr .table__btns { padding: 0; border-left: 1px solid white; }
-tr .table__btns .btn-sort:first-child { border-right: 1px solid white; }
-tr .table__btns:first-child { border-left: 0; }
-tr .table__btns:first-child .btn-sort:first-child { border-left: 0; }
 
 .btn-import { margin-top: 17px; float: right; width: 36px; height: 28px; text-align: center; background: #c5c5c5; border-radius: 2px; }
 .btn-import i { display: inline-block; vertical-align: middle; background: url('../img/icons-s9a73a5c3c9.png') 0 -713px no-repeat; width: 20px; height: 17px; }
 
 .table_border { border-bottom: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; }
+
+.paginator_p { cursor: pointer; }
 
 .l { width: 100%; display: inline-block; }
 .l .l-col1 { float: left; width: 20%; }
