@@ -333,6 +333,7 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .search-field .input-wrap { margin-bottom: 0; }
 .search-field .input { border: 1px solid #93adb7; }
 
+.table-easy { border-bottom: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; }
 .table-easy .table-head tr:hover { background: #e7e7e7; }
 .table-easy .table-head tr:first-child td { border-color: white; border-bottom: 0; border-left: 0; }
 .table-easy .table-head .btns-wrap { position: static; height: 20px; }
