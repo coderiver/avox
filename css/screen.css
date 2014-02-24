@@ -354,8 +354,11 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .table-easy .table__btns:first-child { border-left: 0; }
 .table-easy .table__btns:first-child .btn-sort:first-child { border-left: 0; }
 
+.customcheckbox { cursor: pointer; }
+.customcheckbox input { cursor: pointer; }
+
 .table td.with-checkbox { padding: 0; }
-.table td.with-checkbox .customcheckbox { display: block; }
+.table td.with-checkbox .customcheckbox { display: block; cursor: pointer; }
 .table td.with-checkbox .customcheckbox i { left: 50%; top: 50%; margin: -9px 0 0 -9px; }
 
 tr[data-href]:hover { cursor: pointer; }
