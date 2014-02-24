@@ -406,21 +406,26 @@ input[type="file"]
 	.input
 		border: 1px solid #93adb7
 		
-.table_easy
-	border-bottom: 1px solid #e7e7e7 
-	border-right: 1px solid #e7e7e7 
+.table-easy
+	//border-bottom: 1px solid #e7e7e7 
+	//border-right: 1px solid #e7e7e7 
 	.table-head 
 		tr
-			&:first-child 
+			&:hover
+				background: #e7e7e7
+			&:first-child   
 				td
 					border-color: #fff
 					border-bottom: 0
+					border-left: 0
 		.btns-wrap
 			position: static
+			height: 20px
 		.btn-sort
 			border-top: 0
+			border-left: 0
 			&:first-child
-				border-left: 1px solid #fff 
+				
 	tr
 		&[data-href]    
 			&:hover
@@ -429,3 +434,12 @@ input[type="file"]
 					background: #9ed8ef !important
 	.table__btns
 		padding: 0
+		border-left: 1px solid #fff 
+		.btn-sort
+			&:first-child
+				border-right: 1px solid #fff 
+		&:first-child
+			border-left: 0
+			.btn-sort
+				&:first-child
+					border-left: 0  
