@@ -205,7 +205,9 @@ a img,fieldset
 		width: 47%
 		&:first-child
 			float: left
-
+.actions_small
+	.button
+		min-width: 80px
 .group
 	margin-bottom: 30px 
 	.group__title
@@ -256,7 +258,10 @@ a img,fieldset
 		.icon-delete
 			margin: 0 auto
 			display: block 
-			
+.group_mb
+	margin-top: 30px
+	&:first-child
+		margin-top: 0
 .radio
 	position: relative
 	display: inline-block
@@ -409,6 +414,9 @@ input[type="file"]
 .table-easy
 	border-bottom: 1px solid #e7e7e7 
 	border-right: 1px solid #e7e7e7 
+	+ 
+		.actions
+			margin-top: 65px
 	.table-head 
 		tr
 			&:hover
@@ -426,12 +434,12 @@ input[type="file"]
 			border-left: 0
 			&:first-child
 				
-	tr
-		&[data-href]    
-			&:hover
-				cursor: pointer
-				td
-					background: #9ed8ef !important
+tr
+	&[data-href]    
+		&:hover
+			cursor: pointer
+			td
+				background: #9ed8ef !important
 	.table__btns
 		padding: 0
 		border-left: 1px solid #fff 
@@ -443,3 +451,20 @@ input[type="file"]
 			.btn-sort
 				&:first-child
 					border-left: 0  
+					
+.btn-import
+	margin-top: 17px
+	float: right
+	width: 36px
+	height: 28px
+	text-align: center
+	background: #c5c5c5
+	border-radius: 2px
+	i
+		display: inline-block
+		vertical-align: middle
+		+s(import)
+		  
+.table_border
+	border-bottom: 1px solid #e7e7e7
+	border-right: 1px solid #e7e7e7

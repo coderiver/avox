@@ -1,0 +1,497 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Code deck</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header class="header js-header">
+        <div class="header__top l-container">
+            <div class="header__user">
+                <span>
+                    Logged in as: 
+                    <a href="#">Ed2</a>
+                </span>
+                <a href="#">Logout</a>
+            </div>
+            <div class="header__info js-in">
+                <span>2013 May 17</span>
+                <span>11:45:18</span>
+                <span>+02:00</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <div class="l-container">
+                <ul class="nav">
+                    <li class="nav__item is-active">
+                        <a href="#" class="nav__link">Management</a>
+                        <ul class="subnav">
+                            <li class="subnav__item">
+                                <a href="clients-list.html" class="subnav__link">Clients</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="rate-tables.html" class="subnav__link">Rate Tables</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="invoices.html" class="subnav__link">Invoices</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="transactions.html" class="subnav__link">Transactions</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Balance Report</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Resellers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">System</a></li>
+                </ul>
+                <ul class="nav-info">
+                    <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="filter">
+        <div class="filter__in js-fixed-header">
+            <div class="filter__top js-filter">
+                <div class="l-container">
+                    <form action="">
+                        <div class="wrap">
+                            <div class="l-col3">
+                                <div class="row">
+                                    <span class="row__text">Countries:</span>
+                                    <div class="row__main">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="var0">var0</option>
+                                            <option value="var1">var1</option>
+                                            <option value="var2">var2</option>
+                                            <option value="var3">var3</option>
+                                            <option value="var4">var4</option>
+                                        </select>
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col3">
+                                <div class="row">
+                                    <span class="row__text">Code Name:</span>
+                                    <div class="row__main">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="var0">var0</option>
+                                            <option value="var1">var1</option>
+                                            <option value="var2">var2</option>
+                                            <option value="var3">var3</option>
+                                            <option value="var4">var4</option>
+                                        </select>
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col3">
+                                <div class="l-col2">
+                                    <div class="row">
+                                        <span class="row__text">Codes:</span>
+                                        <div class="row__main">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="l-col2">
+                                    <div class="row">
+                                        <span class="row__text"></span>
+                                        <div class="row__main">
+                                            <input type="text" class="input js-search-input" placeholder="Search">
+                                            <div class="actions actions_fluid">
+                                                <button class="button button_blue">Search</button>
+                                                <button class="btn-import"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col4">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="trans-title">Code Deck</div>
+                </div>
+            </div>
+            <div class="l-container">
+                <div class="filter__bottom">
+                    <div class="action">
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_add"></i>Add Client
+                        </button>
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_export"></i>Export list
+                        </button>
+                        <div class="button-wrap">
+                            <button class="button button_blue button_icon js-show-tooltip">
+                                <i class="icon icon_edit"></i>Mass Edit filtered
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pagin">
+                        <div class="pagin__select">
+                            <div class="pagin__select-text">
+                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                            </div>
+                            <div class="pagin__select-main">
+                                <select class="chosen-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="pagin__nav">
+                            <div class="js-paginator">  
+                                <div class='paginator_p_wrap'> 
+                                    <div class='paginator_p_bloc'> 
+                                        <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                    </div> 
+                                </div>  
+                                <!-- slider --> 
+                                <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                    <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(".js-paginator").jPaginator({ 
+                                    nbPages: 21, 
+                                    selectedPage: 8,
+                                    minSlidesForSlider:1, 
+                                    nbVisible: 7,
+                                    onPageClicked: function(a,num) { 
+                                        $("#page1").html("demo1 - page : "+num); 
+                                    }
+                                });  
+                            </script>                                   
+                        </div>
+                    </div>
+                </div>
+                <div class="table-head-wrap">
+                    <table class="table-head table-head_very-simple">
+                        <thead>
+                            <tr>
+                                <td class="td-0 td-height">
+                                    <div>
+                                        <label class="customcheckbox" for="">
+                                              <input type="checkbox" name="" id="">
+                                              <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="td-1">
+                                    <div>
+                                        <span>Country</span>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <div>
+                                        <span>Code Name</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div>
+                                        <span>Code</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-container table-wrap">
+        <table class="table table_invoices js-table table_border">
+            <tbody>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+                <tr data-href="#">
+                    <td class="to-center" width="80px">
+                        <label class="customcheckbox" for="">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-left" style="min-width: 80px">Albania</td>
+                    <td class="to-left" style="min-width: 50px">Albania mobile Vodafone</td>
+                    <td class="to-left">35567</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<div class="tooltip js-tooltip">
+    <table class="tooltip__table">
+        <thead>
+            <tr>
+                <th>Trunk</th>
+                <th>ORIG Rates</th>
+                <th>TERM Rates</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+            <tr>
+                <td>Alaska_gw1</td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska ORIG-Z</a></td>
+                <td><a href="#" class="js-open-window" data-window-url="rate-table_rates.html" data-window-width="1400" data-window-height="700">Alaska TERM-Q</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>
