@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 					}
 					//newtr = wheretoprepend.prev();
-					alert('adding');
+					//alert('adding');
 						newtr.find(".js-select").chosen().change(function(){ $(this).trigger('chosen:updated') });
 						newtr.find("select[multiple]").multiselect({
 							selectedList: 4,
@@ -549,5 +549,7 @@ $(document).ready(function() {
 		check_radio();
 	});
 	check_radio();
+
+	
 });
 
