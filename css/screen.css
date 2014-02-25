@@ -576,7 +576,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .subnav__item.is-active .subnzv__link { color: white; background: #2aa6da; }
 
-.subnav__link { display: block; padding: 9px 18px 8px 18px; line-height: 1.1; color: #505050; font-size: 12px; text-decoration: none; }
+.subnav__link { display: block; padding: 9px 18px 8px 18px; line-height: 1.1; color: #505050; font-size: 12px; text-decoration: none; white-space: nowrap; }
 .subnav__link:hover { background: #2aa6da; color: white; }
 
 .nav-info { float: right; }
