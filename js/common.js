@@ -180,8 +180,14 @@ $(document).ready(function() {
 			td_width();
 		}); 
 
-		$(".js-table tr").click(function(){
-			$(this).toggleClass("is-clicked");
+		$(".js-table td").on("click", function(){
+			if ($(this).attr("data-href") || $(this).attr("data-window-url") || $(this).hasClass("with-checkbox") || $(this).parent().attr("data-href")) {
+				
+			}
+			else {
+				$(this).parent().toggleClass("is-clicked");
+			}
+			
 		});
 
 		$(".js-clear-select").click(function(){
