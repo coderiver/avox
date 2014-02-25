@@ -25,7 +25,7 @@ $(document).ready(function() {
 		}
 		function add_new_row() {
 			if ($(".js-table-row").length > 0) {
-				$(".js-add-tr:not(.group__addnote)").bind("click",function(){
+				$(".js-add-tr:not(.group__addnote)").bind("click",function(event){
 					var html = $(this).parents(".js-table-group").find(".js-table-row tr").html();
 					if ($(this).parents(".js-table-group").find(".js-table-simple tbody tr").length > 0) {
 						var wheretoprepend = $(this).parents(".js-table-group").find(".js-table-simple tbody tr:first-child");
@@ -48,7 +48,7 @@ $(document).ready(function() {
 							noneSelectedText: "Select an Option",
 							header: ""
 						}).multiselectfilter();
-					return false;
+					event.preventDefault();
 				});
 			}
 		}
@@ -113,7 +113,7 @@ $(document).ready(function() {
 		        //console.log('clicked outside active element');
 		    }
 		});
-		$(".addnote__submit").click(function (e) {
+		$(".addnote__submit").click(function (event) {
 			$('.addnote').hide();
 			newtext = $('.addnote').find('textarea').val();
 			newhtml = '<tr><td>John Doe</td><td>1970</td><td>'+newtext+'</td><td><a href="#">filename</a></td><td class="td_icon"><div class="icon-delete"></div></td></tr>';
@@ -128,7 +128,8 @@ $(document).ready(function() {
 			}
 			
 			$('.addnote').hide();
-			return false;
+			event.preventDefault();
+			//return false;
 		});
 
 
@@ -190,10 +191,10 @@ $(document).ready(function() {
 			
 		});
 
-		$(".js-clear-select").click(function(){
+		$(".js-clear-select").on("click", function(event){
 			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
 			$(this).parent().find(".js-date-input").val("");
-			return false;
+			event.preventDefault();
 		});
 
 	var tooltip = $(".js-tooltip");
@@ -229,9 +230,9 @@ $(document).ready(function() {
 	});
 
 
-	$(".js-show-expand").bind("click",function(){
+	$(".js-show-expand").on("click",function(event){
 		$(".js-expand").toggle();
-		return false;
+		event.preventDefault();
 	});
 
 	function openWindow() {
@@ -412,12 +413,12 @@ $(document).ready(function() {
 
 		});
 
-		$(".js-ok").click(function(){
+		$(".js-ok").on("click", function(event){
 			var text = $(".is-active .js-input-text").text();
 			$(".is-active .js-date-input").val(text);
 			$(".js-date-input").parents(".js-with-calendar").removeClass("is-active");
 			$(".js-date-input").parents(".js-with-calendar").find(".js-calendar").removeClass("is-active");
-			return false;
+			event.preventDefault();
 		});
 
 		$(".calendar__months li").bind("click", function(){
