@@ -426,9 +426,12 @@ input[type="file"]
 .table-easy
 	border-bottom: 1px solid #e7e7e7 
 	border-right: 1px solid #e7e7e7 
+	text-align: left
 	+ 
 		.actions
 			margin-top: 65px
+	td
+		text-align: left !important
 	.table-head 
 		tr
 			&:hover
@@ -440,7 +443,7 @@ input[type="file"]
 					border-left: 0
 		.btns-wrap
 			position: static
-			height: 20px
+			height: 20px     
 		.btn-sort
 			border-top: 0
 			border-left: 0
@@ -472,12 +475,12 @@ input[type="file"]
 					top: 50%
 					margin: -9px 0 0 -9px
 				    
-tr
-	&[data-href]    
-		&:hover
-			cursor: pointer
-			td
-				background: #9ed8ef !important
+	tr
+		&[data-href]    
+			&:hover
+				cursor: pointer
+				td
+					background: #9ed8ef !important
 	
 					
 .btn-import
