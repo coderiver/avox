@@ -361,6 +361,7 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .customcheckbox input { cursor: pointer; }
 
 .table td.with-checkbox { padding: 0; }
+.table td.with-checkbox .button { min-width: 45px; padding: 0 5px; height: 24px; line-height: 24px; margin: 1px; }
 .table td.with-checkbox .customcheckbox { display: block; padding: 5px 0; cursor: pointer; }
 .table td.with-checkbox .customcheckbox i { left: 50%; top: 50%; margin: -9px 0 0 -9px; }
 .table tr[data-href]:hover { cursor: pointer; }
