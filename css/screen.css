@@ -457,7 +457,8 @@ html { height: 100%; }
 .table-simple .input-wrap .icon_glass { margin-top: -7px; }
 .table-simple .input-wrap .input:focus + i { background: url('../img/icons-s9a73a5c3c9.png') 0 -454px no-repeat; width: 15px; height: 15px; }
 
-.customcheckbox { position: relative; display: inline-block; }
+.customcheckbox { position: relative; z-index: 2; display: inline-block; }
+.customcheckbox.is-checked i:before { display: block; }
 .customcheckbox input { position: relative; width: 17px; height: 17px; opacity: 0; z-index: 2; }
 .customcheckbox input:checked + i:before { display: block; }
 .customcheckbox i { position: absolute; top: 0; left: 0; width: 16px; height: 16px; border: 1px solid #d5d5d5; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: white; -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07); }
