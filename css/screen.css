@@ -171,11 +171,12 @@
 .ui-multiselect-header li.ui-multiselect-close { float: right; text-align: right; padding-right: 0; }
 
 .ui-multiselect-menu { display: none; position: absolute; z-index: 10000; text-align: left; margin-top: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #f7f7f7; border: 1px solid #c8c8c8; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); width: auto !important; max-width: 460px; padding-right: 2px; }
+.ui-multiselect-menu.is-fixed-height .ui-multiselect-checkboxes { max-height: 240px; }
 .ui-multiselect-menu:before, .ui-multiselect-menu:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
 .ui-multiselect-menu:before { top: -9px; left: 17px; border-width: 0 7px 10px 7px; border-color: transparent transparent #f7f7f7 transparent; z-index: 2; }
 .ui-multiselect-menu:after { top: -10px; left: 16px; border-width: 0 8px 10px 8px; border-color: transparent transparent #c8c8c8 transparent; }
 
-.ui-multiselect-checkboxes { position: relative; overflow-y: auto; overflow-x: hidden; list-style: none; max-height: 240px; height: auto !important; }
+.ui-multiselect-checkboxes { position: relative; overflow-y: auto; overflow-x: hidden; list-style: none; }
 
 .ui-multiselect-checkboxes label { cursor: default; display: block; border: 1px solid transparent; padding: 3px 1px; }
 

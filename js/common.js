@@ -72,6 +72,8 @@ $(document).ready(function() {
 				header: "",
    		 		open: function () {
    		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+   		 			selectHeight();
+
    		 		},
    		 		close: function () {
    		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
@@ -575,6 +577,31 @@ $(document).ready(function() {
 		}
 
   });
+
+	function selectHeight() {
+		$(".ui-multiselect-menu").each(function(){
+			var top = $(this).offset().top;
+			var height = $(this).outerHeight();
+			var body_height = $("body").height();
+			console.log('top '+top);
+			console.log('height '+height);
+			console.log(body_height);
+			if (+top+height >= body_height) {
+				//$(this).addClass("is-fixed-height");
+				$(this).find(".ui-multiselect-checkboxes").css({
+					height: +body_height - top - 60
+				});
+			}
+			else {
+				//$(this).removeClass("is-fixed-height");
+			}
+		});
+	}
+	//selectHeight();
+	$(window).resize(function(){
+		selectHeight();
+	});
+	
 
 	
 });

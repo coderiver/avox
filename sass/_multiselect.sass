@@ -73,6 +73,9 @@
     width: auto !important 
     max-width: 460px
     padding-right: 2px 
+    &.is-fixed-height
+        .ui-multiselect-checkboxes
+            max-height: 240px
     &:before,
     &:after
         content: ""
@@ -97,15 +100,16 @@
     overflow-y: auto
     overflow-x: hidden
     list-style: none
-    max-height: 240px
-    height: auto !important
+    //max-height: 240px
+    //height: auto
+
 .ui-multiselect-checkboxes label
     cursor: default
     display: block
     border: 1px solid transparent
     padding: 3px 1px
 
-.ui-multiselect-checkboxes label
+.ui-multiselect-checkboxes label  
     display: block
     cursor: pointer
     position: relative
