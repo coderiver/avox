@@ -195,7 +195,7 @@ $(document).ready(function() {
 
 		$(".js-clear-select").on("click", function(event){
 			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
-			$(this).parent().find(".js-date-input").val("");
+			$(this).parent().find(".input").val("");
 			event.preventDefault();
 		});
 
@@ -400,130 +400,130 @@ $(document).ready(function() {
 	slider_zone();
 
 
-	function calendar() {
-		$(".js-calendar li").bind("click",function(){
-			$(this).parent().find("li").removeClass("is-active");
-			$(this).addClass("is-active");
-			var el = $(this).parent().attr("data-class");
-			var id = $(this).text();
-			var text = $(this).text();
-			$(".is-active").find("."+el).val(id);
-			$(".is-active").find("."+el).text(text);
+	// function calendar() {
+	// 	$(".js-calendar li").bind("click",function(){
+	// 		$(this).parent().find("li").removeClass("is-active");
+	// 		$(this).addClass("is-active");
+	// 		var el = $(this).parent().attr("data-class");
+	// 		var id = $(this).text();
+	// 		var text = $(this).text();
+	// 		$(".is-active").find("."+el).val(id);
+	// 		$(".is-active").find("."+el).text(text);
 
-			var text_input = $(".is-active .js-input-text").text();
-			$(".is-active .js-date-input").val(text_input);
+	// 		var text_input = $(".is-active .js-input-text").text();
+	// 		$(".is-active .js-date-input").val(text_input);
 
-		});
+	// 	});
 
-		$(".js-ok").on("click", function(event){
-			var text = $(".is-active .js-input-text").text();
-			$(".is-active .js-date-input").val(text);
-			$(".js-date-input").parents(".js-with-calendar").removeClass("is-active");
-			$(".js-date-input").parents(".js-with-calendar").find(".js-calendar").removeClass("is-active");
-			event.preventDefault();
-		});
+	// 	$(".js-ok").on("click", function(event){
+	// 		var text = $(".is-active .js-input-text").text();
+	// 		$(".is-active .js-date-input").val(text);
+	// 		$(".js-date-input").parents(".js-with-calendar").removeClass("is-active");
+	// 		$(".js-date-input").parents(".js-with-calendar").find(".js-calendar").removeClass("is-active");
+	// 		event.preventDefault();
+	// 	});
 
-		$(".calendar__months li").bind("click", function(){
-			var id = $(this).attr("data-id");
-			var text = $(this).text();
-			var el = $(this).parent().attr("data-class");
-			$(".is-active").find("."+el).val(id);
-			$(".is-active").find("."+el).text(text);
-		});	
-		var date = new Date();
-		var year = date.getFullYear();
-		var month_int = (date.getMonth() + 1).toString();
-		var day = date.getDate();
-		var hours = date.getHours();
-		var minutes = date.getMinutes();
-		var zone_offset = date.getTimezoneOffset()/60;
-		if (zone_offset > 0) {
-			var zone = zone_offset;
-		}
-		else {
-			var zone = -zone_offset;
-		}
+	// 	$(".calendar__months li").bind("click", function(){
+	// 		var id = $(this).attr("data-id");
+	// 		var text = $(this).text();
+	// 		var el = $(this).parent().attr("data-class");
+	// 		$(".is-active").find("."+el).val(id);
+	// 		$(".is-active").find("."+el).text(text);
+	// 	});	
+	// 	var date = new Date();
+	// 	var year = date.getFullYear();
+	// 	var month_int = (date.getMonth() + 1).toString();
+	// 	var day = date.getDate();
+	// 	var hours = date.getHours();
+	// 	var minutes = date.getMinutes();
+	// 	var zone_offset = date.getTimezoneOffset()/60;
+	// 	if (zone_offset > 0) {
+	// 		var zone = zone_offset;
+	// 	}
+	// 	else {
+	// 		var zone = -zone_offset;
+	// 	}
 
-		var month = new Array(12);
-		month[0] = "Jan";
-		month[1] = "Feb";
-		month[2] = "Mar";
-		month[3] = "Apr";
-		month[4] = "May";
-		month[5] = "Jun";
-		month[6] = "Jul";
-		month[7] = "Aug";
-		month[8] = "Sep";
-		month[9] = "Oct";
-		month[10] = "Nov";
-		month[11] = "Dec";
+	// 	var month = new Array(12);
+	// 	month[0] = "Jan";
+	// 	month[1] = "Feb";
+	// 	month[2] = "Mar";
+	// 	month[3] = "Apr";
+	// 	month[4] = "May";
+	// 	month[5] = "Jun";
+	// 	month[6] = "Jul";
+	// 	month[7] = "Aug";
+	// 	month[8] = "Sep";
+	// 	month[9] = "Oct";
+	// 	month[10] = "Nov";
+	// 	month[11] = "Dec";
 
-		// write date in string format
-		$(".js-calendar .js-year").text(year);
-		$(".js-calendar .js-month").text(month[date.getMonth()]);
-		$(".js-calendar .js-date").text(day);
+	// 	// write date in string format
+	// 	$(".js-calendar .js-year").text(year);
+	// 	$(".js-calendar .js-month").text(month[date.getMonth()]);
+	// 	$(".js-calendar .js-date").text(day);
 
-		if (zone > 0) {
-      		if (zone <= 9) {
-      			$( ".js-calendar .js-zone" ).text("+0"+zone+":00");
-      		}
-      		else {
-      			$( ".js-calendar .js-zone" ).text("+"+zone+":00");
-      		}
-      	}
-      	else {
-      		if (zone <= 9) {
-      			$( ".js-calendar .js-zone" ).text("-0"+zone+":00");
-      		}
-      		else {
-      			$( ".js-calendar .js-zone" ).text("-"+zone+":00");
-      		}
-      	}
+	// 	if (zone > 0) {
+ //      		if (zone <= 9) {
+ //      			$( ".js-calendar .js-zone" ).text("+0"+zone+":00");
+ //      		}
+ //      		else {
+ //      			$( ".js-calendar .js-zone" ).text("+"+zone+":00");
+ //      		}
+ //      	}
+ //      	else {
+ //      		if (zone <= 9) {
+ //      			$( ".js-calendar .js-zone" ).text("-0"+zone+":00");
+ //      		}
+ //      		else {
+ //      			$( ".js-calendar .js-zone" ).text("-"+zone+":00");
+ //      		}
+ //      	}
 
 
-      	if (hours <= 9 && minutes <= 9) {
-	      	$( ".js-calendar .js-time" ).text("0"+hours+':'+"0"+minutes);
-	    }
-	    if (hours <= 9 && minutes > 9) {
-	      	$( ".js-calendar .js-time" ).text("0"+hours+':'+minutes);
-	    }
-	    if (hours > 9 && minutes <= 9) {
-	      	$( ".js-calendar .js-time" ).text(hours+':'+"0"+minutes);
-	    }
-	    if (hours > 9 && minutes > 9) {
-	      	$( ".js-calendar .js-time" ).text(hours+':'+minutes);
-	    }
-	    if (hours == 24 ) {
-	      	$( "js-calendar .js-time" ).text('23:59');
-	    }
+ //      	if (hours <= 9 && minutes <= 9) {
+	//       	$( ".js-calendar .js-time" ).text("0"+hours+':'+"0"+minutes);
+	//     }
+	//     if (hours <= 9 && minutes > 9) {
+	//       	$( ".js-calendar .js-time" ).text("0"+hours+':'+minutes);
+	//     }
+	//     if (hours > 9 && minutes <= 9) {
+	//       	$( ".js-calendar .js-time" ).text(hours+':'+"0"+minutes);
+	//     }
+	//     if (hours > 9 && minutes > 9) {
+	//       	$( ".js-calendar .js-time" ).text(hours+':'+minutes);
+	//     }
+	//     if (hours == 24 ) {
+	//       	$( "js-calendar .js-time" ).text('23:59');
+	//     }
 
-	    // set current date
+	//     // set current date
 
-	    $(".js-calendar").each(function(){
-	    	var calendar_days = $(this).find(".calendar__days li");
-	    	var calendar_months = $(this).find(".calendar__months li");
-	    	var calendar_years = $(this).find(".calendar__years li");
-		    calendar_days.each(function(){
-				if ($(this).text() == day) {
-					calendar_days.removeClass("is-active");
-					$(this).addClass("is-active");
-				}
-			});
-			calendar_months.each(function(){
-				if ($(this).attr("data-id") == date.getMonth()) {
-					calendar_months.removeClass("is-active");
-					$(this).addClass("is-active");
-				}
-			});
-			calendar_years.each(function(){
-				if ($(this).text() == year) {
-					calendar_years.removeClass("is-active");
-					$(this).addClass("is-active");
-				}
-			});
-	    });
-	}
-	calendar();
+	//     $(".js-calendar").each(function(){
+	//     	var calendar_days = $(this).find(".calendar__days li");
+	//     	var calendar_months = $(this).find(".calendar__months li");
+	//     	var calendar_years = $(this).find(".calendar__years li");
+	// 	    calendar_days.each(function(){
+	// 			if ($(this).text() == day) {
+	// 				calendar_days.removeClass("is-active");
+	// 				$(this).addClass("is-active");
+	// 			}
+	// 		});
+	// 		calendar_months.each(function(){
+	// 			if ($(this).attr("data-id") == date.getMonth()) {
+	// 				calendar_months.removeClass("is-active");
+	// 				$(this).addClass("is-active");
+	// 			}
+	// 		});
+	// 		calendar_years.each(function(){
+	// 			if ($(this).text() == year) {
+	// 				calendar_years.removeClass("is-active");
+	// 				$(this).addClass("is-active");
+	// 			}
+	// 		});
+	//     });
+	// }
+	// calendar();
 
 	$(".js-date-input").click(function(event){
 		$(".js-calendar").removeClass("is-active");
@@ -602,6 +602,61 @@ $(document).ready(function() {
 		selectHeight();
 	});
 	
+
+	if ($(".js-date").length) {
+		$(".js-date").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	    });
+	}
+	if ($(".js-date-from").length) {
+		$(".js-date-from").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	        onClose: function( selectedDate ) {
+		        $( ".js-date-to" ).datepicker( "option", "minDate", selectedDate );
+		    }
+	    });
+	}
+	if ($(".js-date-to").length) {
+		$(".js-date-to").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	        hour: 23,
+	        minute: 59,
+	        second: 59,
+	        onClose: function( selectedDate ) {
+		        $( ".js-date-from" ).datepicker( "option", "maxDate", selectedDate );
+		    }
+	    });
+	}
 
 	
 });
