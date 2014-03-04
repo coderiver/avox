@@ -44,7 +44,7 @@
                             <span class="row__text">Effective Date:</span>
                             <div class="row__main wrap js-with-calendar">
                                 <div class="input-wrap">
-                                    <input type="text" class="input js-date-from">
+                                    <input type="text" class="input js-date">
                                     <button class="btn-bucket js-clear-select"><i></i></button>
                                 </div>
                             </div>
@@ -70,21 +70,56 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="l-col-equal">
                         <div class="row">
-                            <span class="row__text">End Date:</span>
-                            <div class="row__main js-with-calendar">
+                            <span class="row__text">Note:</span>
+                            <div class="row__main wrap js-with-calendar">
                                 <div class="input-wrap">
-                                    <input type="text" class="input js-date-to">
-                                    <button class="btn-bucket js-clear-select"><i></i></button>
+                                    <input type="text" class="input">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <span class="row__text">Notes:</span>
-                            <div class="row__main">
-                                <input type="text" class="input js-date-input">
+                    </div>
+                    <div class="l-col-equal">
+                        <div class="row wrap">
+                            <div class="l-col-equal">
+                                <span class="row__text">Date format:</span>
+                                <div class="row__main">
+                                    <div class="input-wrap">
+                                        <input type="text" class="input js-date-format-input" disabled value="YYYY-MM-DD">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col-equal">
+                                <span class="row__text">Custom:</span>
+                                <div class="row__main">
+                                    <select class="chosen-select js-date-format-select">
+                                        <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                        <option value="YYYY/MM/DD">YYYY/MM/DD</option>
+                                        <option value="">YYYY. MM. DD</option>
+                                        <option value="YYYY. MM. DD">YYYYMMDD</option>
+                                        <option value="DD-MM-YYYY">DD-MM-YYYY</option>
+                                        <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                        <option value="DD.MM.YYYY">DD.MM.YYYY</option>
+                                        <option value="DD/Mon/YYYY">DD/Mon/YYYY</option>
+                                        <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                                        <option value="MM-DD-YYYY">MM-DD-YYYY</option>
+                                        <option value="MM.DD.YYYY">MM.DD.YYYY</option>
+                                        <option value="1" data-id="1">Custom</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row wrap">
+                            <div class="l-col-equal">
+                                <span class="row__text">Increment format</span>
+                                <div class="row__main">
+                                    <select class="chosen-select">
+                                        <option value="">va1</option>
+                                        <option value="">va2</option>
+                                        <option value="">va3</option>
+                                        <option value="">va4</option>
+                                    </select> 
+                                </div>
                             </div>
                         </div>
                     </div>

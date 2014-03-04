@@ -326,7 +326,7 @@ a img, fieldset { border: none; }
 
 .input, .textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px; width: 100%; height: 32px; border: 1px solid #d5d5d5; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-size: 12px; background: white; color: #5c5c5c; -webkit-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); box-shadow: inset 0 1px 1px rgba(0, 1, 1, 0.05); }
 .input:focus, .textarea:focus { border: 1px solid #aacdda; background: #bfe5f3; outline: none; }
-.input[disabled], .textarea[disabled] { border-color: #e6e6e6; }
+.input[disabled], .textarea[disabled] { border-color: #e6e6e6; background: #ececec; }
 
 .input_textarea { resize: vertical; height: 62px; max-height: 120px; }
 

@@ -658,6 +658,12 @@ $(document).ready(function() {
 	    });
 	}
 
+	$(".js-date-format-select").on("change", function(){
+		if ($(this).val() == 1) {
+			$(".js-date-format-input").removeAttr("disabled");
+			//$(".js-date-format-input").focusin()
+		}
+	});
 	
 });
 
