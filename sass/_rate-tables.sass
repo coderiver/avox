@@ -229,6 +229,7 @@ body
 		color: #a9a9a9 !important
 	&.is-hoverable
 		tr
+			+transition(background .2s linear) 
 			&:hover
 				td
 					background: #cfecf7 
@@ -237,6 +238,7 @@ body
 				&:nth-child(2n)
 					background: #f8e8de 
 		td			
+			+transition(background .2s linear) 
 			&[data-href]
 				&:hover
 					cursor: pointer
