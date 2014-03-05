@@ -380,6 +380,10 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
+.l-col-60 { float: left; width: 60%; }
+
+.l-col-40 { float: left; width: 40%; }
+
 .l-col3 { float: left; padding-left: 1%; width: 33%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 1px; }
 .l-col3:first-child { padding-left: 0; }
 
