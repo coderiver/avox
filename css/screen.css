@@ -871,6 +871,7 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 
 .table_input td { padding: 4px; }
 .table_input tr:last-child td { border-bottom: 1px solid #e7e7e7; }
+.table_input .ui-multiselect { max-width: 100% !important; width: 100% !important; }
 
 .td-input-small { width: 35px; }
 
