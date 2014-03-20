@@ -63,7 +63,7 @@ a img,fieldset
 	position: relative
 	overflow: hidden
 	padding: 0 15px
-	min-width: 120px
+	//min-width: 120px
 	color: #838383 
 	text-align: center
 	font: bold 13px/28px Tahoma,Arial,sans-serif
@@ -75,6 +75,9 @@ a img,fieldset
 	text-decoration: none
 	+box-sizing(border-box)
 	+transition(background .2s linear)
+	+r(step2)
+		font-size: 12px
+  
 	&.button_blue
 		background: #2cabdc
 		color: #fff
@@ -376,7 +379,7 @@ a img,fieldset
 	+box-sizing(border-box)
 	padding: 5px
 	width: 100%
-	height: 32px
+	height: 30px
 	border: 1px solid #d5d5d5
 	+border-radius(3px)
 	font-size: 12px 

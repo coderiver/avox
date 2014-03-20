@@ -9,7 +9,7 @@ $(document).ready(function() {
 		$(".is-active .js-date-input").val(text);
 		$(".js-date-input").parent().removeClass("is-active");
 		$(".js-calendar").removeClass("is-active");
-        //$(".js-expand").hide();
+        $(".js-expand").hide();
     });
 
 	//chosen stuff
@@ -234,7 +234,11 @@ $(document).ready(function() {
 
 	$(".js-show-expand").on("click",function(event){
 		$(".js-expand").toggle();
-		event.preventDefault();
+		event.stopPropagation();
+		return false;
+	});
+	$(".js-expand").on("click",function(event){
+		event.stopPropagation();
 	});
 
 	function openWindow() {
