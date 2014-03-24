@@ -199,20 +199,22 @@ $(document).ready(function() {
 			event.preventDefault();
 		});
 
-	
+	var tooltip = $(".js-tooltip");
 	tooltip.click(function(event){
 		event.stopPropagation();
 	});
 	function tooltipShow() {
 		$(".js-show-tooltip").bind("click", function(event){
-			var tooltip = $("."+$(this).attr("data-tooltip"));
+			var this_tooltip = $("."+$(this).attr("data-tooltip"));
 			var top = $(this).offset().top;
 			var left = $(this).offset().left;
-			tooltip.css({
+			this_tooltip.css({
 				"left": left-12,
 				"top": top+37
 			});
-			tooltip.show();
+			tooltip.hide();
+			this_tooltip.show();
+			//return tooltip;
 			event.stopPropagation();
 		});
 	}
