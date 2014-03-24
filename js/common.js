@@ -251,6 +251,9 @@ $(document).ready(function() {
 			var window_width = $(this).attr("data-window-width");
 			myWindow=window.open(window_url,'','width='+window_width+',height='+window_height+'')
 	    	myWindow.focus();	
+	    	//var el = myWindow.document.getElementsByClassName("input")[0];
+	    	//alert(el);
+	    	//myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
 		});
 	}
 		openWindow();

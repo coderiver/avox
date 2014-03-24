@@ -886,7 +886,7 @@ body.is-fixed-table .tabwindow_extend .filter__in { left: 20px; right: 20px; }
 
 .tooltip_419 { width: 419px; padding-right: 30px; }
 
-.input-wrap_right-glass .icon_glass { right: 12px; left: auto; }
+.input-wrap_right-glass .icon_glass { right: 12px; left: auto; cursor: pointer; }
 .input-wrap_right-glass .input { padding-right: 30px; }
 
 .expand { display: none; position: absolute; right: 0; top: 181px; z-index: 1000; padding: 25px 25px 25px 10px; width: 600px; border-radius: 0 0 2px 2px; background-color: #e3e3e3; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *zoom: 1; box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1); }
