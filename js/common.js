@@ -199,12 +199,13 @@ $(document).ready(function() {
 			event.preventDefault();
 		});
 
-	var tooltip = $(".js-tooltip");
+	
 	tooltip.click(function(event){
 		event.stopPropagation();
 	});
 	function tooltipShow() {
 		$(".js-show-tooltip").bind("click", function(event){
+			var tooltip = $("."+$(this).attr("data-tooltip"));
 			var top = $(this).offset().top;
 			var left = $(this).offset().left;
 			tooltip.css({
