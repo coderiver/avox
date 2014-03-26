@@ -462,25 +462,13 @@
                                 </div>
                             </td>
                             <script>
-    function popitup(url) {
-    newwindow=window.open(url,'name','height=600,width=750');
-    // if (newwindow == 1){
-    //     alert('b');
-    // }
-    if (window.focus) {newwindow.focus()}
-
-    return false;
-}
-function HandlePopupResult(result) {
-    alert("result of popup is: " + result);
-}
+    
 </script>
                             <td>
                                 <div class="input-wrap input-wrap_right-glass">
-                                    <input id="my" type="text" class="input">
-                                    <i class="icon icon_glass"></i>
-                                    <a href="code-name.html" onclick="return popitup('code-name.html')"
-    >Link to popup</a> 
+                                    <input id="mysuperid" type="text" class="input">
+                                    <i data-id="mysuperid" class="icon icon_glass js-codenamepopup"></i>
+                                    
                                 </div>
                             </td>
                             <td>

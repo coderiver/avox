@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	function popitup(url) {
+        newwindow=window.open(url,'name','height=585,width=1000');
+        if (window.focus) {newwindow.focus()}
+        return false;
+    }
+    $('body').on('click', '.js-codenamepopup', function(){
+    	idd = $(this).data('id');
+    	return popitup('code-name.html?parentid='+idd);
+    });
+
 	$(document).click(function() {
         $(".js-tooltip").hide();
         $(".js-calendar").removeClass("is-active");
