@@ -16,6 +16,7 @@
     <script src="js/jquery-ui-timepicker-addon.js"></script>
     <script src="js/jPaginator.js"></script>
     <script src="js/common.js"></script>
+
 </head>
 <body class="is-popup">
 <div class="tabwindow tabwindow_extend">
@@ -460,10 +461,26 @@
                                     <i class="icon icon_glass js-open-window" data-window-url="code-name.html" data-window-width="1400" data-window-height="700"></i>
                                 </div>
                             </td>
+                            <script>
+    function popitup(url) {
+    newwindow=window.open(url,'name','height=600,width=750');
+    // if (newwindow == 1){
+    //     alert('b');
+    // }
+    if (window.focus) {newwindow.focus()}
+
+    return false;
+}
+function HandlePopupResult(result) {
+    alert("result of popup is: " + result);
+}
+</script>
                             <td>
                                 <div class="input-wrap input-wrap_right-glass">
-                                    <input type="text" class="input">
+                                    <input id="my" type="text" class="input">
                                     <i class="icon icon_glass"></i>
+                                    <a href="code-name.html" onclick="return popitup('code-name.html')"
+    >Link to popup</a> 
                                 </div>
                             </td>
                             <td>

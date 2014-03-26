@@ -112,7 +112,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr data-href="#">  
+                    <script>
+                    function GetRowValue(val)
+    {
+        // hardcoded value used to minimize the code.
+        // ControlID can instead be passed as query string to the popup window
+        window.opener.document.getElementById("my").value = val;
+        
+        //alert('a');
+        window.returnValue = 1;
+        window.close();
+        //console.log(window);
+        //return false;
+
+    }
+//     function CloseMySelf(sender) {
+//     try {
+//         window.opener.HandlePopupResult('asd');
+//     }
+//     catch (err) {}
+//     window.close();
+//     return false;
+// }
+                    </script>
+                        <tr data-href="#" onclick="GetRowValue(1)">  
                             <td>United States</td>
                             <td>United States Verizon Free for americans</td>
                             <td>1212</td>
