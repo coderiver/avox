@@ -382,6 +382,14 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .paginator_p { cursor: pointer; }
 
+.is-blue { color: #2cabdc !important; }
+
+.is-green { color: #438420 !important; }
+
+.is-red { color: #990000 !important; }
+
+.is-gray { color: darkgrey !important; }
+
 .l { width: 100%; display: inline-block; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
