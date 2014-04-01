@@ -1,4 +1,13 @@
 $(document).ready(function() {
+	$('.button_resetall').click(function(event) {
+		//alert('a');
+		// $('.chosen-select').trigger('chosen:updated');
+		// $('.chosen-select').trigger('chosen:updated');
+		$('.chosen-select').val('').trigger('chosen:updated');
+		//asd = $(this).parents('form');
+		//$(this).trigger('chosen:updated')
+		//$('.row__main').hide();
+	});
 
 	function popitup(url) {
         newwindow=window.open(url,'name','height=585,width=1000');
