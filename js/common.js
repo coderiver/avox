@@ -19,7 +19,7 @@ $(document).ready(function() {
     	return popitup('code-name.html?parentid='+idd);
     });
 
-	$(document).click(function() {
+	$(document).click(function(event) {
         $(".js-tooltip").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
@@ -28,7 +28,26 @@ $(document).ready(function() {
 		$(".is-active .js-date-input").val(text);
 		$(".js-date-input").parent().removeClass("is-active");
 		$(".js-calendar").removeClass("is-active");
-        $(".js-expand").hide();
+		console.log($(event.target).parents());
+
+		if($(event.target).parents(".ui-multiselect-checkboxes").length == 1) {
+			//  inside ul
+			console.log('a');
+		}
+		else{
+			//not inside ul
+			console.log('b');
+			$(".js-expand").hide();
+		}
+		// if ($(event.target).parents(".js-expand").length == 1 ) { 
+		// 	//alert('a');
+			
+		// }
+		// else{ 
+		// 	$(".js-expand").hide();
+		// 	//alert('b');
+		// }
+        
     });
 
 	//chosen stuff
