@@ -625,11 +625,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 
 .table-head_client-list tr:first-child td:nth-child(7) { border-bottom: 1px solid white; }
 .table-head_client-list .td-1 span, .table-head_client-list .td-11 span, .table-head_client-list .td-14 span, .table-head_client-list .td-15 span, .table-head_client-list .td-16 span, .table-head_client-list .td-17 span { top: -8px; }
-.table-head_client-list .td-2 .is-rotate span { margin-top: 5px; }
-.table-head_client-list .td-3 .is-rotate span { margin-top: 21px; }
-.table-head_client-list .td-4 .is-rotate span, .table-head_client-list .td-5 .is-rotate span { margin-top: 10px; }
-.table-head_client-list .td-6 span, .table-head_client-list .td-9 span, .table-head_client-list .td-10 span { top: 10px; }
-.table-head_client-list .td-12 .is-rotate span { margin-top: 16px; }
+.table-head_client-list .td-2 .is-rotate, .table-head_client-list .td-3 .is-rotate, .table-head_client-list .td-4 .is-rotate, .table-head_client-list .td-5 .is-rotate, .table-head_client-list .td-6 .is-rotate, .table-head_client-list .td-12 .is-rotate { margin-top: 47px; }
 .table-head_client-list .td-6, .table-head_client-list .td-7, .table-head_client-list .td-8, .table-head_client-list .td-9, .table-head_client-list .td-10 { padding-bottom: 40px; }
 .table-head_client-list .td-6 .btns-wrap, .table-head_client-list .td-9 .btns-wrap, .table-head_client-list .td-10 .btns-wrap { top: 39px; }
 
