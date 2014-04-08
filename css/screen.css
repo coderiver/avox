@@ -630,6 +630,7 @@ body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-
 .table-head_client-list .td-6 .btns-wrap, .table-head_client-list .td-9 .btns-wrap, .table-head_client-list .td-10 .btns-wrap { top: 39px; }
 
 .table { width: 100%; border-spacing: 0; border-collapse: collapse; }
+.table .customcheckbox { z-index: 1; }
 .table .input-wrap { margin-bottom: 0; }
 .table tr { -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
 .table tr:nth-child(2n) { background: #f7f7f7; }

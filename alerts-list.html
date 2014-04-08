@@ -1,0 +1,966 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Alerts list</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="js-table-group">
+    <header class="header js-header">
+        <div class="header__top l-container">
+            <div class="header__user">
+                <span>
+                    Logged in as: 
+                    <a href="#">Ed2</a>
+                </span>
+                <a href="#">Logout</a>
+            </div>
+            <div class="header__info js-in">
+                <span>2013 May 17</span>
+                <span>11:45:18</span>
+                <span>+02:00</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <div class="l-container">
+                <ul class="nav">
+                    <li class="nav__item is-active">
+                        <a href="#" class="nav__link">Management</a>
+                        <ul class="subnav">
+                            <li class="subnav__item">
+                                <a href="clients-list.html" class="subnav__link">Clients</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="rate-tables.html" class="subnav__link">Rate Tables</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="invoices.html" class="subnav__link">Invoices</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="transactions.html" class="subnav__link">Transactions</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Balance Report</a>
+                            </li>
+                            <li class="subnav__item">
+                                <a href="#" class="subnav__link">Resellers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">System</a></li>
+                </ul>
+                <ul class="nav-info">
+                    <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
+                    <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="filter">
+        <div class="filter__in js-fixed-header">
+            <div class="filter__top js-filter">
+                <div class="l-container">
+                    <form action="">
+                        <div class="wrap">
+                            <div class="l-col2">
+                                <div class="row">
+                                    <span class="row__text">Klerk</span>
+                                    <div class="row__main">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="var0">var0</option>
+                                            <option value="var1">var1</option>
+                                            <option value="var2">var2</option>
+                                            <option value="var3">var3</option>
+                                            <option value="var4">var4</option>
+                                        </select>
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="row__text"></span>
+                                    <div class="row__main">
+                                       <div class="radio-row radio-row_inine">
+                                            <label class="radio">
+                                                <input type="radio" name="name3">
+                                                <i></i>
+                                                <span>Active</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="name3" checked="">
+                                                <i></i>
+                                                <span>All</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="name3">
+                                                <i></i>
+                                                <span>Disabled</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row_extend">
+                                    <span class="row__text">Check span:</span>
+                                    <div class="row__main">
+                                        <div class="row__main-col" style="padding-right:0">
+                                            <input type="text" class="input">
+                                        </div>
+                                        <i class="row-separator"></i>
+                                        <div class="row__main-col" style="padding-right:0">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row_extend">
+                                    <span class="row__text">Check every:</span>
+                                    <div class="row__main">
+                                        <div class="row__main-col" style="padding-right:0">
+                                            <input type="text" class="input">
+                                        </div>
+                                        <i class="row-separator"></i>
+                                        <div class="row__main-col" style="padding-right:0">
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-col2">
+                                <div class="row row_extend">
+                                    <span class="row__text">Added:</span>
+                                    <div class="row__main">
+                                        <div class="row__main-col js-with-calendar">
+                                            <input type="text" class="input js-date-input" placeholder="Date From">
+                                            <button class="btn-bucket js-clear-select"><i></i></button>
+                                            <div class="calendar js-calendar">
+                                                <div class="calendar__wrap">
+                                                    <ul class="calendar__years" data-class="js-year">
+                                                        <li>2013</li>
+                                                        <li>2014</li>
+                                                    </ul>
+                                                    <ul class="calendar__months" data-class="js-month">
+                                                        <li data-id="0">Jan</li>
+                                                        <li data-id="1">Feb</li>
+                                                        <li data-id="2">Mar</li>
+                                                        <li data-id="3">Apr</li>
+                                                        <li data-id="4">May</li>
+                                                        <li data-id="5">Jun</li>
+                                                        <li data-id="6">Jul</li>
+                                                        <li data-id="7">Aug</li>
+                                                        <li data-id="8">Sep</li>
+                                                        <li data-id="9">Oct</li>
+                                                        <li data-id="10">Nov</li>
+                                                        <li data-id="11">Dec</li>
+                                                    </ul>
+                                                    <ul class="calendar__days" data-class="js-date">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                        <li>11</li>
+                                                        <li>12</li>
+                                                        <li>13</li>
+                                                        <li>14</li>
+                                                        <li>15</li>
+                                                        <li>16</li>
+                                                        <li>17</li>
+                                                        <li>18</li>
+                                                        <li>19</li>
+                                                        <li>20</li>
+                                                        <li>21</li>
+                                                        <li>22</li>
+                                                        <li>23</li>
+                                                        <li>24</li>
+                                                        <li>25</li>
+                                                        <li>26</li>
+                                                        <li>27</li>
+                                                        <li>28</li>
+                                                        <li>29</li>
+                                                        <li>30</li>     
+                                                        <li class="is-inactive">1</li>
+                                                        <li class="is-inactive">2</li>
+                                                        <li class="is-inactive">3</li>
+                                                        <li class="is-inactive">4</li>
+                                                        <li class="is-inactive">5</li>
+                                                    </ul>
+                                                    <div class="calendar__slider">
+                                                        <div class="calendar__slider-row" data-class="js-time">
+                                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                        </div>
+                                                        <div class="calendar__slider-row" data-class="js-zone">
+                                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar__btns">
+                                                    <button class="button js-ok">Ok</button>
+                                                </div>
+                                                
+                                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                                            </div>
+                                        </div>
+                                        <i class="row-separator"></i>
+                                        <div class="row__main-col js-with-calendar">
+                                            <input type="text" class="input js-date-input" placeholder="Date To">
+                                            <button class="btn-bucket js-clear-select"><i></i></button>
+                                            <div class="calendar js-calendar">
+                                                <div class="calendar__wrap">
+                                                    <ul class="calendar__years" data-class="js-year">
+                                                        <li>2013</li>
+                                                        <li>2014</li>
+                                                    </ul>
+                                                    <ul class="calendar__months" data-class="js-month">
+                                                        <li data-id="0">Jan</li>
+                                                        <li data-id="1">Feb</li>
+                                                        <li data-id="2">Mar</li>
+                                                        <li data-id="3">Apr</li>
+                                                        <li data-id="4">May</li>
+                                                        <li data-id="5">Jun</li>
+                                                        <li data-id="6">Jul</li>
+                                                        <li data-id="7">Aug</li>
+                                                        <li data-id="8">Sep</li>
+                                                        <li data-id="9">Oct</li>
+                                                        <li data-id="10">Nov</li>
+                                                        <li data-id="11">Dec</li>
+                                                    </ul>
+                                                    <ul class="calendar__days" data-class="js-date">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                        <li>11</li>
+                                                        <li>12</li>
+                                                        <li>13</li>
+                                                        <li>14</li>
+                                                        <li>15</li>
+                                                        <li>16</li>
+                                                        <li>17</li>
+                                                        <li>18</li>
+                                                        <li>19</li>
+                                                        <li>20</li>
+                                                        <li>21</li>
+                                                        <li>22</li>
+                                                        <li>23</li>
+                                                        <li>24</li>
+                                                        <li>25</li>
+                                                        <li>26</li>
+                                                        <li>27</li>
+                                                        <li>28</li>
+                                                        <li>29</li>
+                                                        <li>30</li>     
+                                                        <li class="is-inactive">1</li>
+                                                        <li class="is-inactive">2</li>
+                                                        <li class="is-inactive">3</li>
+                                                        <li class="is-inactive">4</li>
+                                                        <li class="is-inactive">5</li>
+                                                    </ul>
+                                                    <div class="calendar__slider">
+                                                        <div class="calendar__slider-row" data-class="js-time">
+                                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                        </div>
+                                                        <div class="calendar__slider-row" data-class="js-zone">
+                                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar__btns">
+                                                    <button class="button js-ok">Ok</button>
+                                                </div>
+                                                
+                                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row_extend">
+                                    <span class="row__text">Alerted:</span>
+                                    <div class="row__main">
+                                        <div class="row__main-col js-with-calendar">
+                                            <input type="text" class="input js-date-input" placeholder="Date From">
+                                            <button class="btn-bucket js-clear-select"><i></i></button>
+                                            <div class="calendar js-calendar">
+                                                <div class="calendar__wrap">
+                                                    <ul class="calendar__years" data-class="js-year">
+                                                        <li>2013</li>
+                                                        <li>2014</li>
+                                                    </ul>
+                                                    <ul class="calendar__months" data-class="js-month">
+                                                        <li data-id="0">Jan</li>
+                                                        <li data-id="1">Feb</li>
+                                                        <li data-id="2">Mar</li>
+                                                        <li data-id="3">Apr</li>
+                                                        <li data-id="4">May</li>
+                                                        <li data-id="5">Jun</li>
+                                                        <li data-id="6">Jul</li>
+                                                        <li data-id="7">Aug</li>
+                                                        <li data-id="8">Sep</li>
+                                                        <li data-id="9">Oct</li>
+                                                        <li data-id="10">Nov</li>
+                                                        <li data-id="11">Dec</li>
+                                                    </ul>
+                                                    <ul class="calendar__days" data-class="js-date">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                        <li>11</li>
+                                                        <li>12</li>
+                                                        <li>13</li>
+                                                        <li>14</li>
+                                                        <li>15</li>
+                                                        <li>16</li>
+                                                        <li>17</li>
+                                                        <li>18</li>
+                                                        <li>19</li>
+                                                        <li>20</li>
+                                                        <li>21</li>
+                                                        <li>22</li>
+                                                        <li>23</li>
+                                                        <li>24</li>
+                                                        <li>25</li>
+                                                        <li>26</li>
+                                                        <li>27</li>
+                                                        <li>28</li>
+                                                        <li>29</li>
+                                                        <li>30</li>     
+                                                        <li class="is-inactive">1</li>
+                                                        <li class="is-inactive">2</li>
+                                                        <li class="is-inactive">3</li>
+                                                        <li class="is-inactive">4</li>
+                                                        <li class="is-inactive">5</li>
+                                                    </ul>
+                                                    <div class="calendar__slider">
+                                                        <div class="calendar__slider-row" data-class="js-time">
+                                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                        </div>
+                                                        <div class="calendar__slider-row" data-class="js-zone">
+                                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar__btns">
+                                                    <button class="button js-ok">Ok</button>
+                                                </div>
+                                                
+                                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                                            </div>
+                                        </div>
+                                        <i class="row-separator"></i>
+                                        <div class="row__main-col js-with-calendar">
+                                            <input type="text" class="input js-date-input" placeholder="Date To">
+                                            <button class="btn-bucket js-clear-select"><i></i></button>
+                                            <div class="calendar js-calendar">
+                                                <div class="calendar__wrap">
+                                                    <ul class="calendar__years" data-class="js-year">
+                                                        <li>2013</li>
+                                                        <li>2014</li>
+                                                    </ul>
+                                                    <ul class="calendar__months" data-class="js-month">
+                                                        <li data-id="0">Jan</li>
+                                                        <li data-id="1">Feb</li>
+                                                        <li data-id="2">Mar</li>
+                                                        <li data-id="3">Apr</li>
+                                                        <li data-id="4">May</li>
+                                                        <li data-id="5">Jun</li>
+                                                        <li data-id="6">Jul</li>
+                                                        <li data-id="7">Aug</li>
+                                                        <li data-id="8">Sep</li>
+                                                        <li data-id="9">Oct</li>
+                                                        <li data-id="10">Nov</li>
+                                                        <li data-id="11">Dec</li>
+                                                    </ul>
+                                                    <ul class="calendar__days" data-class="js-date">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                        <li>11</li>
+                                                        <li>12</li>
+                                                        <li>13</li>
+                                                        <li>14</li>
+                                                        <li>15</li>
+                                                        <li>16</li>
+                                                        <li>17</li>
+                                                        <li>18</li>
+                                                        <li>19</li>
+                                                        <li>20</li>
+                                                        <li>21</li>
+                                                        <li>22</li>
+                                                        <li>23</li>
+                                                        <li>24</li>
+                                                        <li>25</li>
+                                                        <li>26</li>
+                                                        <li>27</li>
+                                                        <li>28</li>
+                                                        <li>29</li>
+                                                        <li>30</li>     
+                                                        <li class="is-inactive">1</li>
+                                                        <li class="is-inactive">2</li>
+                                                        <li class="is-inactive">3</li>
+                                                        <li class="is-inactive">4</li>
+                                                        <li class="is-inactive">5</li>
+                                                    </ul>
+                                                    <div class="calendar__slider">
+                                                        <div class="calendar__slider-row" data-class="js-time">
+                                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                                        </div>
+                                                        <div class="calendar__slider-row" data-class="js-zone">
+                                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar__btns">
+                                                    <button class="button js-ok">Ok</button>
+                                                </div>
+                                                
+                                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<span class="row__text"></span>
+                                    <div class="row__main">
+                                        <input type="text" class="input js-search-input" placeholder="Search">
+                                        <div class="actions actions_fluid">
+                                            <button class="button button_gray js-reset-filter" type="reset">Reset All</button>
+                                            <button class="button button_blue">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="trans-title">Invoices</div>
+                </div>
+            </div>
+            <div class="l-container">
+                <div class="filter__bottom">
+                    <table hidden class="js-table-row">
+                        <tr>
+                            <td class="to-center with-checkbox" width="44px">
+                                <form action=""><button class="button button_blue">Add</button></form>
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                            <td class="to-left">
+                                <label class="customcheckbox">
+                                    <input type="checkbox">
+                                    <i></i>
+                                </label>
+                            </td>
+                            <td class="to-left">
+                                <input type="text" class="input">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="action">
+                        <button class="button button_blue button_icon js-add-tr">
+                            <i class="icon icon_add"></i>Add Code
+                        </button>
+                        <!-- <button class="button button_blue button_icon">
+                            <i class="icon icon_export"></i>Export
+                        </button>
+                        <button class="button button_blue button_icon">
+                            <i class="icon icon_import"></i>Import
+                        </button> -->
+                        <div class="button-wrap">
+                            <button class="button button_blue button_icon js-show-tooltip">
+                                <i class="icon icon_edit"></i>Mass Edit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pagin">
+                        <div class="pagin__select">
+                            <div class="pagin__select-text">
+                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                            </div>
+                            <div class="pagin__select-main">
+                                <select class="chosen-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="pagin__nav">
+                            <div class="js-paginator">  
+                                <div class='paginator_p_wrap'> 
+                                    <div class='paginator_p_bloc'> 
+                                        <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                    </div> 
+                                </div>  
+                                <!-- slider --> 
+                                <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                    <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(".js-paginator").jPaginator({ 
+                                    nbPages: 21, 
+                                    selectedPage: 8,
+                                    minSlidesForSlider:1, 
+                                    nbVisible: 7,
+                                    onPageClicked: function(a,num) { 
+                                        $("#page1").html("demo1 - page : "+num); 
+                                    }
+                                });  
+                            </script>                                   
+                        </div>
+                    </div>
+                </div>
+                <div class="table-head-wrap">
+                    <table class="table-head table-head_very-simple">
+                        <thead>
+                            <tr>
+                                <td class="td-0 td-height">
+                                    <div>
+                                        <label class="customcheckbox js-check-all" data-group-id="1">
+                                              <input type="checkbox" name="" id="">
+                                              <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="td-1">
+                                    <div>
+                                        <span>Id</span>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <div>
+                                        <span>Name</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div>
+                                        <span>Check span</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <div>
+                                        <span>Check every</span>
+                                    </div>
+                                </td>
+                                <td class="td-5">
+                                    <div>
+                                        <span>Added by</span>
+                                    </div>
+                                </td>
+                                <td class="td-6">
+                                    <div>
+                                        <span>Added on</span>
+                                    </div>
+                                </td>
+                                <td class="td-7">
+                                    <div>
+                                        <span>Last alerted</span>
+                                    </div>
+                                </td>
+                                <td class="td-8">
+                                    <div>
+                                        <span>Times alerted</span>
+                                    </div>
+                                </td>
+                                <td class="td-height td-9">
+                                    <div>
+                                        <span>Active</span>
+                                    </div>
+                                </td>
+                                <td class="td-height td-10">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                            	<td>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                        <div class="btns-wrap">
+                                            <button class="btn-sort btn-sort_top"><i></i></button>
+                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-container table-wrap">
+        <table class="table table_invoices js-table js-table-simple table_border">
+            <tbody>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+                <tr>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox" data-id="1">
+                              <input type="checkbox" name="" id="">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="to-center">12</td>
+                    <td class="to-left">Alert 12</td>
+                    <td class="to-center">10</td>
+                    <td class="to-center">15</td>
+                    <td class="to-center">ed</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-left">2013-03-02 17:35:16</td>
+                    <td class="to-center" style="min-width:20px">5</td>
+                    <td class="to-center with-checkbox" width="44px">
+                        <label class="customcheckbox">
+                              <input type="checkbox">
+                              <i></i>
+                        </label> 
+                    </td>
+                    <td class="td_icon"><div class="icon-delete"></div></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="actions actions_small">
+            <div class="button">Cancel</div>
+            <div class="button button_blue">Ok</div>
+        </div>
+    </div>
+
+<div class="tooltip tooltip_gray tooltip_pad js-tooltip">
+    <div class="row">
+        <span class="row__text">Action:</span>
+        <div class="row__main">
+            <select data-placeholder="Choose a country..." class="chosen-select">
+                <option value="">&nbsp;</option>
+                <option value="Any">Any</option>
+                <option value="Italy">Italy</option>
+                <option value="Urkaine">Urkaine</option>
+                <option value="India">India</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <input type="text" class="input" disabled placeholder="Disable">
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <button class="button button_red">
+                Delete 
+            </button>
+            <button class="button button_blue button_icon">
+                Preview
+            </button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>
