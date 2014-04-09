@@ -568,8 +568,10 @@ html { height: 100%; }
 .addnote .addnote__file .button { border: 1px solid #c4c4c4; border-radius: 2px; position: absolute; right: 0; top: 0; }
 
 body { font-size: 12px; color: #5c5c5c; }
-body.is-fixed-table .table-wrap { margin-top: 324px; }
-body.is-fixed-table .filter__in { position: fixed; left: 0; top: 0; right: 0; z-index: 2; }
+body.is-fixed-table .table-wrap { margin-top: 168px; }
+body.is-fixed-table .filter .filter__top .l-container { position: static; }
+body.is-fixed-table .filter .l-container { position: fixed; left: 0; top: 0; right: 0; z-index: 2; background: white; }
+body.is-fixed-table .filter .trans-title { position: fixed; top: 0; left: 5%; z-index: 3; }
 
 .header { border-bottom: 1px solid white; }
 

@@ -3,13 +3,23 @@ body
     color: #5c5c5c 
     &.is-fixed-table
         .table-wrap
-            margin-top: 324px
-        .filter__in
-            position: fixed
-            left: 0
-            top: 0
-            right: 0
-            z-index: 2
+            margin-top: 168px
+        .filter
+            .filter__top
+                .l-container
+                    position: static
+            .l-container
+                position: fixed
+                left: 0
+                top: 0
+                right: 0
+                z-index: 2  
+                background: #fff 
+            .trans-title
+                position: fixed
+                top: 0
+                left: 5%
+                z-index: 3
 .header
     border-bottom: 1px solid #fff 
 .header__top
@@ -38,7 +48,7 @@ body
             background: #c7c7c7  
 .header__user
     float: right
-    margin-left: 73px
+    margin-left: 73px      
     span
         display: inline-block
         position: relative

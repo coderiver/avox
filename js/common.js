@@ -174,8 +174,8 @@ $(document).ready(function() {
 
 
 		function fixed_filter() {
-			if ($(".js-header").length > 0) {
-				var header_height = $(".js-header").outerHeight();
+			if ($(".js-filter").length > 0) {
+				var header_height = $(".js-filter").outerHeight() + $(".js-filter").offset().top;
 				if ($(window).scrollTop() >= header_height) {
 					$("body").addClass("is-fixed-table");
 				}
