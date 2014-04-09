@@ -626,6 +626,18 @@ $(document).ready(function() {
 
   });
 
+  $(".customcheckbox input").on("change", function(){
+  		if ($(this).parent().hasClass("is-checked")) {  
+  			$(this).removeAttr("checked");
+			$(this).parent().removeClass("is-checked");
+			
+		}
+		else {
+			$(this).attr("checked","checked");
+			$(this).parent().addClass("is-checked");
+		}
+  });
+
 	function selectHeight() {
 		$(".ui-multiselect-menu").each(function(){
 			var top = $(this).offset().top;
@@ -716,10 +728,6 @@ $(document).ready(function() {
 		}
 	});
 	
-
-	$(".td-relative").on("click", function(){
-		$(this).find("input").trigger("change");
-	});
 
 });
 
