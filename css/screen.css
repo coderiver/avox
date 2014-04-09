@@ -369,6 +369,8 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .table tr[data-href]:hover { cursor: pointer; }
 .table tr[data-href]:hover td { background: #9ed8ef !important; }
 
+.table-head td span { white-space: nowrap; }
+
 .table-simple td.with-checkbox { padding: 0 !important; }
 .table-simple td.with-checkbox .button { min-width: 45px; padding: 0 5px; height: 24px; line-height: 24px; margin: 1px; }
 .table-simple td.with-checkbox .customcheckbox { display: block; padding: 5px 0; cursor: pointer; }
