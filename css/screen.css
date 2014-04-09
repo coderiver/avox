@@ -374,6 +374,11 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .table-simple td.with-checkbox .customcheckbox { display: block; padding: 5px 0; cursor: pointer; }
 .table-simple td.with-checkbox .customcheckbox i { left: 50%; top: 50%; margin: -9px 0 0 -9px; }
 
+.td-relative { position: relative; }
+.td-relative div { position: static !important; }
+.td-relative .customcheckbox { position: absolute !important; top: 0; right: 0; left: 0; bottom: 0; z-index: 3; margin-top: 0 !important; cursor: pointer; }
+.td-relative .customcheckbox input, .td-relative .customcheckbox i { position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px; }
+
 .btn-import { margin-top: 17px; float: right; width: 36px; height: 28px; text-align: center; background: #c5c5c5; border-radius: 2px; }
 .btn-import i { display: inline-block; vertical-align: middle; background: url('../img/icons-scb8763a3ab.png') 0 -739px no-repeat; width: 20px; height: 17px; }
 

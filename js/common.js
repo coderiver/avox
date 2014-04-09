@@ -296,156 +296,156 @@ $(document).ready(function() {
 	}
 		openWindow();
 
-	function slider_time() {
-		$(".js-slider-time").each(function(){
-			var date = new Date();
-			var current_hours = date.getHours();
-			var current_minutes = date.getMinutes();
-			var current_time = current_hours*60 + current_minutes;
-			$(this).slider({
-		      	value: current_time,
-		      	min: 0,
-		      	max: 1440,
-		      	step: 15,
-		      	slide: function( event, ui ) {
-		      		$(this).find(".ui-slider-handle" ).html("<span></span>");
-					var handle = $(this).find(".ui-slider-handle span");
-		      		var hours = Math.floor(ui.value/60);
-		      		var minutes = Math.floor(ui.value%60);
-		      		if (hours <= 9 && minutes <= 9) {
-		      			handle.text("0"+hours+':'+"0"+minutes);
-		      			$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
-		      		}
-		      		if (hours <= 9 && minutes > 9) {
-		      			handle.text("0"+hours+':'+minutes);
-		      			$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
-		      		}
-		      		if (hours > 9 && minutes <= 9) {
-		      			handle.text(hours+':'+"0"+minutes);
-		      			$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
-		      		}
-		      		if (hours > 9 && minutes > 9) {
-		      			handle.text(hours+':'+minutes);
-		      			$( ".is-active .js-time" ).text(hours+':'+minutes);
-		      		}
-		      		if (hours == 24 ) {
-		      			handle.text('23:59');
-		      			$( ".js-time" ).text('23:59');
-		      		}
+	// function slider_time() {
+	// 	$(".js-slider-time").each(function(){
+	// 		var date = new Date();
+	// 		var current_hours = date.getHours();
+	// 		var current_minutes = date.getMinutes();
+	// 		var current_time = current_hours*60 + current_minutes;
+	// 		$(this).slider({
+	// 	      	value: current_time,
+	// 	      	min: 0,
+	// 	      	max: 1440,
+	// 	      	step: 15,
+	// 	      	slide: function( event, ui ) {
+	// 	      		$(this).find(".ui-slider-handle" ).html("<span></span>");
+	// 				var handle = $(this).find(".ui-slider-handle span");
+	// 	      		var hours = Math.floor(ui.value/60);
+	// 	      		var minutes = Math.floor(ui.value%60);
+	// 	      		if (hours <= 9 && minutes <= 9) {
+	// 	      			handle.text("0"+hours+':'+"0"+minutes);
+	// 	      			$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
+	// 	      		}
+	// 	      		if (hours <= 9 && minutes > 9) {
+	// 	      			handle.text("0"+hours+':'+minutes);
+	// 	      			$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
+	// 	      		}
+	// 	      		if (hours > 9 && minutes <= 9) {
+	// 	      			handle.text(hours+':'+"0"+minutes);
+	// 	      			$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
+	// 	      		}
+	// 	      		if (hours > 9 && minutes > 9) {
+	// 	      			handle.text(hours+':'+minutes);
+	// 	      			$( ".is-active .js-time" ).text(hours+':'+minutes);
+	// 	      		}
+	// 	      		if (hours == 24 ) {
+	// 	      			handle.text('23:59');
+	// 	      			$( ".js-time" ).text('23:59');
+	// 	      		}
 	
-		      		var text_input = $(".is-active .js-input-text").text();
-					$(".is-active .js-date-input").val(text_input);
-		      	}
-			});
+	// 	      		var text_input = $(".is-active .js-input-text").text();
+	// 				$(".is-active .js-date-input").val(text_input);
+	// 	      	}
+	// 		});
 
 
-			$(this).find(".ui-slider-handle" ).html("<span></span>");
-			var handle = $(this).find(".ui-slider-handle span");
-			var date = new Date();
-			var hours = date.getHours();
-			var minutes = date.getMinutes();
-		    if (hours <= 9 && minutes <= 9) {
-		      	handle.text("0"+hours+':'+"0"+minutes);
-		      	$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
-		    }
-		    if (hours <= 9 && minutes > 9) {
-		      	handle.text("0"+hours+':'+minutes);
-		      	$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
-		    }
-		    if (hours > 9 && minutes <= 9) {
-		      	handle.text(hours+':'+"0"+minutes);
-		      	$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
-		    }
-		    if (hours > 9 && minutes > 9) {
-		      	handle.text(hours+':'+minutes);
-		      	$( ".is-active .js-time" ).text(hours+':'+minutes);
-		    }
-		    if (hours == 24 ) {
-		      	handle.text('23:59');
-		      	$( ".js-time" ).text('23:59');
-		    }
-		    var text_input = $(".is-active .js-input-text").text(text_input);
-			$(".is-active .js-date-input").val(text_input);
+	// 		$(this).find(".ui-slider-handle" ).html("<span></span>");
+	// 		var handle = $(this).find(".ui-slider-handle span");
+	// 		var date = new Date();
+	// 		var hours = date.getHours();
+	// 		var minutes = date.getMinutes();
+	// 	    if (hours <= 9 && minutes <= 9) {
+	// 	      	handle.text("0"+hours+':'+"0"+minutes);
+	// 	      	$( ".is-active .js-time" ).text("0"+hours+':'+"0"+minutes);
+	// 	    }
+	// 	    if (hours <= 9 && minutes > 9) {
+	// 	      	handle.text("0"+hours+':'+minutes);
+	// 	      	$( ".is-active .js-time" ).text("0"+hours+':'+minutes);
+	// 	    }
+	// 	    if (hours > 9 && minutes <= 9) {
+	// 	      	handle.text(hours+':'+"0"+minutes);
+	// 	      	$( ".is-active .js-time" ).text(hours+':'+"0"+minutes);
+	// 	    }
+	// 	    if (hours > 9 && minutes > 9) {
+	// 	      	handle.text(hours+':'+minutes);
+	// 	      	$( ".is-active .js-time" ).text(hours+':'+minutes);
+	// 	    }
+	// 	    if (hours == 24 ) {
+	// 	      	handle.text('23:59');
+	// 	      	$( ".js-time" ).text('23:59');
+	// 	    }
+	// 	    var text_input = $(".is-active .js-input-text").text(text_input);
+	// 		$(".is-active .js-date-input").val(text_input);
 		
-		});
+	// 	});
 
-  	}
-	slider_time();
+ //  	}
+	// slider_time();
 
-  	function slider_zone() {
-  		var date = new Date();
-		var zone = date.getTimezoneOffset()/60;
-		if (zone > 0) {
-			var zone = zone;
-		}
-		else {
-			var zone = -zone;
-		}
-		$(".js-slider-zone").each(function(){
-			$(this).slider({
-		     	value: zone,
-		     	min: -12,
-		     	max: 14,
-		     	step: 1,
-		     	slide: function( event, ui ) {
-		      		$(this).find(".ui-slider-handle").html("<span></span>");
-		      		var handle = $(this).find(".ui-slider-handle span");
-		      		if (ui.value > 0) {
-		      			if (Math.abs(ui.value) <= 9) {
-							handle.text('+0'+ui.value+":00");
-		      				$( ".is-active .js-zone" ).text('+0'+ui.value+":00");
-		      			}
-		      			else {
-							handle.text("+"+ui.value+":00");
-		      				$( ".is-active .js-zone" ).text("+"+ui.value+":00");
-		      			}
-		      		}
-		      		else {
-		      			if (Math.abs(ui.value) <= 9) {
-							handle.text('-0'+Math.abs(ui.value)+":00");
-		      				$( ".is-active .js-zone" ).text('-0'+Math.abs(ui.value)+":00");
-		      			}
-		      			else {
-							handle.text('-'+Math.abs(ui.value)+":00");
-		      				$( ".is-active .js-zone" ).text('-'+Math.abs(ui.value)+":00");
-		      			}
-		      		}
-		        	$( ".is-active .js-zone" ).val(ui.value);
-		        	var text_input = $(".is-active .js-input-text").text();
-					$(".is-active .js-date-input").val(text_input);
-		    	}
-		    });
+ //  	function slider_zone() {
+ //  		var date = new Date();
+	// 	var zone = date.getTimezoneOffset()/60;
+	// 	if (zone > 0) {
+	// 		var zone = zone;
+	// 	}
+	// 	else {
+	// 		var zone = -zone;
+	// 	}
+	// 	$(".js-slider-zone").each(function(){
+	// 		$(this).slider({
+	// 	     	value: zone,
+	// 	     	min: -12,
+	// 	     	max: 14,
+	// 	     	step: 1,
+	// 	     	slide: function( event, ui ) {
+	// 	      		$(this).find(".ui-slider-handle").html("<span></span>");
+	// 	      		var handle = $(this).find(".ui-slider-handle span");
+	// 	      		if (ui.value > 0) {
+	// 	      			if (Math.abs(ui.value) <= 9) {
+	// 						handle.text('+0'+ui.value+":00");
+	// 	      				$( ".is-active .js-zone" ).text('+0'+ui.value+":00");
+	// 	      			}
+	// 	      			else {
+	// 						handle.text("+"+ui.value+":00");
+	// 	      				$( ".is-active .js-zone" ).text("+"+ui.value+":00");
+	// 	      			}
+	// 	      		}
+	// 	      		else {
+	// 	      			if (Math.abs(ui.value) <= 9) {
+	// 						handle.text('-0'+Math.abs(ui.value)+":00");
+	// 	      				$( ".is-active .js-zone" ).text('-0'+Math.abs(ui.value)+":00");
+	// 	      			}
+	// 	      			else {
+	// 						handle.text('-'+Math.abs(ui.value)+":00");
+	// 	      				$( ".is-active .js-zone" ).text('-'+Math.abs(ui.value)+":00");
+	// 	      			}
+	// 	      		}
+	// 	        	$( ".is-active .js-zone" ).val(ui.value);
+	// 	        	var text_input = $(".is-active .js-input-text").text();
+	// 				$(".is-active .js-date-input").val(text_input);
+	// 	    	}
+	// 	    });
 			
-			$(this).find(".ui-slider-handle").html("<span></span>");
-		     var handle = $(this).find(".ui-slider-handle span");
-		    if (zone > 0) {
-	      		if (zone <= 9) {
-	      			handle.text("+0"+zone+":00");
-	      			$( ".is-active .js-zone" ).text("+0"+zone+":00");
-	      		}
-	      		else {
-	      			handle.text("+"+zone+":00");
-	      			$( ".is-active .js-zone" ).text("+"+zone+":00");
-	      		}
-	      	}
-	      	else {
-	      		if (zone <= 9) {
-	      			handle.text("-0"+zone+":00");
-	      			$( ".is-active .js-zone" ).text("-0"+zone+":00");
-	      		}
-	      		else {
-	      			handle.text("-"+zone+":00");
-	      			$( ".is-active .js-zone" ).text("-"+zone+":00");
-	      		}
-	      	}
-	      	// if (zone == 0) {
-	      	// 	handle.text("+00:00");
-	      	// 	$( ".is-active .js-zone" ).text("+00:00");
-	      	// }
-		});
+	// 		$(this).find(".ui-slider-handle").html("<span></span>");
+	// 	     var handle = $(this).find(".ui-slider-handle span");
+	// 	    if (zone > 0) {
+	//       		if (zone <= 9) {
+	//       			handle.text("+0"+zone+":00");
+	//       			$( ".is-active .js-zone" ).text("+0"+zone+":00");
+	//       		}
+	//       		else {
+	//       			handle.text("+"+zone+":00");
+	//       			$( ".is-active .js-zone" ).text("+"+zone+":00");
+	//       		}
+	//       	}
+	//       	else {
+	//       		if (zone <= 9) {
+	//       			handle.text("-0"+zone+":00");
+	//       			$( ".is-active .js-zone" ).text("-0"+zone+":00");
+	//       		}
+	//       		else {
+	//       			handle.text("-"+zone+":00");
+	//       			$( ".is-active .js-zone" ).text("-"+zone+":00");
+	//       		}
+	//       	}
+	//       	// if (zone == 0) {
+	//       	// 	handle.text("+00:00");
+	//       	// 	$( ".is-active .js-zone" ).text("+00:00");
+	//       	// }
+	// 	});
 	 
-  	}
-	slider_zone();
+ //  	}
+	// slider_zone();
 
 
 	// function calendar() {
@@ -573,18 +573,18 @@ $(document).ready(function() {
 	// }
 	// calendar();
 
-	$(".js-date-input").click(function(event){
-		$(".js-calendar").removeClass("is-active");
-		$(".row__main").removeClass("is-active");
-		$(".js-date-input").parent().removeClass("is-active");
-		$(this).parents(".js-with-calendar").addClass("is-active");
-		$(this).parents(".js-with-calendar").find(".js-calendar").addClass("is-active");
-		event.stopPropagation();
-	});
+	// $(".js-date-input").click(function(event){
+	// 	$(".js-calendar").removeClass("is-active");
+	// 	$(".row__main").removeClass("is-active");
+	// 	$(".js-date-input").parent().removeClass("is-active");
+	// 	$(this).parents(".js-with-calendar").addClass("is-active");
+	// 	$(this).parents(".js-with-calendar").find(".js-calendar").addClass("is-active");
+	// 	event.stopPropagation();
+	// });
 
-	$(".js-calendar").click(function(event) {
-		event.stopPropagation();
-	});
+	// $(".js-calendar").click(function(event) {
+	// 	event.stopPropagation();
+	// });
 
 	$(".js-attach").hide();
 	function check_radio() {
@@ -716,5 +716,10 @@ $(document).ready(function() {
 		}
 	});
 	
+
+	$(".td-relative").on("click", function(){
+		$(this).find("input").trigger("change");
+	});
+
 });
 

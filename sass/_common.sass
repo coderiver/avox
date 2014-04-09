@@ -469,7 +469,7 @@ input[type="file"]
 	cursor: pointer
 	input
 		cursor: pointer
-.table					
+.table  				
 	td
 		&.with-checkbox  
 			padding: 0
@@ -494,7 +494,6 @@ input[type="file"]
 				cursor: pointer
 				td
 					background: #9ed8ef !important
-	
 .table-simple
 	td
 		&.with-checkbox  
@@ -513,6 +512,24 @@ input[type="file"]
 					left: 50%
 					top: 50%
 					margin: -9px 0 0 -9px				
+.td-relative
+	position: relative
+	div
+		position: static !important  
+	.customcheckbox
+		position: absolute !important
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		z-index: 3
+		margin-top: 0 !important
+		cursor: pointer
+		input, i
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -8px 0 0 -8px 
 .btn-import
 	margin-top: 17px
 	float: right
