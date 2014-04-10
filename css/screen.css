@@ -334,6 +334,8 @@ a img, fieldset { border: none; }
 .input_gray { background: #f6f6f6; }
 .input_gray + i { display: none; }
 
+.input_65 { display: inline-block; width: 65px; }
+
 .input-file { height: 32px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2px; background: #e7e7e7; border: 0; }
