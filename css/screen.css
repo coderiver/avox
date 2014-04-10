@@ -861,6 +861,7 @@ body.is-fixed-width .l-container { width: 1165px; }
 .radio-row_inine .radio_inline:after { left: -31px; }
 .radio-row_inine .radio_inline:first-child .radio__input { margin-left: 14px; }
 .radio-row_inine .radio_inline:nth-child(2) { margin-left: 13px; }
+.radio-row_inine .radio_inline:nth-child(2) .radio__input + span { margin-left: 14px; }
 .radio-row_inine .radio_inline:nth-child(3) { margin-left: 13px; }
 .radio-row_inine .radio_inline:nth-child(3) .radio__input { margin-right: 14px; }
 .radio-row_inine .radio_inline:nth-child(4) { margin-left: -1px; }
