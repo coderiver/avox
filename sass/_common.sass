@@ -614,8 +614,28 @@ input[type="file"]
 			position: absolute
 			top: 0
 			right: 0
+		.button,
+		.btn-import,
+		.btn-trash
+			float: none
+			display: inline-block
+			vertical-align: top
+			margin-top: 0
+			margin-left: 10px
 	.row__sep
 		display: inline-block
 		margin: 0 3px 0 -17px 
 		vertical-align: middle
 		font-size: 12px
+
+.btn-trash
+	background: #c5c5c5 
+	width: 36px
+	height: 28px
+	text-align: center
+	background: #c5c5c5
+	border-radius: 2px
+	i
+		display: inline-block
+		vertical-align: middle
+		+s(bucket) 
