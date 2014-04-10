@@ -1,0 +1,705 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>CDR list</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.css">
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jPaginator.js"></script>
+    <script src="js/jquery-ui-1.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body class="js-table-group is-fixed-width">
+    <div class="l-layout-fixed">     
+        <header class="header js-header">
+            <div class="header__top l-container">
+                <div class="header__user">
+                    <span>
+                        Logged in as: 
+                        <a href="#">Ed2</a>
+                    </span>
+                    <a href="#">Logout</a>
+                </div>
+                <div class="header__info js-in">
+                    <span>2013 May 17</span>
+                    <span>11:45:18</span>
+                    <span>+02:00</span>
+                </div>
+            </div>
+            <div class="nav-wrap">
+                <div class="l-container">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Management</a>
+                            <ul class="subnav">
+                                <li class="subnav__item">
+                                    <a href="clients-list.html" class="subnav__link">Clients</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="rate-tables.html" class="subnav__link">Rate Tables</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="invoices.html" class="subnav__link">Invoices</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="transactions.html" class="subnav__link">Transactions</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="#" class="subnav__link">Balance Report</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="#" class="subnav__link">Resellers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item is-active"><a href="#" class="nav__link">Statistics</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">System</a></li>
+                    </ul>
+                    <ul class="nav-info">
+                        <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>  
+        <div class="filter">
+            <div class="filter__in js-fixed-header">
+                <div class="filter__top js-filter">
+                    <div class="l-container">
+                        <form action="">
+                            <div class="wrap">
+                                <div class="row js-date-group">
+                                    <div class="row__left width-66">Period:</div>
+                                    <div class="row__input width-190">
+                                        <select class="chosen-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-166">
+                                        <input type="text" class="input js-date-from" placeholder="Date From">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__input row__input width-61">
+                                        <select class="chosen-select">
+                                            <option value="00:00">00:00</option>
+                                            <option value="+00:01">+00:01</option>
+                                        </select>
+                                    </div>
+                                    <div class="row__input width-166">
+                                        <input type="text" class="input js-date-to" placeholder="Date To">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__input width-420 to-center">
+                                        <div class="radio-row radio-row_inine">
+                                            <label class="radio radio_inline">
+                                                <span>By connect</span>
+                                                <span class="radio__input">
+                                                    <input type="radio" name="name3">
+                                                    <i></i>
+                                                </span>
+                                            </label>
+                                            <label class="radio radio_inline">
+                                                <span class="radio__input">
+                                                    <input type="radio" name="name3" checked>
+                                                    <i></i>
+                                                </span>
+                                                <span>By disconnect</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row_mb5 is-green">
+                                    <div class="row__left width-66">ORIG:</div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Managers</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select> 
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Groups</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Clients</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Trunks</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Countries</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Code Name</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Code</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="row is-red">
+                                    <div class="row__left width-66">TERM:</div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Managers</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select> 
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Groups</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Clients</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="1">Trunks</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Countries</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Code Name</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                    <div class="row__input width-139">
+                                        <select class="js-select-multi" multiple="multiple">
+                                            <option value="1">Code</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="row row_mb5">
+                                    <div class="row__left width-66">A-Number:</div>
+                                    <div class="row__input width-139">
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-47">Call ID:</div>
+                                    <div class="row__input width-139">
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-100">Release code:</div>
+                                    <div class="row__input width-39">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-94">Profit, $/min:</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-151 is-green">ORIG rates, $:</div>
+                                    <div class="row__input width-65 is-green">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-65 is-green">  
+                                        <input type="text" class="input">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="row__left width-66">B-Number:</div>
+                                    <div class="row__input width-139">
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-47">Call ID:</div>
+                                    <div class="row__input width-139">
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-100">Local release:</div>
+                                    <div class="row__input width-39">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-94">Profit, %:</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__left width-151 is-red">TERM rates, $:</div>
+                                    <div class="row__input width-65 is-red">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-65 is-red">  
+                                        <input type="text" class="input">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="row__left width-66">Duration:</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-65">  
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="row__input width-270 to-center">  
+                                        <div class="radio-row radio-row_inine">
+                                            <label class="radio radio_inline">
+                                                <span>Zero</span>
+                                                <span class="radio__input">
+                                                    <input type="radio" name="name4">
+                                                    <i></i>
+                                                </span>
+                                            </label>
+                                            <label class="radio radio_inline">
+                                                <span class="radio__input">
+                                                    <input type="radio" name="name4" checked>
+                                                    <i></i>
+                                                </span>
+                                            </label>
+                                            <label class="radio radio_inline">
+                                                <span class="radio__input">
+                                                    <input type="radio" name="name4" >
+                                                    <i></i>
+                                                </span>
+                                                <span>Non-Zero</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="trans-title">Alerts list</div>
+                    </div>
+                </div>
+                <div class="l-container">
+                    <div class="filter__bottom">
+                        
+                        <div class="pagin">
+                            <div class="pagin__select">
+                                <div class="pagin__select-text">
+                                    Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                                </div>
+                                <div class="pagin__select-main">
+                                    <select class="chosen-select">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select> 
+                                </div>
+                            </div>
+                            <div class="pagin__nav">
+                                <div class="js-paginator">  
+                                    <div class='paginator_p_wrap'> 
+                                        <div class='paginator_p_bloc'> 
+                                            <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                        </div> 
+                                    </div>  
+                                    <!-- slider --> 
+                                    <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                        <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(".js-paginator").jPaginator({ 
+                                        nbPages: 21, 
+                                        selectedPage: 8,
+                                        minSlidesForSlider:1, 
+                                        nbVisible: 7,
+                                        onPageClicked: function(a,num) { 
+                                            $("#page1").html("demo1 - page : "+num); 
+                                        }
+                                    });  
+                                </script>                                   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-head-wrap">
+                        <table class="table-head table-head_very-simple">
+                            <thead>
+                                <tr>
+                                    <td class="td-0">
+                                        <div>
+                                            <span>Setuptime</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-1 is-green-bg">
+                                        <div>
+                                            <span>ORIG Client</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-2 is-green-bg">
+                                        <div>
+                                            <span>ORIG Code</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3 is-red-bg">
+                                        <div>
+                                            <span>TERM CodeName</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4"> 
+                                        <div>
+                                            <span>A-Number</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-5">
+                                        <div>
+                                            <span>B-Number</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-6">
+                                        <div>
+                                            <span>Session Time, sec</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-7 is-red-bg">
+                                        <div>
+                                            <span>TERM Cost</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="is-green-bg">
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="is-green-bg">
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="is-red-bg">
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="is-red-bg">
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-container table-wrap">
+            <table class="table table_invoices js-table js-table-simple table_border">
+                <tbody>
+                    <tr>
+                        <td class="to-left">2014-03-13  17:05:02</td>
+                        <td class="to-left is-green">Hansa Serp</td>
+                        <td class="to-left is-green">38067</td>
+                        <td class="is-red to-left" style="min-width: 70px">380</td>
+                        <td>380677654321</td>
+                        <td class="to-left" style="min-width: 70px">2013-03-02 17:35:16</td>
+                        <td class="to-right" style="min-width: 70px">215</td>
+                        <td class="to-left is-red">0.6768374</td>
+                    </tr>
+                    <tr>
+                        <td class="to-left">2014-03-13  17:05:02</td>
+                        <td class="to-left is-green">Hansa Serp</td>
+                        <td class="to-left is-green">38067</td>
+                        <td class="is-red to-left" style="min-width: 70px">380</td>
+                        <td>380677654321</td>
+                        <td class="to-left" style="min-width: 70px">2013-03-02 17:35:16</td>
+                        <td class="to-right" style="min-width: 70px">215</td>
+                        <td class="to-left is-red">0.6768374</td>
+                    </tr>
+                    <tr>
+                        <td class="to-left">2014-03-13  17:05:02</td>
+                        <td class="to-left is-green">Hansa Serp</td>
+                        <td class="to-left is-green">38067</td>
+                        <td class="is-red to-left" style="min-width: 70px">380</td>
+                        <td>380677654321</td>
+                        <td class="to-left" style="min-width: 70px">2013-03-02 17:35:16</td>
+                        <td class="to-right" style="min-width: 70px">215</td>
+                        <td class="to-left is-red">0.6768374</td>
+                    </tr>
+                    <tr>
+                        <td class="to-left">2014-03-13  17:05:02</td>
+                        <td class="to-left is-green">Hansa Serp</td>
+                        <td class="to-left is-green">38067</td>
+                        <td class="is-red to-left" style="min-width: 70px">380</td>
+                        <td>380677654321</td>
+                        <td class="to-left" style="min-width: 70px">2013-03-02 17:35:16</td>
+                        <td class="to-right" style="min-width: 70px">215</td>
+                        <td class="to-left is-red">0.6768374</td>
+                    </tr>
+                    <tr>
+                        <td class="to-left">2014-03-13  17:05:02</td>
+                        <td class="to-left is-green">Hansa Serp</td>
+                        <td class="to-left is-green">38067</td>
+                        <td class="is-red to-left" style="min-width: 70px">380</td>
+                        <td>380677654321</td>
+                        <td class="to-left" style="min-width: 70px">2013-03-02 17:35:16</td>
+                        <td class="to-right" style="min-width: 70px">215</td>
+                        <td class="to-left is-red">0.6768374</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="actions actions_small">
+                <div class="button">Cancel</div>
+                <div class="button button_blue">Ok</div>
+            </div>
+        </div>
+    </div>
+
+<div class="tooltip tooltip_gray tooltip_pad js-tooltip">
+    <div class="row">
+        <span class="row__text">Action:</span>
+        <div class="row__main">
+            <select data-placeholder="Choose a country..." class="chosen-select">
+                <option value="">&nbsp;</option>
+                <option value="Any">Any</option>
+                <option value="Italy">Italy</option>
+                <option value="Urkaine">Urkaine</option>
+                <option value="India">India</option>
+            </select> 
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <input type="text" class="input" disabled placeholder="Disable">
+        </div>
+    </div>
+    <div class="row">
+        <span class="row__text"></span>
+        <div class="row__main">
+            <button class="button button_red">
+                Delete 
+            </button>
+            <button class="button button_blue button_icon">
+                Preview
+            </button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>(&copy;) Avox 2013</p>
+</footer>
+</body>
+</html>

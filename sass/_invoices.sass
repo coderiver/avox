@@ -26,6 +26,32 @@
 	display: inline-block
 	vertical-align: middle
 	margin-bottom: 0 
+	.radio_inline
+		width: auto
+		margin-right: 14px
+		&:after
+			left: -31px
+		&:first-child
+			.radio__input
+				margin-left: 14px
+		&:nth-child(2)
+			margin-left: 13px
+		&:nth-child(3)
+			margin-left: 13px
+			.radio__input
+				margin-right: 14px
+		&:nth-child(4)
+			margin-left: -1px
+			.radio__input
+				margin-right: 14px
+		span
+			position: relative
+			margin-top: 0
+			display: inline-block
+			vertical-align: middle  
+		.radio__input
+			width: 24px
+			height: 24px
 .row__main-col_radio
 	padding-right: 0
 	text-align: center

@@ -45,3 +45,18 @@
 	width: 50%
 	float: left
 	+box-sizing(border-box)  
+
+$grid-columns: 39,47,52,61,65,66,70,94,100,139,150,151,166,190,270,420,780
+@each $i in $grid-columns
+	.width-#{$i}
+		width: #{$i}px 
+.to-center
+	text-align: center
+.width-61
+	.chosen-container
+		min-width: 60px !important
+		.chosen-single 
+			span
+				margin-right: 0
+			&:after
+				display: none

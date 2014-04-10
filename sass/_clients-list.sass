@@ -20,12 +20,25 @@ body
                 top: 0
                 left: 5%
                 z-index: 3
+        // &.is-fixed-width
+        //     .filter
+        //         .trans-title
+        //             left
+    &.is-fixed-width
+        min-width: 1165px
+        .l-container
+            width: 1165px
+// .l-layout-fixed
+//     width: 1165px
+//     margin: 0 auto 
 .header
     border-bottom: 1px solid #fff 
+    background: #fbfbfb 
+    +background-image(linear-gradient(bottom, #fff 0%, #fbfbfb 100%))
 .header__top
     overflow: hidden
     padding: 15px 0 24px 
-    +background-image(linear-gradient(bottom, #fff 0%, #fbfbfb 100%))
+    
 .header__info
     float: right
     span
