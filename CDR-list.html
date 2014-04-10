@@ -79,12 +79,13 @@
             <div class="filter__in js-fixed-header">
                 <div class="filter__top js-filter">
                     <div class="l-container">
-                        <form action="">
+                        <form action="" method="post">
                             <div class="wrap">
                                 <div class="row js-date-group">
                                     <div class="row__left width-66">Period:</div>
                                     <div class="row__input width-190">
-                                        <select class="chosen-select">
+                                        <select class="chosen-select" data-placeholder="custom">
+                                            <option value=""></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -98,17 +99,18 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-166">
-                                        <input type="text" class="input js-date-from" placeholder="Date From">
+                                        <input type="text" class="input js-date-from" placeholder="date from">
                                         <button class="btn-bucket js-clear-select"><i></i></button>
                                     </div>
                                     <div class="row__input row__input width-61">
-                                        <select class="chosen-select">
+                                        <select class="chosen-select"  data-placeholder="zone">
+                                            <option value=""></option>
                                             <option value="00:00">00:00</option>
                                             <option value="+00:01">+00:01</option>
                                         </select>
                                     </div>
                                     <div class="row__input width-166">
-                                        <input type="text" class="input js-date-to" placeholder="Date To">
+                                        <input type="text" class="input js-date-to" placeholder="date to">
                                         <button class="btn-bucket js-clear-select"><i></i></button>
                                     </div>
                                     <div class="row__input width-420 to-center">
@@ -133,8 +135,8 @@
                                 <div class="row row_mb5 is-green">
                                     <div class="row__left width-66">ORIG:</div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Managers</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Managers">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -147,8 +149,8 @@
                                         </select> 
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Groups</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Groups" >
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -161,8 +163,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Clients</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Clients" >
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -175,8 +177,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Trunks</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Trunks" >
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -189,8 +191,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Countries</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Countries">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -203,8 +205,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Code Name</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Code Name">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -217,8 +219,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Code</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Code">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -234,8 +236,8 @@
                                 <div class="row is-red">
                                     <div class="row__left width-66">TERM:</div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Managers</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Managers" >
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -248,8 +250,8 @@
                                         </select> 
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Groups</option>
+                                        <select class="js-select-multi" multiple="multiple"  data-placeholder="Groups">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -262,8 +264,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Clients</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Clients" >
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -276,8 +278,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple" >
-                                            <option value="1">Trunks</option>
+                                        <select class="js-select-multi" multiple="multiple"  data-placeholder="Trunks">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -290,8 +292,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Countries</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Countries">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -304,8 +306,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Code Name</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Code Name">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -318,8 +320,8 @@
                                         </select>   
                                     </div>
                                     <div class="row__input width-139">
-                                        <select class="js-select-multi" multiple="multiple">
-                                            <option value="1">Code</option>
+                                        <select class="js-select-multi" multiple="multiple" data-placeholder="Code">
+                                            <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
@@ -335,15 +337,15 @@
                                 <div class="row row_mb5">
                                     <div class="row__left width-66">A-Number:</div>
                                     <div class="row__input width-139">
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="380668889977">
                                     </div>
                                     <div class="row__left width-47">Call ID:</div>
                                     <div class="row__input width-139">
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="12345678901234567890">
                                     </div>
                                     <div class="row__left width-100">Release code:</div>
                                     <div class="row__input width-39">  
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="123">
                                     </div>
                                     <div class="row__left width-94">Profit, $/min:</div>
                                     <div class="row__input width-65">  
@@ -365,15 +367,15 @@
                                 <div class="row">
                                     <div class="row__left width-66">B-Number:</div>
                                     <div class="row__input width-139">
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="380668889977">
                                     </div>
                                     <div class="row__left width-47">Call ID:</div>
                                     <div class="row__input width-139">
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="12345678901234567890">
                                     </div>
                                     <div class="row__left width-100">Local release:</div>
                                     <div class="row__input width-39">  
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="123">
                                     </div>
                                     <div class="row__left width-94">Profit, %:</div>
                                     <div class="row__input width-65">  
@@ -395,11 +397,11 @@
                                 <div class="row">
                                     <div class="row__left width-66">Duration:</div>
                                     <div class="row__input width-65">  
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="From">
                                     </div>
                                     <div class="row__sep">-</div>
                                     <div class="row__input width-65">  
-                                        <input type="text" class="input">
+                                        <input type="text" class="input" placeholder="To">
                                     </div>
                                     <div class="row__input width-270 to-center">  
                                         <div class="radio-row radio-row_inine">
@@ -429,7 +431,7 @@
                                 <div class="row">
                                     <div class="row__left width-66">Columns:</div>
                                     <div class="row__input width-780">  
-                                        <select class="js-select-multi" multiple="multiple" >
+                                        <select class="js-select-multi js-unlimit-val" multiple="multiple" data-placeholder="dfd">
                                             <option value="Setup Time">Setup Time</option>
                                             <option value="Connect Time">Connect Time</option>
                                             <option value="Disc Time">Disc Time</option>
@@ -471,7 +473,7 @@
                                     <div class="row__input to-right width-292">
                                         <button class="button button_blue  width-123">Filter</button>
                                         <button class="btn-import"><i></i></button>
-                                        <button class="btn-trash"><i></i></button>
+                                        <button class="btn-trash js-reset-all" type="reset"><i></i></button>
                                     </div>
                                 </div>
                             </div>

@@ -8,7 +8,10 @@ $(document).ready(function() {
 		//$(this).trigger('chosen:updated')
 		//$('.row__main').hide();
 	});
-
+	$('.js-reset-all').click(function(event) {
+		$('.chosen-select').val('').trigger('chosen:updated');
+		$(".js-select-multi").next().removeClass("has-value").addClass("has-placeholder");
+	});
 	function popitup(url) {
         newwindow=window.open(url,'name','height=585,width=1000');
         if (window.focus) {newwindow.focus()}
@@ -104,27 +107,55 @@ $(document).ready(function() {
 		});
 
 
-		$(".js-select-multi").multiselect({
-				selectedList: 7,
-				noneSelectedText: "",
-				header: "",
-   		 		open: function () {
-   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
-   		 			selectHeight();
-
-   		 		},
-   		 		close: function () {
-   		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
-   		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
-   		 		}
+		// $(".js-select-multi").multiselect({
+		// 	selectedList: 7,
+		// 	noneSelectedText: "",
+		// 	header: "",
+  //  		 	open: function () {
+  //  		 		$(this).multiselect("widget").find("input[type='search']:first").focus();
+  //  		 		selectHeight();
+  //  		 	},
+  //  		 	close: function () {
+  //  		 		$(this).multiselect("widget").find("input[type='search']:first").val("");
+  //  		 		$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+  //  		 	}
  
-		}).multiselectfilter();
-		$(".js-select-multi.is-placeholder").each(function () {
-			var placeholder = $(this).attr("data-placeholder");
+		// }).multiselectfilter();
+
+		$(".js-select-multi").each(function () {
+			if ($(this).attr("data-placeholder")) {
+				var placeholder = $(this).attr("data-placeholder");
+			}
+			else {
+				var placeholder = '';
+			}
 			$(this).multiselect({
 				selectedList: 7,
 				noneSelectedText: placeholder,
 				header: "",
+		 		open: function () {
+		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+		 		},
+		 		close: function () {
+		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
+		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+		 		}
+			}).multiselectfilter().on("multiselectclick", function(event, ui) {
+				if ($(this).multiselect("widget").find("input").is(":checked")) {
+					$(this).next().addClass("has-value").removeClass("has-placeholder");
+				}
+				else {
+					$(this).next().addClass("has-placeholder").removeClass("has-value");
+				}
+				
+				
+
+			});
+		})
+		$(".js-select-multi.js-unlimit-val").each(function (){
+			$(this).multiselect({
+				selectedList: 100,
+				header: "",       
 		 		open: function () {
 		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
 		 		},
