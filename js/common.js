@@ -89,6 +89,7 @@ $(document).ready(function() {
 							noneSelectedText: "Select an Option",
 							header: ""
 						}).multiselectfilter();
+					td_width();
 					event.preventDefault();
 				});
 			}

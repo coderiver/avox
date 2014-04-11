@@ -27,10 +27,102 @@
             </div>
         </div>
         <div class="tabwindow__content">
-            <div class="group group_no-left">
+            <div class="group group_search">
+                <div class="search-field">
+                    <div class="input-wrap input-wrap_right-glass">
+                        <input type="text" class="input">
+                        <i class="icon icon_glass"></i>
+                    </div>
+                </div>
+               <div class="pagin">
+                    <div class="pagin__select">
+                        <div class="pagin__select-text">
+                            Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                        </div>
+                        <div class="pagin__select-main">
+                            <select class="chosen-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="pagin__nav">
+                        <div class="js-paginator">  
+                            <div class='paginator_p_wrap'> 
+                                <div class='paginator_p_bloc'> 
+                                    <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                </div> 
+                            </div>  
+                            <!-- slider --> 
+                            <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(".js-paginator").jPaginator({ 
+                                nbPages: 21, 
+                                selectedPage: 8,
+                                minSlidesForSlider:1, 
+                                nbVisible: 7,
+                                onPageClicked: function(a,num) { 
+                                    $("#page1").html("demo1 - page : "+num); 
+                                }
+                            });  
+                        </script>                                   
+                    </div>
+                </div>
+            </div>
+            <div class="group group_no-left js-table-group">
                 <div class="group__title">
                     <h2>RULES INFORMATION</h2>
+                    <div class="group__add js-add-tr"></div>
                 </div>
+                <table hidden class="js-table-row">
+                    <tr>
+                        <td>
+                            <input type="text" class="input">            
+                        </td>
+                        <td>
+                            <input type="text" class="input"> 
+                        </td>
+                        <td>
+                            <div class="input-wrap input-wrap_right-glass">
+                                <input type="text" class="input">
+                                <i class="icon icon_glass"></i>
+                            </div>
+                        </td>
+                        <td><input type="password" class="input">  </td>
+                        <td>
+                            <select class="js-select">
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select>                                  
+                        </td>
+                        <td>
+                            <select multiple="multiple">
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select>
+                        </td>
+                        <td><input type="text" class="input"></td>
+                        <td><input type="text" class="input"></td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                </table>
                 <div class="l-container l-container_width">   
                     <div class="table-head-wrap">
                         <table class="table-head table-head_very-simple">
@@ -58,30 +150,25 @@
                                     </td>
                                     <td class="td-4 td-height">
                                         <div>
-                                            <span>Open / Block</span>
+                                            <span>Policy</span>
                                         </div>
                                     </td>
                                     <td class="td-5 td-height">
                                         <div>
-                                            <span>Policy</span>
+                                            <span>Terminators</span>
                                         </div>
                                     </td>
                                     <td class="td-6 td-height">
                                         <div>
-                                            <span>Terminators</span>
+                                            <span>PM</span>
                                         </div>
                                     </td>
                                     <td class="td-7 td-height">
                                         <div>
-                                            <span>PM</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-8 td-height">
-                                        <div>
                                             <span>Cap</span>
                                         </div>
                                     </td>
-                                    <td class="td-9 td-height">
+                                    <td class="td-8 td-height">
                                         <div>
                                             <span></span>
                                         </div>
@@ -112,14 +199,6 @@
                                             <div class="btns-wrap">
                                                 <button class="btn-sort btn-sort_top"><i></i></button>
                                                 <button class="btn-sort btn-sort_down"><i></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <span></span>
-                                            <div class="btns-wrap">
-                                                
                                             </div>
                                         </div>
                                     </td>
@@ -177,7 +256,7 @@
                         </table>
                     </div>
                     <div class="table-wrap">
-                        <table class="table table_left-aligh table_input js-table" style="margin-bottom:30px">
+                        <table class="table table_left-aligh table_input js-table js-table-simple" style="margin-bottom:30px">
                             <tbody>
                                 <tr>
                                     <td>
@@ -190,22 +269,16 @@
                                             <input type="text" class="input">
                                         </div>
                                     </td>
-                                    <td>
+                                    <td class="width-120">
                                         <div class="input-wrap input-wrap_right-glass">
                                             <input type="text" class="input">
                                             <i class="icon icon_glass"></i>
                                         </div>
                                     </td>
-                                    <td width="100">
+                                    <td class="width-65">
                                         <div class="input-wrap">
                                             <input type="text" class="input">
                                         </div>
-                                    </td>
-                                    <td width="100">
-                                        <label class="customcheckbox" for="">
-                                            <input type="checkbox" name="" id="" checked="">
-                                            <i></i>
-                                        </label>
                                     </td>
                                     <td>
                                         <select class="chosen-select">
@@ -216,7 +289,7 @@
                                             <option value="India">India</option>
                                         </select> 
                                     </td>
-                                    <td width="200">
+                                    <td>
                                         <select class="js-select-multi" multiple="multiple" >
                                             <option value="var0">var0</option>
                                             <option value="var1">var1</option>
@@ -225,12 +298,12 @@
                                             <option value="var4">var4</option>
                                         </select>
                                     </td>
-                                    <td width="100">
+                                    <td class="width-65">
                                         <div class="input-wrap">
                                             <input type="text" class="input">
                                         </div>
                                     </td>
-                                    <td>
+                                    <td class="width-65">
                                         <div class="input-wrap">
                                             <input type="text" class="input">
                                         </div>
@@ -250,8 +323,5 @@
         </div>
     </div>
 </div>
-<footer class="footer">
-    <p>(&copy;) Avox 2013</p>
-</footer>
 </body>
 </html>
