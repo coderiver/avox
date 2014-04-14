@@ -123,16 +123,16 @@ $(document).ready(function() {
  
 		// }).multiselectfilter();
 
-		$(".js-select-multi").each(function () {
-			if ($(this).attr("data-placeholder")) {
-				var placeholder = $(this).attr("data-placeholder");
-			}
-			else {
-				var placeholder = '';
-			}
-			$(this).multiselect({
+		
+			// if ($(this).attr("data-placeholder")) {
+			// 	var placeholder = 
+			// }
+			// else {
+			// 	var placeholder = '';
+			// }
+			$(".js-select-multi").multiselect({
 				selectedList: 7,
-				noneSelectedText: placeholder,
+				noneSelectedText: $(this).attr("data-placeholder"),
 				header: "",
 		 		open: function () {
 		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
@@ -142,17 +142,16 @@ $(document).ready(function() {
 		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
 		 		}
 			}).multiselectfilter().on("multiselectclick", function(event, ui) {
-				if ($(this).multiselect("widget").find("input").is(":checked")) {
-					$(this).next().addClass("has-value").removeClass("has-placeholder");
-				}
-				else {
-					$(this).next().addClass("has-placeholder").removeClass("has-value");
-				}
+			if ($(this).multiselect("widget").find("input").is(":checked")) {
+				$(this).next().addClass("has-value").removeClass("has-placeholder");
+			}
+			else {
+				$(this).next().addClass("has-placeholder").removeClass("has-value");
+			}
 				
 				
 
 			});
-		})
 		$(".js-select-multi.js-unlimit-val").each(function (){
 			$(this).multiselect({
 				selectedList: 100,
@@ -165,7 +164,7 @@ $(document).ready(function() {
 		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
 		 		}
 			}).multiselectfilter();
-		})
+		});
 
 		// hiding on blur, needs class, is-shown
 		mouseOverActiveElement = false;
@@ -695,21 +694,21 @@ $(document).ready(function() {
 	});
 	
 
-	// if ($(".js-date").length) {
-	// 	$(".js-date").datetimepicker({
-	//         dateFormat: 'yy-mm-dd',
-	//         firstDay: 1,
-	//         changeMonth: true,
-	//         changeYear: true,
-	//         showOtherMonths: true,
-	//         showTimezone: true,
-	//         selectOtherMonths: true,
-	//         yearRange: '-10:+3',
-	//         showSecond: true,
-	//         showButtonPanel: false,
-	//         timeFormat: 'HH:mm:ss z',
-	//     });
-	// }
+	if ($(".js-date").length) {
+		$(".js-date").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	    });
+	}
 	$(".js-date-group").each(function(){
 		var date_from = $(this).find(".js-date-from");
 		var date_to = $(this).find(".js-date-to");
