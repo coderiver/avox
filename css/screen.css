@@ -236,7 +236,7 @@ textarea, input { font-family: Tahoma, sans-serif; }
 
 a img, fieldset { border: none; }
 
-.button { display: inline-block; border-radius: 2px; height: 28px; position: relative; overflow: hidden; padding: 0 15px; color: #838383; text-align: center; font: bold 13px/28px Tahoma, Arial, sans-serif; font-weight: bold; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
+.button { display: inline-block; border-radius: 2px; height: 28px; position: relative; overflow: hidden; padding: 0 15px; min-width: 90px; color: #838383; text-align: center; font: bold 13px/28px Tahoma, Arial, sans-serif; font-weight: bold; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
 @media only screen and (max-width: 1000px) { .button { font-size: 12px; } }
 .button.button_blue { background: #2cabdc; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 .button.button_blue:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; background: #238db5; }
