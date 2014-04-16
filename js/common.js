@@ -123,16 +123,17 @@ $(document).ready(function() {
  
 		// }).multiselectfilter();
 
-		
-			// if ($(this).attr("data-placeholder")) {
-			// 	var placeholder = 
-			// }
-			// else {
-			// 	var placeholder = '';
-			// }
-			$(".js-select-multi").multiselect({
+		$(".js-select-multi").each(function(){
+			if ($(this).attr("data-placeholder")) {
+				var placeholder = $(this).attr("data-placeholder");
+			}
+			else {
+				var placeholder = "Select options";
+			}
+			//$(this).next().find("span").text(placeholder);
+			$(this).multiselect({
 				selectedList: 7,
-				noneSelectedText: $(this).attr("data-placeholder"),
+				noneSelectedText: placeholder,
 				header: "",
 		 		open: function () {
 		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
@@ -142,16 +143,15 @@ $(document).ready(function() {
 		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
 		 		}
 			}).multiselectfilter().on("multiselectclick", function(event, ui) {
-			if ($(this).multiselect("widget").find("input").is(":checked")) {
-				$(this).next().addClass("has-value").removeClass("has-placeholder");
-			}
-			else {
-				$(this).next().addClass("has-placeholder").removeClass("has-value");
-			}
+				if ($(this).multiselect("widget").find("input").is(":checked")) {
+					$(this).next().addClass("has-value").removeClass("has-placeholder");
+				}
+				else {
+					$(this).next().addClass("has-placeholder").removeClass("has-value");
+				}
 				
-				
-
 			});
+		});
 		$(".js-select-multi.js-unlimit-val").each(function (){
 			$(this).multiselect({
 				selectedList: 100,
