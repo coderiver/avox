@@ -413,6 +413,9 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .is-red-bg { background: #eed3d3; }
 .is-red-bg .btn-sort { background: #eed3d3; }
 
+.row { *zoom: 1; }
+.row:before, .row:after { content: " "; display: table; }
+.row:after { clear: both; }
 .row.row_mb5 { margin-bottom: 5px !important; }
 .row .row__left { display: inline-block; vertical-align: middle; margin-right: 6px; text-align: right; font-size: 12px; }
 .row .row__input { position: relative; margin-right: 20px; display: inline-block; vertical-align: middle; }
@@ -420,6 +423,9 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .row .row__input .btn-bucket { position: absolute; top: 0; right: 0; }
 .row .row__input .button, .row .row__input .btn-import, .row .row__input .btn-trash { float: none; display: inline-block; vertical-align: top; margin-top: 0; margin-left: 10px; }
 .row .row__sep { display: inline-block; margin: 0 3px 0 -17px; vertical-align: middle; font-size: 12px; }
+.row .row__right { float: right; margin-top: 6px; }
+.row .button { min-width: 10px; }
+.row .button:first-child { margin-left: 0; }
 
 .btn-trash { background: #c5c5c5; width: 36px; height: 28px; text-align: center; background: #c5c5c5; border-radius: 2px; }
 .btn-trash i { display: inline-block; vertical-align: middle; background: url('../img/icons-s1d6dae9cc4.png') 0 -301px no-repeat; width: 13px; height: 20px; }
@@ -461,9 +467,15 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .width-70 { width: 70px; }
 
+.width-81 { width: 81px; }
+
+.width-87 { width: 87px; }
+
 .width-94 { width: 94px; }
 
 .width-100 { width: 100px; }
+
+.width-103 { width: 103px; }
 
 .width-120 { width: 120px; }
 
@@ -477,7 +489,13 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .width-166 { width: 166px; }
 
+.width-176 { width: 176px; }
+
+.width-180 { width: 180px; }
+
 .width-190 { width: 190px; }
+
+.width-242 { width: 242px; }
 
 .width-270 { width: 270px; }
 

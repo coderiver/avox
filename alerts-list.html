@@ -17,538 +17,515 @@
     <script src="js/jquery-ui-timepicker-addon.js"></script>
     <script src="js/common.js"></script>
 </head>
-<body class="js-table-group">
-    <header class="header js-header">
-        <div class="header__top l-container">
-            <div class="header__user">
-                <span>
-                    Logged in as: 
-                    <a href="#">Ed2</a>
-                </span>
-                <a href="#">Logout</a>
+<body class="js-table-group is-fixed-width">
+    <div class="l-layout-fixed">
+        <header class="header js-header">
+            <div class="header__top l-container">
+                <div class="header__user">
+                    <span>
+                        Logged in as: 
+                        <a href="#">Ed2</a>
+                    </span>
+                    <a href="#">Logout</a>
+                </div>
+                <div class="header__info js-in">
+                    <span>2013 May 17</span>
+                    <span>11:45:18</span>
+                    <span>+02:00</span>
+                </div>
             </div>
-            <div class="header__info js-in">
-                <span>2013 May 17</span>
-                <span>11:45:18</span>
-                <span>+02:00</span>
-            </div>
-        </div>
-        <div class="nav-wrap">
-            <div class="l-container">
-                <ul class="nav">
-                    <li class="nav__item is-active">
-                        <a href="#" class="nav__link">Management</a>
-                        <ul class="subnav">
-                            <li class="subnav__item">
-                                <a href="clients-list.html" class="subnav__link">Clients</a>
-                            </li>
-                            <li class="subnav__item">
-                                <a href="rate-tables.html" class="subnav__link">Rate Tables</a>
-                            </li>
-                            <li class="subnav__item">
-                                <a href="invoices.html" class="subnav__link">Invoices</a>
-                            </li>
-                            <li class="subnav__item">
-                                <a href="transactions.html" class="subnav__link">Transactions</a>
-                            </li>
-                            <li class="subnav__item">
-                                <a href="#" class="subnav__link">Balance Report</a>
-                            </li>
-                            <li class="subnav__item">
-                                <a href="#" class="subnav__link">Resellers</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">System</a></li>
-                </ul>
-                <ul class="nav-info">
-                    <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
-                    <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
-                    <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
-                    <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div class="filter">
-        <div class="filter__in js-fixed-header">
-            <div class="filter__top js-filter">
+            <div class="nav-wrap">
                 <div class="l-container">
-                    <form action="">
-                        <div class="wrap">
-                            <div class="l-col2">
-                                <div class="row row_extend">
-                                    <span class="row__text"></span>
-                                    <div class="row__main">
-                                        <div class="row__main-col" style="text-align:center">
-                                            <div class="radio-row radio-row_inine">
-                                                <label class="radio">
-                                                    <input type="radio" name="name3">
-                                                    <i></i>
-                                                    <span>Active</span>
-                                                </label>
-                                                <label class="radio">
-                                                    <input type="radio" name="name3" checked="">
-                                                    <i></i>
-                                                    <span>All</span>
-                                                </label>
-                                                <label class="radio">
-                                                    <input type="radio" name="name3">
-                                                    <i></i>
-                                                    <span>Disabled</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row__main-col">
-                                            <span class="row__text">Klerk</span>
-                                            <div class="row__main">
-                                                <select class="js-select-multi" multiple="multiple" >
-                                                    <option value="var0">var0</option>
-                                                    <option value="var1">var1</option>
-                                                    <option value="var2">var2</option>
-                                                    <option value="var3">var3</option>
-                                                    <option value="var4">var4</option>
-                                                </select>
-                                                <button class="btn-bucket js-clear-select"><i></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row_extend">
-                                    <span class="row__text">Check span:</span>
-                                    <div class="row__main">
-                                        <div class="row__main-col" style="padding-right:0">
-                                            <input type="text" class="input">
-                                        </div>
-                                        <i class="row-separator"></i>
-                                        <div class="row__main-col" style="padding-right:0">
-                                            <input type="text" class="input">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row_extend">
-                                    <span class="row__text">Check every:</span>
-                                    <div class="row__main">
-                                        <div class="row__main-col" style="padding-right:0">
-                                            <input type="text" class="input">
-                                        </div>
-                                        <i class="row-separator"></i>
-                                        <div class="row__main-col" style="padding-right:0">
-                                            <input type="text" class="input">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="l-col2">
-                                <div class="row row_extend">
-                                    <span class="row__text">Added:</span>
-                                    <div class="row__main js-date-group">
-                                        <div class="row__main-col">
-                                            <input type="text" class="input js-date-from" placeholder="Date From">
-                                            <button class="btn-bucket js-clear-select"><i></i></button>
-                                        </div>
-                                        <i class="row-separator"></i>
-                                        <div class="row__main-col">
-                                            <input type="text" class="input js-date-to" placeholder="Date To">
-                                            <button class="btn-bucket js-clear-select"><i></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row_extend">
-                                    <span class="row__text">Alerted:</span>
-                                    <div class="row__main js-date-group">
-                                        <div class="row__main-col">
-                                            <input type="text" class="input js-date-from" placeholder="Date From">
-                                            <button class="btn-bucket js-clear-select"><i></i></button>
-                                        </div>
-                                        <i class="row-separator"></i>
-                                        <div class="row__main-col">
-                                            <input type="text" class="input js-date-to" placeholder="Date To">
-                                            <button class="btn-bucket js-clear-select"><i></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                	<span class="row__text"></span>
-                                    <div class="row__main">
-                                        <input type="text" class="input js-search-input" placeholder="Search">
-                                        <div class="actions actions_fluid">
-                                            <button class="button button_gray js-reset-filter" type="reset">Reset All</button>
-                                            <button class="button button_blue">Search</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="trans-title">Alerts list</div>
+                    <ul class="nav">
+                        <li class="nav__item is-active">
+                            <a href="#" class="nav__link">Management</a>
+                            <ul class="subnav">
+                                <li class="subnav__item">
+                                    <a href="clients-list.html" class="subnav__link">Clients</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="rate-tables.html" class="subnav__link">Rate Tables</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="invoices.html" class="subnav__link">Invoices</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="transactions.html" class="subnav__link">Transactions</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="#" class="subnav__link">Balance Report</a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="#" class="subnav__link">Resellers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Tools</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Routing</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Configuration</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">System</a></li>
+                    </ul>
+                    <ul class="nav-info">
+                        <li><a href="#"><i class="icon icon_nav1"></i><span>0</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav2"></i><span>0</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav3"></i><span>0.92/24</span></a></li>
+                        <li><a href="#"><i class="icon icon_nav4"></i><span>3</span></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="l-container">
-                <div class="filter__bottom">
-                    <div class="action">
-                        <!-- <button class="button button_blue button_icon">
-                            <i class="icon icon_add"></i>Add Code
-                        </button> -->
-                        <!-- <button class="button button_blue button_icon">
-                            <i class="icon icon_export"></i>Export
-                        </button>
-                        <button class="button button_blue button_icon">
-                            <i class="icon icon_import"></i>Import
-                        </button> -->
-                        <button class="button button_blue button_icon js-show-tooltip">
-                            <i class="icon icon_edit"></i>Mass Edit
-                        </button>
-                    </div>
-                    <div class="pagin">
-                        <div class="pagin__select">
-                            <div class="pagin__select-text">
-                                Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
-                            </div>
-                            <div class="pagin__select-main">
-                                <select class="chosen-select">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select> 
-                            </div>
-                        </div>
-                        <div class="pagin__nav">
-                            <div class="js-paginator">  
-                                <div class='paginator_p_wrap'> 
-                                    <div class='paginator_p_bloc'> 
-                                        <!--<a class='paginator_p'></a> // page number : dynamically added --> 
-                                    </div> 
-                                </div>  
-                                <!-- slider --> 
-                                <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
-                                    <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
+        </header>
+        <div class="filter">
+            <div class="filter__in js-fixed-header">
+                <div class="filter__top js-filter">
+                    <div class="l-container">
+                        <form action="">
+                            <div class="wrap">
+                                <div class="row js-date-group">
+                                    <div class="row__input width-166 to-right">
+                                        <div class="radio-row radio-row_inine">
+                                            <label class="radio">
+                                                <input type="radio" name="name3">
+                                                <i></i>
+                                                <span>Active</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="name3" checked="">
+                                                <i></i>
+                                                <span>All</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="name3">
+                                                <i></i>
+                                                <span>Disabled</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row__left width-47">Clerk:</div>
+                                    <div class="row__input width-242">
+                                        <select class="js-select-multi" multiple="multiple" >
+                                            <option value="var0">var0</option>
+                                            <option value="var1">var1</option>
+                                            <option value="var2">var2</option>
+                                            <option value="var3">var3</option>
+                                            <option value="var4">var4</option>
+                                        </select>
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__left width-47">Date:</div>
+                                    <div class="row__input width-176">
+                                        <input type="text" class="input js-date-from" placeholder="date from">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-176">
+                                        <input type="text" class="input js-date-to" placeholder="date to">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__input row__right width-180">
+                                        <input type="text" class="input" placeholder="Search">
+                                    </div>
+                                </div>
+                                <div class="row js-date-group">
+                                    <div class="row__left width-81">Check span:</div>
+                                    <div class="row__input width-61">  
+                                        <input type="text" class="input" placeholder="345">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-61">  
+                                        <input type="text" class="input" placeholder="345">
+                                    </div>
+                                    <div class="row__left width-103">Check span:</div>
+                                    <div class="row__input width-61">  
+                                        <input type="text" class="input" placeholder="345">
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-61">  
+                                        <input type="text" class="input" placeholder="345">
+                                    </div>
+                                    <div class="row__left width-47">Date:</div>
+                                    <div class="row__input width-176">
+                                        <input type="text" class="input js-date-from" placeholder="date from">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__sep">-</div>
+                                    <div class="row__input width-176">
+                                        <input type="text" class="input js-date-to" placeholder="date to">
+                                        <button class="btn-bucket js-clear-select"><i></i></button>
+                                    </div>
+                                    <div class="row__input row__right width-180">
+                                        <button class="button button_blue  width-87">Search</button>
+                                        <button class="btn-import"><i></i></button>
+                                        <button class="btn-trash js-reset-all" type="reset"><i></i></button>
+                                    </div>
                                 </div>
                             </div>
-                            <script type="text/javascript">
-                                $(".js-paginator").jPaginator({ 
-                                    nbPages: 21, 
-                                    selectedPage: 8,
-                                    minSlidesForSlider:1, 
-                                    nbVisible: 7,
-                                    onPageClicked: function(a,num) { 
-                                        $("#page1").html("demo1 - page : "+num); 
-                                    }
-                                });  
-                            </script>                                   
-                        </div>
+                        </form>
+                        <div class="trans-title">Alerts list</div>
                     </div>
                 </div>
-                <div class="table-head-wrap">
-                    <table class="table-head table-head_very-simple">
-                        <thead>
-                            <tr>
-                                <td class="td-0 td-relative" rowspan="2">
-                                    <div>
-                                        <label class="customcheckbox js-check-all" data-group-id="1">
-                                              <input type="checkbox">
-                                              <i></i>
-                                        </label>
+                <div class="l-container">
+                    <div class="filter__bottom">
+                        <div class="action">
+                            <!-- <button class="button button_blue button_icon">
+                                <i class="icon icon_add"></i>Add Code
+                            </button> -->
+                            <!-- <button class="button button_blue button_icon">
+                                <i class="icon icon_export"></i>Export
+                            </button>
+                            <button class="button button_blue button_icon">
+                                <i class="icon icon_import"></i>Import
+                            </button> -->
+                            <button class="button button_blue button_icon js-show-tooltip">
+                                <i class="icon icon_edit"></i>Mass Edit
+                            </button>
+                        </div>
+                        <div class="pagin">
+                            <div class="pagin__select">
+                                <div class="pagin__select-text">
+                                    Rows <strong>61</strong> – <strong>70</strong> of <strong>115</strong>
+                                </div>
+                                <div class="pagin__select-main">
+                                    <select class="chosen-select">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select> 
+                                </div>
+                            </div>
+                            <div class="pagin__nav">
+                                <div class="js-paginator">  
+                                    <div class='paginator_p_wrap'> 
+                                        <div class='paginator_p_bloc'> 
+                                            <!--<a class='paginator_p'></a> // page number : dynamically added --> 
+                                        </div> 
+                                    </div>  
+                                    <!-- slider --> 
+                                    <div class='paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all'> 
+                                        <a class='ui-slider-handle ui-state-default ui-corner-all' href='#'></a> 
                                     </div>
-                                </td>
-                                <td class="td-1 td-height">
-                                    <div>
-                                        <span>Id</span>
-                                    </div>
-                                </td>
-                                <td class="td-2">
-                                    <div>
-                                        <span>Name</span>
-                                    </div>
-                                </td>
-                                <td class="td-3">
-                                    <div>
-                                        <span>Check span</span>
-                                    </div>
-                                </td>
-                                <td class="td-4">
-                                    <div>
-                                        <span>Check every</span>
-                                    </div>
-                                </td>
-                                <td class="td-5">
-                                    <div>
-                                        <span>Added by</span>
-                                    </div>
-                                </td>
-                                <td class="td-6">
-                                    <div>
-                                        <span>Added on</span>
-                                    </div>
-                                </td>
-                                <td class="td-7">
-                                    <div>
-                                        <span>Last alerted</span>
-                                    </div>
-                                </td>
-                                <td class="td-8">
-                                    <div>
-                                        <span>Times alerted</span>
-                                    </div>
-                                </td>
-                                <td class="td-9">
-                                    <div>
-                                        <span>Active</span>
-                                    </div>
-                                </td>
-                                <td class="td-height td-10">
-                                    <div>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                            	<td>
-                                    <div>
-                                        <span></span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                </div>
+                                <script type="text/javascript">
+                                    $(".js-paginator").jPaginator({ 
+                                        nbPages: 21, 
+                                        selectedPage: 8,
+                                        minSlidesForSlider:1, 
+                                        nbVisible: 7,
+                                        onPageClicked: function(a,num) { 
+                                            $("#page1").html("demo1 - page : "+num); 
+                                        }
+                                    });  
+                                </script>                                   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-head-wrap">
+                        <table class="table-head table-head_very-simple">
+                            <thead>
+                                <tr>
+                                    <td class="td-0 td-relative" rowspan="2">
+                                        <div>
+                                            <label class="customcheckbox js-check-all" data-group-id="1">
+                                                  <input type="checkbox">
+                                                  <i></i>
+                                            </label>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-1 td-height">
+                                        <div>
+                                            <span>Id</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-2">
+                                        <div>
+                                            <span>Name</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-3">
+                                        <div>
+                                            <span>Check span</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-4">
+                                        <div>
+                                            <span>Check every</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-5">
+                                        <div>
+                                            <span>Added by</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-6">
+                                        <div>
+                                            <span>Added on</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                        <div class="btns-wrap">
-                                            <button class="btn-sort btn-sort_top"><i></i></button>
-                                            <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                    </td>
+                                    <td class="td-7">
+                                        <div>
+                                            <span>Last alerted</span>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
+                                    </td>
+                                    <td class="td-8">
+                                        <div>
+                                            <span>Times alerted</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-9">
+                                        <div>
+                                            <span>Active</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-height td-10">
+                                        <div>
+                                            <span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                        <div>
+                                            <span></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                            <div class="btns-wrap">
+                                                <button class="btn-sort btn-sort_top"><i></i></button>
+                                                <button class="btn-sort btn-sort_down is-active"><i></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="l-container table-wrap">
-        <table class="table table_invoices js-table js-table-simple table_border">
-            <tbody>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="to-center with-checkbox" width="44px">
-                        <label class="customcheckbox" data-id="1">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="to-center">12</td>
-                    <td class="to-left" data-href="#">Alert 12</td>
-                    <td class="to-center" style="min-width:50px">10</td>
-                    <td class="to-center" style="min-width:50px">15</td>
-                    <td class="to-center" style="min-width:50px">ed</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center">2013-03-02 17:35:16</td>
-                    <td class="to-center" style="min-width:60px">5</td>
-                    <td class="to-center with-checkbox" width="50px">
-                        <label class="customcheckbox">
-                              <input type="checkbox">
-                              <i></i>
-                        </label> 
-                    </td>
-                    <td class="td_icon"><div class="icon-delete"></div></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="actions actions_small">
-            <div class="button">Cancel</div>
-            <div class="button button_blue">Ok</div>
+        <div class="l-container table-wrap">
+            <table class="table table_invoices js-table js-table-simple table_border">
+                <tbody>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="to-center with-checkbox" width="44px">
+                            <label class="customcheckbox" data-id="1">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="to-center">12</td>
+                        <td class="to-left" data-href="#">Alert 12</td>
+                        <td class="to-center" style="min-width:50px">10</td>
+                        <td class="to-center" style="min-width:50px">15</td>
+                        <td class="to-center" style="min-width:50px">ed</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center">2013-03-02 17:35:16</td>
+                        <td class="to-center" style="min-width:60px">5</td>
+                        <td class="to-center with-checkbox" width="50px">
+                            <label class="customcheckbox">
+                                  <input type="checkbox">
+                                  <i></i>
+                            </label> 
+                        </td>
+                        <td class="td_icon"><div class="icon-delete"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="actions actions_small">
+                <div class="button">Cancel</div>
+                <div class="button button_blue">Ok</div>
+            </div>
         </div>
     </div>
 
