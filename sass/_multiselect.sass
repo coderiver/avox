@@ -1,221 +1,227 @@
 .ui-multiselect
-    position: relative
-    overflow: hidden
-    padding: 2px 0 2px 8px
-    text-align: left
-    width: 150px !important
-    max-width: 150px
-    display: inline-block
-    +box-sizing(border-box)
-    padding-right: 20px 
-    min-height: 30px
-    border: 1px solid #d5d5d5
-    +border-radius(3px)
-    background: #fff
-    font-size: 13px !important
-    +box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
-    span
-        color: #999
-    &:focus,
-    &:active
-        outline: none
-    &.ui-state-active
-        background: #bfe6f4
-        span.ui-icon
-            +s(arr2)   
-    &.has-placeholder
-        span
-            color: #999
-    &.has-value
-        span
-            color: #5c5c5c 
+	position: relative
+	overflow: hidden
+	padding: 2px 0 2px 8px
+	text-align: left
+	width: 150px !important
+	max-width: 150px
+	display: inline-block
+	+box-sizing(border-box)
+	padding-right: 20px 
+	min-height: 30px
+	border: 1px solid #d5d5d5
+	+border-radius(3px)
+	background: #fff
+	font-size: 13px !important
+	+box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
+	span
+		color: #999
+	&:focus,
+	&:active
+		outline: none
+	&.ui-state-active
+		background: #bfe6f4
+		span.ui-icon
+			+s(arr2)   
+	&.has-placeholder
+		span
+			color: #999
+	&.has-value
+		span
+			color: #5c5c5c 
 .ui-multiselect span.ui-icon
-    position: absolute     
-    top: 50%
-    right: 10px
-    margin-top: -8px
-    +s(arr1)
+	position: absolute     
+	top: 50%
+	right: 10px
+	margin-top: -8px
+	+s(arr1)
 .ui-multiselect-single .ui-multiselect-checkboxes input
-    position: absolute !important
-    top: auto !important
-    left: -9999px
+	position: absolute !important
+	top: auto !important
+	left: -9999px
 
 .ui-multiselect-single .ui-multiselect-checkboxes label
-    padding: 5px !important
+	padding: 5px !important
 
 .ui-multiselect-header
 .ui-multiselect-header ul
-    font-size: 0.9em
+	font-size: 0.9em
 
 .ui-multiselect-header ul li
-    float: left
-    padding: 0 10px 0 0
+	float: left
+	padding: 0 10px 0 0
 
 .ui-multiselect-header a
-    text-decoration: none
+	text-decoration: none
 
 .ui-multiselect-header a:hover
-    text-decoration: underline
+	text-decoration: underline
 
 .ui-multiselect-header span.ui-icon
-    float: left
+	float: left
 
 .ui-multiselect-header li.ui-multiselect-close
-    float: right
-    text-align: right
-    padding-right: 0
+	float: right
+	text-align: right
+	padding-right: 0
 
 .ui-multiselect-menu
-    display: none
-    position: absolute
-    z-index: 10000
-    text-align: left
-    margin-top: 15px
-    +box-sizing(border-box)
-    width: 100%
-    +border-radius(2px)
-    background: #f7f7f7
-    border: 1px solid #c8c8c8
-    +box-shadow(0 3px 15px rgba(0,0,0,.2))
-    width: auto !important 
-    max-width: 460px
-    //padding-right: 2px 
-    &.is-fixed-height
-        .ui-multiselect-checkboxes
-            max-height: 240px
-    &:before,
-    &:after
-        content: ""
-        position: absolute
-        width: 0px
-        height: 0px
-        border-style: solid
-    &:before
-        top: -9px
-        left: 17px
-        border-width: 0 7px 10px 7px
-        border-color: transparent transparent #f7f7f7 transparent
-        z-index: 2
-    &:after
-        top: -10px
-        left: 16px
-        border-width: 0 8px 10px 8px
-        border-color: transparent transparent #c8c8c8 transparent
+	display: none
+	position: absolute
+	z-index: 10000
+	text-align: left
+	margin-top: 15px
+	+box-sizing(border-box)
+	width: 100%
+	+border-radius(2px)
+	background: #f7f7f7
+	border: 1px solid #c8c8c8
+	+box-shadow(0 3px 15px rgba(0,0,0,.2))
+	width: auto !important 
+	max-width: 460px
+	//padding-right: 2px 
+	&.is-fixed-height
+		.ui-multiselect-checkboxes
+			max-height: 240px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		width: 0px
+		height: 0px
+		border-style: solid
+	&:before
+		top: -9px
+		left: 17px
+		border-width: 0 7px 10px 7px
+		border-color: transparent transparent #f7f7f7 transparent
+		z-index: 2
+	&:after
+		top: -10px
+		left: 16px
+		border-width: 0 8px 10px 8px
+		border-color: transparent transparent #c8c8c8 transparent
 
 .ui-multiselect-checkboxes
-    position: relative
-    overflow-y: auto
-    overflow-x: hidden
-    list-style: none
-    //max-height: 240px
-    //height: auto
+	position: relative
+	overflow-y: auto
+	overflow-x: hidden
+	list-style: none
+	//max-height: 240px
+	//height: auto
 
 .ui-multiselect-checkboxes label
-    cursor: default
-    display: block
-    border: 1px solid transparent
-    padding: 3px 1px
+	cursor: default
+	display: block
+	border: 1px solid transparent
+	padding: 3px 1px
 
 .ui-multiselect-checkboxes label  
-    display: block
-    cursor: pointer
-    position: relative
-    padding: 6px 5px 6px 30px
-    +unselectable
-    input  
-        position: absolute
-        left: 6px
-        top: 50%
-        margin-top: -8px
-        width: 17px
-        height: 17px
-        opacity: 0
-        z-index: 2
-        &:checked
-            + span
-                &:before 
-                    display: block
-    span
-        &:before
-            display: none 
-            content: ""
-            position: absolute
-            top: 50%
-            left: 10px
-            margin-top: -5px
-            +s(check) 
-            z-index: 2
-        &:after
-            content: "" 
-            position: absolute
-            top: 50%
-            left: 6px
-            margin-top: -8px
-            width: 16px
-            height: 16px
-            border: 1px solid #d5d5d5
-            +border-radius(4px)
-            background: #fff
-            +box-shadow(inset 0 1px 3px rgba(0,0,0,.07))
+	display: block
+	cursor: pointer
+	position: relative
+	padding: 6px 5px 6px 30px
+	+unselectable
+	input  
+		position: absolute
+		left: 6px
+		top: 50%
+		margin-top: -8px
+		width: 17px
+		height: 17px
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ span
+				&:before 
+					display: block
+	span
+		&:before
+			display: none 
+			content: ""
+			position: absolute
+			top: 50%
+			left: 10px
+			margin-top: -5px
+			+s(check) 
+			z-index: 2
+		&:after
+			content: "" 
+			position: absolute
+			top: 50%
+			left: 6px
+			margin-top: -8px
+			width: 16px
+			height: 16px
+			border: 1px solid #d5d5d5
+			+border-radius(4px)
+			background: #fff
+			+box-shadow(inset 0 1px 3px rgba(0,0,0,.07))
 .ui-multiselect-checkboxes li
-    display: list-item
-    
-    &:hover  
-        background: #2cabdc
-        color: #fff
+	display: list-item
+	
+	&:hover  
+		background: #2cabdc
+		color: #fff
 .ui-multiselect-checkboxes li.ui-multiselect-optgroup-label
-    text-align: center
-    font-weight: bold
-    border-bottom: 1px solid
+	text-align: center
+	font-weight: bold
+	border-bottom: 1px solid
 
 .ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a
-    display: block
-    padding: 3px
-    margin: 1px 0
-    text-decoration: none
+	display: block
+	padding: 3px
+	margin: 1px 0
+	text-decoration: none
 
 .ui-multiselect-hasfilter ul
-    position: relative
-    top: 2px
+	position: relative
+	top: 2px
 
 .ui-multiselect-filter
-    font-size: 0
-    position: relative
-    margin: 6px
-    &:after
-        content: ""
-        position: absolute
-        top: 50%  
-        margin-top: -7px
-        right: 10px 
-        +s(glass-h)
+	font-size: 0
+	position: relative
+	margin: 6px
+	&:after
+		content: ""
+		position: absolute
+		top: 50%  
+		margin-top: -7px
+		right: 10px 
+		+s(glass-h)
 .ui-multiselect-filter input
-    +box-sizing(border-box)
-    padding: 5px 30px 5px 5px
-    width: 100%
-    height: 32px
-    border: 1px solid #d5d5d5
-    +border-radius(3px)
-    font-size: 12px !important
-    background: #fff  
-    +box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
-    &::-webkit-search-cancel-button
-        margin-right: 0
-    &:focus
-        border: 1px solid #aacdda
-        background: #bfe5f3
-        outline: none 
-        color: #5c5c5c
+	+box-sizing(border-box)
+	padding: 5px 30px 5px 5px
+	width: 100%
+	height: 32px
+	border: 1px solid #d5d5d5
+	+border-radius(3px)
+	font-size: 12px !important
+	background: #fff  
+	+box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
+	&::-webkit-search-cancel-button
+		margin-right: 0
+	&:focus
+		border: 1px solid #aacdda
+		background: #bfe5f3
+		outline: none 
+		color: #5c5c5c
 .multipleselect
-    white-space:nowrap
-    width: 190px 
-    &>*
-        vertical-align: middle
-    .clearselect
-        display: inline-block
-        border-radius: 4px
-        border: 1px solid #D5D5D5 
-        margin-left: 4px 
-        padding: 5px 
-        background: #D5D5D5 
-        cursor: pointer
+	white-space:nowrap
+	width: 190px 
+	&>*
+		vertical-align: middle
+	.clearselect
+		display: inline-block
+		border-radius: 4px
+		border: 1px solid #D5D5D5 
+		margin-left: 4px 
+		padding: 5px 
+		background: #D5D5D5 
+		cursor: pointer
+
+.js-select-multi
+	display: block !important
+	opacity: 0
+	height: 0
+	margin-left: 40px
